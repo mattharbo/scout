@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #55585D;
+  font-family: "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  background-color: #F6F7FB;
+  box-sizing: border-box;
+}
+
+a:link {
+  color: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/*RESPONSIVE EXAMPLE*/
+@media screen and (max-width: 450px){
+
+#testdiv{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #029E9B;
+}
+    
+.logo{
+    background-image: url("../ressources/logo_text.png");
+    display: inline-block;
+    text-align: center;
+    background-size: 66px 18px;
+    height: 18px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 66px;
+    -webkit-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+  .circle{
+    background-image: url("../img/clock@x2.png");
+    background-size: 12px 12px;
+  }
+}
