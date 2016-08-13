@@ -36,7 +36,7 @@ a:active {
 }
 
 /*RESPONSIVE EXAMPLE*/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 600px){
 
 #header{
     position: relative;
@@ -49,13 +49,6 @@ a:active {
 #logo_header{
     position: relative;
     margin: 10px auto;
-}
-    
-#rightMenuOpener{
-    position: absolute;
-    right: 12px;
-    margin-top: 9px;
-    color: white;
 }
     
 #scoreContainer{
@@ -160,6 +153,16 @@ a:active {
     width: 80%;
 }
     
+#dynamicStatSaveHome{
+    float: left;
+    width: 30%;
+}
+     
+#dynamicStatSaveAway{
+    float: right;
+    width: 70%;
+}
+    
 #dynamicStatCrossHome{
     float: left;
     width: 70%;
@@ -168,6 +171,16 @@ a:active {
 #dynamicStatCrossAway{
     float: right;
     width: 30%;
+}
+    
+#dynamicStatCornerHome{
+    float: left;
+    width: 50%;
+}
+     
+#dynamicStatCornerAway{
+    float: right;
+    width: 50%;
 }
     
 #dynamicStatFoulHome{
@@ -207,7 +220,7 @@ a:active {
     
 .dynamicClassAway{
     height: 70px;
-    background-color: #F9E7E7;
+    background-color: #E1F2EE;
 }
     
 #figureContainer{
@@ -227,7 +240,7 @@ a:active {
     display: inline-block;
 }
     
-#scoreHome{
+#scoreHomeShoot{
     float: left;
     width: 33%;
     height:70px;
@@ -235,7 +248,87 @@ a:active {
 /*    background-color: olive;*/
 }
     
-#scoreAway{
+#scoreAwayShoot{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+#scoreHomeSave{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAwaySave{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+#scoreHomeCross{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAwayCross{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+#scoreHomeCorner{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAwayCorner{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+#scoreHomeFoul{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAwayFoul{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+#scoreHomeOffside{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAwayOffside{
     float: right;
     width: 33%;
     height:70px;
@@ -294,7 +387,7 @@ a:active {
     transition: opacity 0.25s;
 }
     
-.rightNavContainer {
+#rightNavContainer {
     height: 100%;
     width: 0; /*100 instead of 0 to dev*/
     position: fixed;
@@ -303,36 +396,56 @@ a:active {
     right: 0;
     background-color: white;
     overflow-x: hidden;
-    transition: 0.05s;
+    transition: 0.1s;
 /*    padding-top: 60px;*/
     z-index:6;
 }  
 
-.rightMenuDismissBtn{
+#rightMenuDismissBtn{
     position: block;
-    margin: 400px 0 0 30px;
-    height: 56px;
-    width: 165px;
+    float: left;
+    margin-left: 4%;
+    height: 55px;
+    width: 44%;
+    text-align: center;
+    line-height: 55px;
     background: #FFFFFF;
-    padding: 10px;
     border: 1px solid #029E9B;
     border-radius: 6px;
-    font-size: 17px;
+    font-weight: 500;
+    font-size: 20px;
     color: #029E9B;
+}
+    
+#rightMenuSubmitBtn{
+    position: block;
+/*    display: inline-block;*/
+    float: right;
+    margin-right: 4%;
+    height: 55px;
+    width: 44%;
+    text-align: center;
+    line-height: 55px;
+    background: #029E9B;
+    border: 1px solid #029E9B;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
 }
     
 #startHalfButton{
     position: block;
     margin: 13px auto;
-    height: 65px;
-    line-height: 65px;
+    height: 55px;
+    line-height: 55px;
     width: 94%;
     text-align: center;
 /*    padding-bottom: 200px;*/
     background: #029E9B;
     border-radius: 6px;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 20px;
     color: #FFFFFF;
 }
 

@@ -13,17 +13,17 @@
 	</head>
 	<body>
         
-        <div id="rightNav" class="rightNavContainer">
+        <div id="rightNavContainer">
         
-            <a href="javascript:void(0)" class="rightMenuDismissBtn" onclick="closeRightNav()">Dismiss</a>
+            <div id="rightMenuDismissBtn" onclick="closeRightNav()">Dismiss</div>
+            
+            <div id="rightMenuSubmitBtn" onclick="submitRightNav();">Submit</div>
         
         </div><!--rightNav-->
         
 		<div id="header">
             
             <a href="/" class="logo" id="logo_header">scout</a>
-            
-<!--            <span id="rightMenuOpener" onClick="openRightNav()">&#128513;</span>-->
             
         </div><!--Header-->
         
@@ -49,7 +49,7 @@
             </div><!--awayTeamName-->
             
             <div id="halfAndTime">
-            1st half - 32:10
+            1st half - 00:00
             </div><!--awayTeamName-->
             
         </div><!--liveUpperContainer-->
@@ -67,12 +67,12 @@
                 
                 <div id="figureContainer">
                     
-                    <div id="scoreHome" class="score">
+                    <div id="scoreHomeShoot" class="score">
                         <div id="pourcentage">(0%)</div>
                         0
                     </div><!--scoreHome-->
                     
-                    <div id="scoreAway" class="score">
+                    <div id="scoreAwayShoot" class="score" onClick="openRightNav()">
                         0
                         <div id="pourcentage">(0%)</div>
                     </div><!--scoreAway-->
@@ -86,6 +86,27 @@
             </div><!--statLine-->
             <!--########### END FIRST LINE ###########-->
             
+            <!--########### FIRST LINE BIS ###########-->
+            <div id="statLine">
+                
+                <div id="dynamicStatSaveHome" class="dynamicClassHome">
+                </div><!--statColHome-->
+                
+                <div id="dynamicStatSaveAway" class="dynamicClassAway">
+                </div><!--statColAway-->
+                
+                <div id="figureContainer">
+                    
+                    <div id="scoreHomeSave" class="score" onClick="alertSave()">0</div><!--scoreHome-->
+                    
+                    <div id="scoreAwaySave" class="score" onClick="alertSave()">0</div><!--scoreAway-->
+                    
+                    <div id="scoreLabel">Save(s)</span></div><!--scoreLabel-->
+                    
+                </div><!--figureContainer-->
+                
+            </div><!--statLine-->
+            <!--########### END FIRST LINE BIS ###########-->
             
             <!--########### SEDOND LINE ###########-->
             <div id="statLine">
@@ -98,9 +119,9 @@
                 
                 <div id="figureContainer">
                     
-                    <div id="scoreHome" class="score">0</div><!--scoreHome-->
+                    <div id="scoreHomeCross" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreHome-->
                     
-                    <div id="scoreAway" class="score">0</div><!--scoreAway-->
+                    <div id="scoreAwayCross" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreAway-->
                     
                     <div id="scoreLabel">Crosse(s)</span></div><!--scoreLabel-->
                     
@@ -108,7 +129,29 @@
                 
             </div><!--statLine-->
             <!--########### END SEDOND LINE ###########-->
-            
+        
+            <!--########### SECOND LINE BIS ###########-->
+            <div id="statLine">
+                
+                <div id="dynamicStatCornerHome" class="dynamicClassHome">
+                </div><!--statColHome-->
+                
+                <div id="dynamicStatCornerAway" class="dynamicClassAway">
+                </div><!--statColAway-->
+                
+                <div id="figureContainer">
+                    
+                    <div id="scoreHomeCorner" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreHome-->
+                    
+                    <div id="scoreAwayCorner" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreAway-->
+                    
+                    <div id="scoreLabel">Corner Kick(s)</span></div><!--scoreLabel-->
+                    
+                </div><!--figureContainer-->
+                
+            </div><!--statLine-->
+            <!--########### END SECOND LINE BIS ###########-->
+        
             <!--########### THIRD LINE ###########-->
             <div id="statLine">
                 
@@ -120,9 +163,9 @@
                 
                 <div id="figureContainer">
                     
-                    <div id="scoreHome" class="score">0</div><!--scoreHome-->
+                    <div id="scoreHomeFoul" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreHome-->
                     
-                    <div id="scoreAway" class="score">0</div><!--scoreAway-->
+                    <div id="scoreAwayFoul" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreAway-->
                     
                     <div id="scoreLabel">Foul(s)</span></div><!--scoreLabel-->
                     
@@ -142,11 +185,11 @@
                 
                 <div id="figureContainer">
                     
-                    <div id="scoreHome" class="score">
-                        <div id="doubleFigure">0 / </div>0
+                    <div id="scoreHomeFoul" class="score">
+                        <div id="doubleFigure">0 /</div> 0
                     </div><!--scoreHome-->
                     
-                    <div id="scoreAway" class="score">
+                    <div id="scoreAwayFoul" class="score">
                         0 / <div id="doubleFigure">0</div>
                     </div><!--scoreAway-->
                     
@@ -170,9 +213,9 @@
                 
                 <div id="figureContainer">
                     
-                    <div id="scoreHome" class="score">0</div><!--scoreHome-->
+                    <div id="scoreHomeOffside" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreHome-->
                     
-                    <div id="scoreAway" class="score">0</div><!--scoreAway-->
+                    <div id="scoreAwayOffside" class="score" onClick="openRightNav();addUnit(this)">0</div><!--scoreAway-->
                     
                     <div id="scoreLabel">Offside(s)</span></div><!--scoreLabel-->
                     
@@ -184,7 +227,7 @@
             
         </div><!--liveUpperContainer-->
 
-        <div id="startHalfButton" onClick="openRightNav()">Start game</a>
+        <div id="startHalfButton">Start game</a>
         
         
 	</body>
