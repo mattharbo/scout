@@ -9,7 +9,7 @@ html {
 
 body {
   color: #55585D;
-  font-family: "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 15px;
   background-color: #F6F7FB;
   box-sizing: border-box;
@@ -38,17 +38,252 @@ a:active {
 /*RESPONSIVE EXAMPLE*/
 @media screen and (max-width: 450px){
 
-#testdiv{
-    position: absolute;
+#header{
+    position: relative;
     width: 100%;
     height: 40px;
+    text-align: center;
     background-color: #029E9B;
 }
     
+#logo_header{
+    position: relative;
+    margin: 10px auto;
+}
+    
+#rightMenuOpener{
+    position: absolute;
+    right: 12px;
+    margin-top: 9px;
+    color: white;
+}
+    
+#scoreContainer{
+    position: relative;
+    margin: 10px auto -60px auto;
+    width: 120px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    color: #EEA42E;
+/*    background-color: royalblue;*/
+    z-index:3;
+}
+    
+#liveUpperContainer{
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+/*    background-color: yellowgreen;*/
+    z-index:1;
+}
+
+#homeTeamHash{
+    float: left;
+    height: 40px;
+    width: 50%;
+/*    background-color: bisque;*/
+    z-index:2;
+}
+    
+#awayTeamHash{
+    float: right;
+    height: 40px;
+    width: 50%;
+    text-align: right;
+/*    background-color: firebrick;*/
+    z-index:2;
+}
+    
+.hashTeam{
+    font-weight: 300;
+    font-size: 35px;
+    color: #143542;
+}
+
+
+#homeTeamName{
+    position: absolute;
+    margin-top: 40px;
+    height: 27px;
+    width: 50%;
+    float: left;
+/*    background-color: palevioletred*/
+}
+    
+#awayTeamName{
+    float: right;
+    height: 27px;
+    width: 50%;
+    text-align: right;
+/*    background-color:chocolate*/
+}
+    
+.teamName{
+    font-weight: 300;
+    font-size: 13px;   
+}
+    
+#halfAndTime{
+    float: left;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 13px;
+/*    background-color: navy*/
+}
+    
+#statsContainer{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+    
+#statLine{
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+/*    background-color: khaki*/
+}
+    
+#dynamicStatShootHome{
+    float: left;
+    width: 20%;
+}
+     
+#dynamicStatShootAway{
+    float: right;
+    width: 80%;
+}
+    
+#dynamicStatCrossHome{
+    float: left;
+    width: 70%;
+}
+     
+#dynamicStatCrossAway{
+    float: right;
+    width: 30%;
+}
+    
+#dynamicStatFoulHome{
+    float: left;
+    width: 90%;
+}
+     
+#dynamicStatFoulAway{
+    float: right;
+    width: 10%;
+}
+    
+#dynamicStatCardHome{
+    float: left;
+    width: 80%;
+}
+     
+#dynamicStatCardAway{
+    float: right;
+    width: 20%;
+}
+    
+#dynamicStatOffsideHome{
+    float: left;
+    width: 56%;
+}
+     
+#dynamicStatOffsideAway{
+    float: right;
+    width: 44%;
+}
+    
+.dynamicClassHome{
+    height: 70px;
+    background-color: #FDF0DE;
+}
+    
+.dynamicClassAway{
+    height: 70px;
+    background-color: #F9E7E7;
+}
+    
+#figureContainer{
+    position: absolute;
+    width: 100%;
+    height:70px;
+/*    background-color: darkred;*/
+}
+    
+#pourcentage{
+    display: inline-block;
+    margin-right: -7px;
+    font-size: 25px;
+}
+    
+#doubleFigure{
+    display: inline-block;
+}
+    
+#scoreHome{
+    float: left;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: olive;*/
+}
+    
+#scoreAway{
+    float: right;
+    width: 33%;
+    height:70px;
+    line-height: 70px;
+/*    background-color: hotpink;*/
+}
+    
+.score{
+    text-align: center;
+    font-weight: 100;
+    font-size: 38px;
+    color: #029E9B;
+}
+
+#scoreLabel{
+    margin-left: 33%;
+    margin-right: 33%;
+    height:70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #143542;
+/*    background-color: peru;*/
+}    
+
+#scoreLabelLine{
+    margin-left: 33%;
+    margin-right: 33%;
+    height:70px;
+    line-height: 70px;
+    margin-top: -8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #143542;
+/*    background-color: peru;*/
+}
+    
+.scoreLabelLine{
+    display: block;
+    margin-top: -20px;
+    line-height: 0;
+}
+   
 .logo{
     background-image: url("../ressources/logo_text.png");
     display: inline-block;
-    text-align: center;
     background-size: 66px 18px;
     height: 18px;
     overflow: hidden;
@@ -58,7 +293,47 @@ a:active {
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
 }
+    
+.rightNavContainer {
+    height: 100%;
+    width: 0; /*100 instead of 0 to dev*/
+    position: fixed;
+    z-index: 1;
+/*    top: 40px;*/
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.05s;
+/*    padding-top: 60px;*/
+    z-index:6;
+}  
 
+.rightMenuDismissBtn{
+    position: block;
+    margin: 400px 0 0 30px;
+    height: 56px;
+    width: 165px;
+    background: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #029E9B;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #029E9B;
+}
+    
+#startHalfButton{
+    position: block;
+    margin: 13px auto;
+    height: 65px;
+    line-height: 65px;
+    width: 94%;
+    text-align: center;
+/*    padding-bottom: 200px;*/
+    background: #029E9B;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
