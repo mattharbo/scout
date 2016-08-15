@@ -12,6 +12,7 @@
 		
 	</head>
 	<body>
+<!--    http://smallenvelop.com/display-loading-icon-page-loads-completely/-->
         
         <div id="rightNavContainer">
         
