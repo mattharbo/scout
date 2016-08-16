@@ -40,7 +40,6 @@ a:active {
 @media screen and (max-width: 600px){
 
 #header{
-    position: relative;
     width: 100%;
     height: 45px;
     text-align: center;
@@ -49,7 +48,7 @@ a:active {
     
 #logo_header{
     position: relative;
-    margin: 10px auto;
+    margin: 12px auto;
 }
     
 #scoreContainer{
@@ -381,21 +380,48 @@ a:active {
 }
    
 .logo{
-    background-image: url("../ressources/logo_text.png");
+    background-image: url("../ressources/scout_soccer_logo@x1.png");
     display: inline-block;
-    background-size: 66px 18px;
-    height: 18px;
+    background-size: 59px 23px;
+    height: 23px;
     overflow: hidden;
     text-indent: -9999px;
-    width: 66px;
+    width: 59px;
     -webkit-transition: opacity 0.25s;
     -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
 }
     
-#rightNavContainer {
+#closePageBtn {
+    display: inline-block;
+    background-image: url("../ressources/close@x1.png");
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#pageTitle {
+    display: inline-block;
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+#validationPageBtn {
+    display: inline-block;
+    background-image: url("../ressources/validation@x1.png");
+    width: 18px;
+    height: 17px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 14px;
+}
+    
+#foulNavContainer {
     height: 100%;
-    width: 0; /*100 instead of 0 to dev*/
+    width: 0%; /*100 instead of 0 to dev*/
     position: fixed;
     z-index: 1;
 /*    top: 40px;*/
@@ -411,48 +437,160 @@ a:active {
     height: 239px;
     width: 100%;
     margin: 20px auto;
-    background-image: url("../ressources/vertical_pitch@1x.png");
-    background-repeat: no-repeat;
-    background-size: 100% 240px;
     background-color: red;
 }
-    
-#rightMenuDismissBtn{
-    position: block;
+
+.sectionTitle{
     float: left;
-    margin-left: 4%;
-    height: 55px;
-    width: 44%;
-    text-align: center;
-    line-height: 55px;
-    background: #FFFFFF;
-    border: 1px solid #029E9B;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 20px;
-    color: #029E9B;
+    margin: 20px 0 20px 5%;
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: 300;
+}    
+
+#foulSection1{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #EEEEEE;
+/*    background-color: blue;*/
 }
     
-#rightMenuSubmitBtn{
-    position: block;
-/*    display: inline-block;*/
-    float: right;
-    margin-right: 4%;
-    height: 55px;
-    width: 44%;
-    text-align: center;
-    line-height: 55px;
-    background: #029E9B;
+#foulRadioBtn{
+  display: inline-block;
+  width:90%;
+  margin:0 0 20px 0;
+/*    background-color:purple;*/
+}
+
+.radios .radio{
+    background-color:white;
+    color:#029E9B;
+    background-color:#FAFAFA;
+    border-radius: 5px;
+    display:inline-block;
     border: 1px solid #029E9B;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 20px;
+    width:140px;
+    height:30px   
+}
+
+.radio{
+    text-align:center;
+    line-height:30px;
+/*
+    margin-right:1%;
+    margin-left:1%;
+*/
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.radios input[type=radio]{
+    display:none
+}
+
+.radios input[type=radio]:checked + .radio{
+    background-color:#029E9B;
+    color:white;
+}
+    
+#foulSection2{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #EEEEEE;
+/*    background-color: lightpink;*/
+}    
+
+#foulCheckboxesBtn{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+/*    background-color: violet;*/
+}    
+    
+#foulCheckboxesBtn input[type=checkbox]{
+    display: none;
+    width: 90px;
+    height: 90px;
+}
+
+#foulCheckboxesBtn input[type=checkbox]:checked + .checkbox{
+/*    background-color: green;*/
+    border: 1px solid #029E9B;
+    border-radius: 3px;
     color: #FFFFFF;
+    background-color: #029E9B;
+}
+
+.checkbox{
+/*    background-color: red;*/
+    border-radius: 3px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    color: #029E9B;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 120px;
+    margin-bottom: 20px;
+/*
+    margin-right: 3%;
+    margin-left: 3%;
+*/
+}
+    
+#yellowcard{
+    background-image: url("../ressources/yellowcard@x1.png");
+    background-repeat: no-repeat;
+    background-position: center 15px;
+}
+    
+#redcard{
+    background-image: url("../ressources/redcard@x1.png");
+    background-repeat: no-repeat;
+    background-position: center 15px;
+}
+
+#nowhistle{
+    background-image: url("../ressources/whistle@x1.png");
+    background-repeat: no-repeat;
+    background-position: center 15px;
+}
+
+    
+#foulSection3{
+    width: 100%;
+    height: auto;
+}
+    
+#pitchDiv{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+    
+#expandBtn{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background-color: #029E9B;
+    -moz-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+-webkit-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+-o-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#7F7F7F, Direction=180, Strength=2);
+}
+    
+img.pitchimage{
+    width: 100%;
+    height: auto;
+    background-image: url('../ressources/vertical_pitch@1x.png') no-repeat center fixed;
+    background-size: cover;
+    
 }
     
 #startHalfButton{
     position: block;
-    margin: 13px auto 20px auto;
+    margin: 13px auto 15px auto;
     height: 55px;
     line-height: 55px;
     width: 94%;
@@ -502,7 +640,7 @@ a:active {
     line-height: 70px;
     border-radius: 3px;
     border: 1px solid #029E9B;
-    background-color: #F2F2F2;
+    background-color: #FBFBFB;
     color: #029E9B;
     font-weight: 800;
     font-size: 16px;
@@ -515,10 +653,49 @@ a:active {
     color: #EEA42E;
 }
     
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
   .circle{
     background-image: url("../img/clock@x2.png");
     background-size: 12px 12px;
   }
+    
+.logo{
+    background-image: url("../ressources/scout_soccer_logo@x2.png");
+    display: inline-block;
+    background-size: 59px 23px;
+    height: 23px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 59px;
+    -webkit-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+#closePageBtn {
+    display: inline-block;
+    background-image: url("../ressources/close@x2.png");
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#validationPageBtn {
+    display: inline-block;
+    background-image: url("../ressources/validation@x2.png");
+    background-size: 18px 17px;
+    width: 18px;
+    height: 17px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 14px;
+}
+    
+    
 }

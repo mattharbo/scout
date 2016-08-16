@@ -1,11 +1,11 @@
 var divSelected = "";
 
 function openRightNav(){
-    document.getElementById("rightNavContainer").style.width="100%";
+    document.getElementById("foulNavContainer").style.width="100%";
 }
 
 function closeRightNav(){
-    document.getElementById("rightNavContainer").style.width="0";
+    document.getElementById("foulNavContainer").style.width="0";
     
     console.log(window.location.href +" :: Remove unit to "+divSelected.id);
     
@@ -15,7 +15,7 @@ function closeRightNav(){
 }
 
 function submitRightNav(){
-    document.getElementById("rightNavContainer").style.width="0";
+    document.getElementById("foulNavContainer").style.width="0";
     
     console.log(window.location.href +" :: Submit Unit for "+divSelected.id);
     

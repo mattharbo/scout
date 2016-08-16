@@ -14,20 +14,64 @@
 	<body>
 <!--    http://smallenvelop.com/display-loading-icon-page-loads-completely/-->
         
-        <div id="rightNavContainer">
+        <div id="foulNavContainer">
             
             <div id="header">
-            
-                Foul
+                
+                <div id="closePageBtn" onclick="closeRightNav()"></div>
+                <div id="pageTitle">Foul</div>
+                <div id="validationPageBtn" onclick="submitRightNav();"></div>
             
             </div><!--Header-->
             
-            <div id="rightNavMainContent">MHA</div>
-        
-            <div id="rightMenuDismissBtn" onclick="closeRightNav()">Dismiss</div>
+            <div id="foulSection1">
+                <span class="sectionTitle">1. Which team committed the foul?</span>
+                
+                <div id="foulRadioBtn" class="radios">
+                    <input type="radio" name="foulTeam" value="home" id="foul1">
+                    <label class="radio" for="foul1">#SCB</label>
+
+                    <input type="radio" name="foulTeam" value="away" id="foul2">
+                    <label class="radio" for="foul2">#PSG</label>
+                </div>
+                
+            </div>
             
-            <div id="rightMenuSubmitBtn" onclick="submitRightNav();">Submit</div>
-        
+            <div id="foulSection2">
+                <span class="sectionTitle">2. Has a card been given?</span>
+                
+                <div id="foulCheckboxesBtn">
+                    <input type="checkbox" name="cardteam" value="yellowcard" id="card1"/>
+                    <label class="checkbox" for="card1">
+                        <div id="yellowcard">Yellow Card</div>
+                    </label>
+
+                    <input type="checkbox" name="cardteam" value="redcard" id="card2" />
+                    <label class="checkbox" for="card2">
+                        <div id="redcard">Red Card</div>
+                    </label>
+
+                    <input type="checkbox" name="cardteam" value="nowhistle" id="card3" />
+                    <label class="checkbox" for="card3">
+                        <div id="nowhistle">No Whistle</div>
+                    </label>
+                </div>
+            </div>
+            
+            <div id="foulSection3">
+                <span class="sectionTitle">3. Where was it located on the pitch?</span>
+                
+                <div id="pitchDiv">
+                    <img src="./ressources/vertical_pitch@1x.png" class="pitchimage">
+                </div>
+                
+                <div id="expandBtn"></div>
+                
+                <div id="startHalfButton">Save</div>
+                
+            </div>
+            
+            
         </div><!--rightNav-->
         
 		<div id="header">
