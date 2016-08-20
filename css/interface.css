@@ -8,10 +8,9 @@ html {
 }
 
 body {
-  color: #55585D;
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 15px;
-  background-color: #F6F7FB;
+  background-color: white;
   box-sizing: border-box;
     text-align: center;
 }
@@ -574,10 +573,10 @@ a:active {
     height: 30px;
     background-color: #029E9B;
     -moz-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
--webkit-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
--o-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#7F7F7F, Direction=180, Strength=2);
+    -webkit-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+    -o-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+    box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#7F7F7F, Direction=180, Strength=2);
 }
     
 img.pitchimage{
@@ -653,6 +652,209 @@ img.pitchimage{
     color: #EEA42E;
 }
     
+/*#### Record V3 ####*/
+
+#matchPresentation{
+    width: 100%;
+    height: 73px;
+    margin-top: -10px;
+    border-bottom: 1px solid #BEBEBE;
+/*    background-color: red;*/
+}
+    
+#timeBox{
+    width: 100%;
+    height: 26px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid #BEBEBE;
+    background-color: #F5F5F5;
+}
+    
+#hashContainer{    
+    width: 90%;
+    margin: auto;
+    z-index:2;
+}
+
+#hashHome{
+    float: left;
+    text-align: left;
+    height: 40px;
+    width: 50%;
+/*    background-color: bisque;*/
+    z-index:2;
+}
+    
+#hashAway{
+    float: right;
+    text-align: right;
+    height: 40px;
+    width: 50%;
+/*    background-color: orange;*/
+    z-index:2;
+}
+    
+.hashTeam{
+    font-weight: 300;
+    font-size: 35px;
+    color: #143542;
+}
+    
+#teamNameContainer{    
+    width: 90%;
+    margin: auto;
+    z-index:2;
+}
+    
+#teamNameHome{
+    float: left;
+    text-align: left;
+    width: 50%;
+/*    background-color: orchid;*/
+    z-index:2;
+}
+    
+#teamNameAway{
+    float: right;
+    text-align: right;
+    width: 50%;
+/*    background-color: bisque;*/
+    z-index:2;
+} 
+    
+.teamName{
+    font-weight: 200;
+    font-size: 13px;
+    color: #143542;
+}
+    
+.figureLine{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: white;
+    border-bottom: 1px solid #BEBEBE;
+}
+    
+#homeData{
+    display: inline-block;
+    float: left;
+    width: 33%;
+    text-align: right;
+    background-image: url("../ressources/verticaldots@x2.png");
+    background-size: 5px 20.5px;
+    background-repeat: no-repeat;
+    background-position: 10% center;
+/*    background-color: palegreen;*/
+}
+    
+.dataScore{
+    font-size: 23px;
+    font-weight: 600;
+    color:#EEA42E;
+}
+    
+.dataLabel{
+    font-size: 16px;
+    font-weight: 600;
+    color:#1F4C5D;
+}
+    
+#awayData{
+    display: inline-block;
+    float: right;
+    width: 33%;
+    text-align: left;
+    background-image: url("../ressources/verticaldots@x2.png");
+    background-size: 5px 20.5px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+/*    background-color: brown;*/
+}
+    
+#dataType{
+    display: inline-block;
+/*    background-color: chartreuse;*/
+}
+ 
+#scoreBox{
+    position: relative;
+    margin: 20px auto -41px auto;
+    width: 120px;
+    text-align: center;
+/*    background-color: royalblue;*/
+    z-index:3;
+} 
+
+.scoreBoxClass{
+    font-weight: 700;
+    font-size: 35px;
+    color: #EEA42E;
+}
+    
+#timeAndHalf{
+    display: inline-block;
+    float: left;
+    width: 35%;
+    text-align: right;
+    color: #1F4C5D;
+/*    background-color: firebrick;*/
+}
+    
+#liveIcon{
+    display: inline-block;
+    background-image: url("../ressources/livesymbol@x2.png");
+    background-size: 29.5px 8.5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 59px;
+    text-indent: -9999px;
+/*    background-color: hotpink;*/
+}
+    
+#stopHalfBtn{
+    display: inline-block;
+    float: right;
+    text-align: left;
+    background-image: url("../ressources/rightarrow@x2.png");
+    background-size: 5px 10px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    width: 35%;
+    color: #029E9B;
+/*    background-color: blueviolet; */
+}
+
+/*#### Right Menu V3 ####*/
+    
+#pitchContainer{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    background-image: url('../ressources/vertical_pitch@2x.png');
+    background-size: 100% 460px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -moz-box-shadow: 0px 1px 2px 0px #c0c0c0;
+    -moz-box-shadow: 0px 1px 2px 0px #656565;
+    -webkit-box-shadow: 0px 1px 2px 0px #656565;
+    -o-box-shadow: 0px 1px 2px 0px #656565;
+    box-shadow: 0px 1px 2px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=2);
+}
+    
+#pitchExpandBtn{
+    width: 100%;
+    height: 28px;
+    background-color: #029E9B;
+    background-image: url('../ressources/expandicon@x2.png');
+    background-size: 15px 7px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 

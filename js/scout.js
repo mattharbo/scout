@@ -36,3 +36,16 @@ function addUnit(elem) {
 function alertSave() {
     alert("There is always a shoot before a save ! ;)");
 }
+
+function expandPitch(){
+    document.getElementById("pitchContainer").style.height="460px";
+    document.getElementById("pitchExpandBtn").style.backgroundImage='url("./ressources/retracticon@x2.png")';
+    document.getElementById("pitchExpandBtn").removeAttribute("onclick");
+     
+}
+
+function retractPitch(){
+    document.getElementById("pitchContainer").style.height="250px";
+    document.getElementById("pitchExpandBtn").style.backgroundImage='url("./ressources/expandicon@x2.png")';
+    document.getElementById("pitchExpandBtn").onclick="expandPitch();";
+}
