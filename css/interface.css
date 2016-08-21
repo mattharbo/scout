@@ -38,822 +38,824 @@ a:active {
 /*RESPONSIVE EXAMPLE*/
 @media screen and (max-width: 600px){
 
-#header{
-    width: 100%;
-    height: 45px;
-    text-align: center;
-    background-color: #029E9B;
-}
-    
-#logo_header{
-    position: relative;
-    margin: 12px auto;
-}
-    
-#scoreContainer{
-    position: relative;
-    margin: 20px auto -60px auto;
-    width: 120px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 35px;
-    color: #EEA42E;
-/*    background-color: royalblue;*/
-    z-index:3;
-}
-    
-#liveUpperContainer{
-    position: relative;
-    margin: 20px auto;
-    width: 90%;
-    height: auto;
-/*    background-color: yellowgreen;*/
-    z-index:1;
-}
+    #header{
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        background-color: #029E9B;
+    }
 
-#homeTeamHash{
-    float: left;
-    text-align: left;
-    height: 40px;
-    width: 50%;
-/*    background-color: bisque;*/
-    z-index:2;
-}
-    
-#awayTeamHash{
-    float: right;
-    height: 40px;
-    width: 50%;
-    text-align: right;
-/*    background-color: firebrick;*/
-    z-index:2;
-}
-    
-.hashTeam{
-    font-weight: 400;
-    font-size: 35px;
-    color: #143542;
-}
+    #logo_header{
+        position: relative;
+        margin: 12px auto;
+    }
+
+    #scoreContainer{
+        position: relative;
+        margin: 20px auto -60px auto;
+        width: 120px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+        color: #EEA42E;
+    /*    background-color: royalblue;*/
+        z-index:3;
+    }
+
+    #liveUpperContainer{
+        position: relative;
+        margin: 20px auto;
+        width: 90%;
+        height: auto;
+    /*    background-color: yellowgreen;*/
+        z-index:1;
+    }
+
+    #homeTeamHash{
+        float: left;
+        text-align: left;
+        height: 40px;
+        width: 50%;
+    /*    background-color: bisque;*/
+        z-index:2;
+    }
+
+    #awayTeamHash{
+        float: right;
+        height: 40px;
+        width: 50%;
+        text-align: right;
+    /*    background-color: firebrick;*/
+        z-index:2;
+    }
+
+    .hashTeam{
+        font-weight: 400;
+        font-size: 35px;
+        color: #143542;
+    }
 
 
-#homeTeamName{
-    position: absolute;
-    margin-top: 40px;
-    text-align: left;
-    height: 27px;
-    width: 50%;
-    float: left;
-/*    background-color: palevioletred*/
-}
-    
-#awayTeamName{
-    float: right;
-    height: 27px;
-    width: 50%;
-    text-align: right;
-/*    background-color:chocolate*/
-}
-    
-.teamName{
-    font-weight: 300;
-    font-size: 13px;
-    color:#9B9B9B;
-}
-    
-#halfAndTime{
-    float: left;
-    text-align: center;
-    display: block;
-    width: 100%;
-    height: 35px;
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #E4E4E4;
-    color: black;
-/*    background-color: navy*/
-}
-    
-#statsContainer{
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-}
-    
-#statLine{
-    overflow: hidden;
-    width: 100%;
-    height: 70px;
-/*    background-color: khaki*/
-}
-    
-#dynamicStatShootHome{
-    float: left;
-    width: 20%;
-}
-     
-#dynamicStatShootAway{
-    float: right;
-    width: 80%;
-}
-    
-#dynamicStatSaveHome{
-    float: left;
-    width: 30%;
-}
-     
-#dynamicStatSaveAway{
-    float: right;
-    width: 70%;
-}
-    
-#dynamicStatCrossHome{
-    float: left;
-    width: 70%;
-}
-     
-#dynamicStatCrossAway{
-    float: right;
-    width: 30%;
-}
-    
-#dynamicStatCornerHome{
-    float: left;
-    width: 50%;
-}
-     
-#dynamicStatCornerAway{
-    float: right;
-    width: 50%;
-}
-    
-#dynamicStatFoulHome{
-    float: left;
-    width: 90%;
-}
-     
-#dynamicStatFoulAway{
-    float: right;
-    width: 10%;
-}
-    
-#dynamicStatCardHome{
-    float: left;
-    width: 80%;
-}
-     
-#dynamicStatCardAway{
-    float: right;
-    width: 20%;
-}
-    
-#dynamicStatOffsideHome{
-    float: left;
-    width: 56%;
-}
-     
-#dynamicStatOffsideAway{
-    float: right;
-    width: 44%;
-}
-    
-.dynamicClassHome{
-    height: 70px;
-    background-color: #FDF0DE;
-}
-    
-.dynamicClassAway{
-    height: 70px;
-    background-color: #E1F2EE;
-}
-    
-#figureContainer{
-    position: absolute;
-    width: 100%;
-    height:70px;
-/*    background-color: darkred;*/
-}
-    
-#pourcentage{
-    display: inline-block;
-    margin-right: -7px;
-    font-size: 25px;
-}
-    
-#doubleFigure{
-    display: inline-block;
-}
-    
-#scoreHomeShoot{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwayShoot{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-#scoreHomeSave{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwaySave{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-#scoreHomeCross{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwayCross{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-#scoreHomeCorner{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwayCorner{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-#scoreHomeFoul{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwayFoul{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-#scoreHomeOffside{
-    float: left;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: olive;*/
-}
-    
-#scoreAwayOffside{
-    float: right;
-    width: 33%;
-    height:70px;
-    line-height: 70px;
-/*    background-color: hotpink;*/
-}
-    
-.score{
-    text-align: center;
-    font-weight: 100;
-    font-size: 38px;
-    color: #029E9B;
-}
+    #homeTeamName{
+        position: absolute;
+        margin-top: 40px;
+        text-align: left;
+        height: 27px;
+        width: 50%;
+        float: left;
+    /*    background-color: palevioletred*/
+    }
 
-#scoreLabel{
-    margin-left: 33%;
-    margin-right: 33%;
-    height:70px;
-    line-height: 70px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    color: #143542;
-/*    background-color: peru;*/
-}    
+    #awayTeamName{
+        float: right;
+        height: 27px;
+        width: 50%;
+        text-align: right;
+    /*    background-color:chocolate*/
+    }
 
-#scoreLabelLine{
-    margin-left: 33%;
-    margin-right: 33%;
-    height:70px;
-    line-height: 70px;
-    margin-top: -8px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    color: #143542;
-/*    background-color: peru;*/
-}
-    
-.scoreLabelLine{
-    display: block;
-    margin-top: -20px;
-    line-height: 0;
-}
-   
-.logo{
-    background-image: url("../ressources/scout_soccer_logo@x1.png");
-    display: inline-block;
-    background-size: 59px 23px;
-    height: 23px;
-    overflow: hidden;
-    text-indent: -9999px;
-    width: 59px;
-    -webkit-transition: opacity 0.25s;
-    -o-transition: opacity 0.25s;
-    transition: opacity 0.25s;
-}
-    
-#closePageBtn {
-    display: inline-block;
-    background-image: url("../ressources/close@x1.png");
-    height: 15px;
-    width: 15px;
-    float: left;
-    margin-left: 15px;
-    margin-top: 15px;
-}
+    .teamName{
+        font-weight: 300;
+        font-size: 13px;
+        color:#9B9B9B;
+    }
 
-#pageTitle {
-    display: inline-block;
-    margin-top: 15px;
-    color: #FFFFFF;
-    font-weight: 800;
-}
+    #halfAndTime{
+        float: left;
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 35px;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #E4E4E4;
+        color: black;
+    /*    background-color: navy*/
+    }
 
-#validationPageBtn {
-    display: inline-block;
-    background-image: url("../ressources/validation@x1.png");
-    width: 18px;
-    height: 17px;
-    float: right;
-    margin-right: 15px;
-    margin-top: 14px;
-}
-    
-#foulNavContainer {
-    height: 100%;
-    width: 0%; /*100 instead of 0 to dev*/
-    position: fixed;
-    z-index: 1;
-/*    top: 40px;*/
-    right: 0;
-    background-color: white;
-    overflow-x: hidden;
-/*    transition: 0.1s;*/
-/*    padding-top: 60px;*/
-    z-index:6;
-}
-    
-#rightNavMainContent{
-    height: 239px;
-    width: 100%;
-    margin: 20px auto;
-    background-color: red;
-}
+    #statsContainer{
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
 
-.sectionTitle{
-    float: left;
-    margin: 20px 0 20px 5%;
-    color: #9B9B9B;
-    font-size: 16px;
-    font-weight: 300;
-}    
+    #statLine{
+        overflow: hidden;
+        width: 100%;
+        height: 70px;
+    /*    background-color: khaki*/
+    }
 
-#foulSection1{
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #EEEEEE;
-/*    background-color: blue;*/
-}
-    
-#foulRadioBtn{
-  display: inline-block;
-  width:90%;
-  margin:0 0 20px 0;
-/*    background-color:purple;*/
-}
+    #dynamicStatShootHome{
+        float: left;
+        width: 20%;
+    }
 
-.radios .radio{
-    background-color:white;
-    color:#029E9B;
-    background-color:#FAFAFA;
-    border-radius: 5px;
-    display:inline-block;
-    border: 1px solid #029E9B;
-    width:140px;
-    height:30px   
-}
+    #dynamicStatShootAway{
+        float: right;
+        width: 80%;
+    }
 
-.radio{
-    text-align:center;
-    line-height:30px;
-/*
-    margin-right:1%;
-    margin-left:1%;
-*/
-    font-size: 13px;
-    font-weight: 800;
-}
+    #dynamicStatSaveHome{
+        float: left;
+        width: 30%;
+    }
 
-.radios input[type=radio]{
-    display:none
-}
+    #dynamicStatSaveAway{
+        float: right;
+        width: 70%;
+    }
 
-.radios input[type=radio]:checked + .radio{
-    background-color:#029E9B;
-    color:white;
-}
-    
-#foulSection2{
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #EEEEEE;
-/*    background-color: lightpink;*/
-}    
+    #dynamicStatCrossHome{
+        float: left;
+        width: 70%;
+    }
 
-#foulCheckboxesBtn{
-    display: inline-block;
-    width: 90%;
-    height: auto;
-/*    background-color: violet;*/
-}    
-    
-#foulCheckboxesBtn input[type=checkbox]{
-    display: none;
-    width: 90px;
-    height: 90px;
-}
+    #dynamicStatCrossAway{
+        float: right;
+        width: 30%;
+    }
 
-#foulCheckboxesBtn input[type=checkbox]:checked + .checkbox{
-/*    background-color: green;*/
-    border: 1px solid #029E9B;
-    border-radius: 3px;
-    color: #FFFFFF;
-    background-color: #029E9B;
-}
+    #dynamicStatCornerHome{
+        float: left;
+        width: 50%;
+    }
 
-.checkbox{
-/*    background-color: red;*/
-    border-radius: 3px;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    color: #029E9B;
-    font-weight: 800;
-    font-size: 13px;
-    line-height: 120px;
-    margin-bottom: 20px;
-/*
-    margin-right: 3%;
-    margin-left: 3%;
-*/
-}
-    
-#yellowcard{
-    background-image: url("../ressources/yellowcard@x1.png");
-    background-repeat: no-repeat;
-    background-position: center 15px;
-}
-    
-#redcard{
-    background-image: url("../ressources/redcard@x1.png");
-    background-repeat: no-repeat;
-    background-position: center 15px;
-}
+    #dynamicStatCornerAway{
+        float: right;
+        width: 50%;
+    }
 
-#nowhistle{
-    background-image: url("../ressources/whistle@x1.png");
-    background-repeat: no-repeat;
-    background-position: center 15px;
-}
+    #dynamicStatFoulHome{
+        float: left;
+        width: 90%;
+    }
 
-    
-#foulSection3{
-    width: 100%;
-    height: auto;
-}
-    
-#pitchDiv{
-    display: inline-block;
-    width: 100%;
-    height: auto;
-}
-    
-#expandBtn{
-    display: inline-block;
-    width: 100%;
-    height: 30px;
-    background-color: #029E9B;
-    -moz-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-    -webkit-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-    -o-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-    box-shadow: inset 0px 1px 2px 0px #7F7F7F;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#7F7F7F, Direction=180, Strength=2);
-}
-    
-img.pitchimage{
-    width: 100%;
-    height: auto;
-    background-image: url('../ressources/vertical_pitch@1x.png') no-repeat center fixed;
-    background-size: cover;
-    
-}
-    
-#startHalfButton{
-    position: block;
-    margin: 13px auto 15px auto;
-    height: 55px;
-    line-height: 55px;
-    width: 94%;
-    text-align: center;
-/*    padding-bottom: 200px;*/
-    background: #029E9B;
-    border-radius: 6px;
-    font-weight: 800;
-    font-size: 19px;
-    color: #FFFFFF;
-}
-    
-/*FOR RADIO BUTTON > http://jsfiddle.net/ob9ardLz/*/
-    
-#liveRecordContainer{
-    display: inline-block;
-    overflow: hidden;
-    margin: 0 auto 7px auto;
-    width: 90%;
-    height: 315px;
-    border-bottom: 1px solid #E4E4E4;
-/*    background-color: mediumvioletred;*/
-}
+    #dynamicStatFoulAway{
+        float: right;
+        width: 10%;
+    }
 
-#lineOfRecord{
-    overflow: hidden;
-     display: inline-block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-/*    background-color: yellow;*/
-}
-    
-#shootBtn{
-    float:left;
-    width: 48%;
-    height: 90px;
-}
-    
-#turnoverBtn{
-    float:right;
-    width: 48%;
-    height: 90px;
-}
+    #dynamicStatCardHome{
+        float: left;
+        width: 80%;
+    }
 
-.designBtn{
-    line-height: 70px;
-    border-radius: 3px;
-    border: 1px solid #029E9B;
-    background-color: #FBFBFB;
-    color: #029E9B;
-    font-weight: 800;
-    font-size: 16px;
-}
-    
-.designBtnLine{
-    display: block;
-    margin-top: -10px;
-    line-height: 0;
-    color: #EEA42E;
-}
-    
-/*#### Record V3 ####*/
+    #dynamicStatCardAway{
+        float: right;
+        width: 20%;
+    }
 
-#matchPresentation{
-    width: 100%;
-    height: 73px;
-    margin-top: -10px;
-    border-bottom: 1px solid #BEBEBE;
-/*    background-color: red;*/
-}
-    
-#timeBox{
-    width: 100%;
-    height: 26px;
-    padding-top: 10px;
-    font-size: 12px;
-    font-weight: 400;
-    border-bottom: 1px solid #BEBEBE;
-    background-color: #F5F5F5;
-}
-    
-#hashContainer{    
-    width: 90%;
-    margin: auto;
-    z-index:2;
-}
+    #dynamicStatOffsideHome{
+        float: left;
+        width: 56%;
+    }
 
-#hashHome{
-    float: left;
-    text-align: left;
-    height: 40px;
-    width: 50%;
-/*    background-color: bisque;*/
-    z-index:2;
-}
-    
-#hashAway{
-    float: right;
-    text-align: right;
-    height: 40px;
-    width: 50%;
-/*    background-color: orange;*/
-    z-index:2;
-}
-    
-.hashTeam{
-    font-weight: 300;
-    font-size: 35px;
-    color: #143542;
-}
-    
-#teamNameContainer{    
-    width: 90%;
-    margin: auto;
-    z-index:2;
-}
-    
-#teamNameHome{
-    float: left;
-    text-align: left;
-    width: 50%;
-/*    background-color: orchid;*/
-    z-index:2;
-}
-    
-#teamNameAway{
-    float: right;
-    text-align: right;
-    width: 50%;
-/*    background-color: bisque;*/
-    z-index:2;
-} 
-    
-.teamName{
-    font-weight: 200;
-    font-size: 13px;
-    color: #143542;
-}
-    
-.figureLine{
-    width: 100%;
-    height: 70px;
-    line-height: 70px;
-    background-color: white;
-    border-bottom: 1px solid #BEBEBE;
-}
-    
-#homeData{
-    display: inline-block;
-    float: left;
-    width: 33%;
-    text-align: right;
-    background-image: url("../ressources/verticaldots@x2.png");
-    background-size: 5px 20.5px;
-    background-repeat: no-repeat;
-    background-position: 10% center;
-/*    background-color: palegreen;*/
-}
-    
-.dataScore{
-    font-size: 23px;
-    font-weight: 600;
-    color:#EEA42E;
-}
-    
-.dataLabel{
-    font-size: 16px;
-    font-weight: 600;
-    color:#1F4C5D;
-}
-    
-#awayData{
-    display: inline-block;
-    float: right;
-    width: 33%;
-    text-align: left;
-    background-image: url("../ressources/verticaldots@x2.png");
-    background-size: 5px 20.5px;
-    background-repeat: no-repeat;
-    background-position: 90% center;
-/*    background-color: brown;*/
-}
-    
-#dataType{
-    display: inline-block;
-/*    background-color: chartreuse;*/
-}
- 
-#scoreBox{
-    position: relative;
-    margin: 20px auto -41px auto;
-    width: 120px;
-    text-align: center;
-/*    background-color: royalblue;*/
-    z-index:3;
-} 
+    #dynamicStatOffsideAway{
+        float: right;
+        width: 44%;
+    }
 
-.scoreBoxClass{
-    font-weight: 700;
-    font-size: 35px;
-    color: #EEA42E;
-}
-    
-#timeAndHalf{
-    display: inline-block;
-    float: left;
-    width: 35%;
-    text-align: right;
-    color: #1F4C5D;
-/*    background-color: firebrick;*/
-}
-    
-#liveIcon{
-    display: inline-block;
-    background-image: url("../ressources/livesymbol@x2.png");
-    background-size: 29.5px 8.5px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 59px;
-    text-indent: -9999px;
-/*    background-color: hotpink;*/
-}
-    
-#stopHalfBtn{
-    display: inline-block;
-    float: right;
-    text-align: left;
-    background-image: url("../ressources/rightarrow@x2.png");
-    background-size: 5px 10px;
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    width: 35%;
-    color: #029E9B;
-/*    background-color: blueviolet; */
-}
+    .dynamicClassHome{
+        height: 70px;
+        background-color: #FDF0DE;
+    }
 
-/*#### Right Menu V3 ####*/
+    .dynamicClassAway{
+        height: 70px;
+        background-color: #E1F2EE;
+    }
+
+    #figureContainer{
+        position: absolute;
+        width: 100%;
+        height:70px;
+    /*    background-color: darkred;*/
+    }
+
+    #pourcentage{
+        margin-right: -7px;
+        font-size: 14px;
+        background-color: yellowgreen;
+    }
+
+    #doubleFigure{
+        display: inline-block;
+    }
+
+    #scoreHomeShoot{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwayShoot{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    #scoreHomeSave{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwaySave{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    #scoreHomeCross{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwayCross{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    #scoreHomeCorner{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwayCorner{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    #scoreHomeFoul{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwayFoul{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    #scoreHomeOffside{
+        float: left;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: olive;*/
+    }
+
+    #scoreAwayOffside{
+        float: right;
+        width: 33%;
+        height:70px;
+        line-height: 70px;
+    /*    background-color: hotpink;*/
+    }
+
+    .score{
+        text-align: center;
+        font-weight: 100;
+        font-size: 38px;
+        color: #029E9B;
+    }
+
+    #scoreLabel{
+        margin-left: 33%;
+        margin-right: 33%;
+        height:70px;
+        line-height: 70px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #143542;
+    /*    background-color: peru;*/
+    }    
+
+    #scoreLabelLine{
+        margin-left: 33%;
+        margin-right: 33%;
+        height:70px;
+        line-height: 70px;
+        margin-top: -8px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #143542;
+    /*    background-color: peru;*/
+    }
+
+    .scoreLabelLine{
+        display: block;
+        margin-top: -20px;
+        line-height: 0;
+    }
+
+    .logo{
+        background-image: url("../ressources/scout_soccer_logo@x1.png");
+        display: inline-block;
+        background-size: 59px 23px;
+        height: 23px;
+        overflow: hidden;
+        text-indent: -9999px;
+        width: 59px;
+        -webkit-transition: opacity 0.25s;
+        -o-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+    }
+
+    #closePageBtn {
+        display: inline-block;
+        background-image: url("../ressources/close@x1.png");
+        height: 15px;
+        width: 15px;
+        float: left;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    #pageTitle {
+        display: inline-block;
+        margin-top: 15px;
+        color: #FFFFFF;
+        font-weight: 800;
+    }
+
+    #validationPageBtn {
+        display: inline-block;
+        background-image: url("../ressources/validation@x1.png");
+        width: 18px;
+        height: 17px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 14px;
+    }
+
+    #foulNavContainer {
+        height: 100%;
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        background-color: #F5F5F5;
+        overflow-x: hidden;
+        z-index:6;
+    }
     
-#pitchContainer{
-    width: 100%;
-    height: 250px;
-    margin-top: 20px;
-    background-image: url('../ressources/vertical_pitch@2x.png');
-    background-size: 100% 460px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    -moz-box-shadow: 0px 1px 2px 0px #c0c0c0;
-    -moz-box-shadow: 0px 1px 2px 0px #656565;
-    -webkit-box-shadow: 0px 1px 2px 0px #656565;
-    -o-box-shadow: 0px 1px 2px 0px #656565;
-    box-shadow: 0px 1px 2px 0px #656565;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=2);
-}
+    #shootNavContainerPage1 {
+        height: 100%;
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        background-color: #F5F5F5;
+        overflow-x: hidden;
+        z-index:6;
+    }
     
-#pitchExpandBtn{
-    width: 100%;
-    height: 28px;
-    background-color: #029E9B;
-    background-image: url('../ressources/expandicon@x2.png');
-    background-size: 15px 7px;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+    #shootNavContainerPage2 {
+        height: 100%;
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        background-color: #F5F5F5;
+        overflow-x: hidden;
+        z-index:7;
+    }
+
+    #rightNavMainContent{
+        height: 239px;
+        width: 100%;
+        margin: 20px auto;
+        background-color: red;
+    }
+
+    .sectionTitle{
+        float: left;
+        margin: 20px 0 20px 5%;
+        color: #9B9B9B;
+        font-size: 16px;
+        font-weight: 300;
+    }    
+
+    #foulSection1{
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #EEEEEE;
+    /*    background-color: blue;*/
+    }
+
+    #foulRadioBtn{
+      display: inline-block;
+      width:90%;
+      margin:0 0 20px 0;
+    /*    background-color:purple;*/
+    }
+
+    .radios .radio{
+        background-color:white;
+        color:#029E9B;
+        background-color:#FAFAFA;
+        border-radius: 5px;
+        display:inline-block;
+        border: 1px solid #029E9B;
+        width:140px;
+        height:30px   
+    }
+
+    .radio{
+        text-align:center;
+        line-height:30px;
+    /*
+        margin-right:1%;
+        margin-left:1%;
+    */
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .radios input[type=radio]{
+        display:none
+    }
+
+    .radios input[type=radio]:checked + .radio{
+        background-color:#029E9B;
+        color:white;
+    }
+
+    #foulPropositions{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    label.forcheckbox {
+        display:block;
+        line-height:50px;
+        height:50px;
+        width: 100%;
+        color:#029E9B;
+        background-color: #ffffff;
+        text-align: left;
+        padding-left: 7%;
+        font-weight: 600;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    input[type=checkbox] {
+        display: none;
+    }
+
+    input:checked + label {
+        color: #FFFFFF;
+        background-color:#029E9B;
+        background-image: url("../ressources/validation@x2.png");
+        background-repeat: no-repeat;
+        background-position: 88%;
+        background-size: 17.5px 16.5px;
+    }
+
+    #foulSection3{
+        width: 100%;
+        height: auto;
+    }
+
+    #pitchDiv{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    #expandBtn{
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        background-color: #029E9B;
+        -moz-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+        -webkit-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+        -o-box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+        box-shadow: inset 0px 1px 2px 0px #7F7F7F;
+    }
+
+    img.pitchimage{
+        width: 100%;
+        height: auto;
+        background-image: url('../ressources/vertical_pitch@1x.png') no-repeat center fixed;
+        background-size: cover;
+
+    }
+
+    #startHalfButton{
+        position: block;
+        margin: 13px auto 15px auto;
+        height: 55px;
+        line-height: 55px;
+        width: 94%;
+        text-align: center;
+    /*    padding-bottom: 200px;*/
+        background: #029E9B;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 19px;
+        color: #FFFFFF;
+    }
+
+    /*FOR RADIO BUTTON > http://jsfiddle.net/ob9ardLz/*/
+
+    #liveRecordContainer{
+        display: inline-block;
+        overflow: hidden;
+        margin: 0 auto 7px auto;
+        width: 90%;
+        height: 315px;
+        border-bottom: 1px solid #E4E4E4;
+    /*    background-color: mediumvioletred;*/
+    }
+
+    #lineOfRecord{
+        overflow: hidden;
+         display: inline-block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    /*    background-color: yellow;*/
+    }
+
+    #shootBtn{
+        float:left;
+        width: 48%;
+        height: 90px;
+    }
+
+    #turnoverBtn{
+        float:right;
+        width: 48%;
+        height: 90px;
+    }
+
+    .designBtn{
+        line-height: 70px;
+        border-radius: 3px;
+        border: 1px solid #029E9B;
+        background-color: #FBFBFB;
+        color: #029E9B;
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    .designBtnLine{
+        display: block;
+        margin-top: -10px;
+        line-height: 0;
+        color: #EEA42E;
+    }
+
+    /*#### Record V3 ####*/
+
+    #matchPresentation{
+        width: 100%;
+        height: 73px;
+        margin-top: -10px;
+        border-bottom: 1px solid #d8d8d8;
+    /*    background-color: red;*/
+    }
+
+    #timeBox{
+        width: 100%;
+        height: 26px;
+        padding-top: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        border-bottom: 1px solid #d8d8d8;
+        background-color: #F5F5F5;
+    }
+
+    #hashContainer{    
+        width: 90%;
+        margin: auto;
+        z-index:2;
+    }
+
+    #hashHome{
+        float: left;
+        text-align: left;
+        height: 40px;
+        width: 50%;
+    /*    background-color: bisque;*/
+        z-index:2;
+    }
+
+    #hashAway{
+        float: right;
+        text-align: right;
+        height: 40px;
+        width: 50%;
+    /*    background-color: orange;*/
+        z-index:2;
+    }
+
+    .hashTeam{
+        font-weight: 300;
+        font-size: 35px;
+        color: #143542;
+    }
+
+    #teamNameContainer{    
+        width: 90%;
+        margin: auto;
+        z-index:2;
+    }
+
+    #teamNameHome{
+        float: left;
+        text-align: left;
+        width: 50%;
+    /*    background-color: orchid;*/
+        z-index:2;
+    }
+
+    #teamNameAway{
+        float: right;
+        text-align: right;
+        width: 50%;
+    /*    background-color: bisque;*/
+        z-index:2;
+    } 
+
+    .teamName{
+        font-weight: 200;
+        font-size: 13px;
+        color: #143542;
+    }
+
+    .figureLine{
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        background-color: white;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    #homeData{
+        display: inline-block;
+        float: left;
+        width: 33%;
+        text-align: right;
+        background-image: url("../ressources/verticaldots@x2.png");
+        background-size: 5px 20.5px;
+        background-repeat: no-repeat;
+        background-position: 10% center;
+/*        background-color: palegreen;*/
+    }
+
+    .dataScore{
+        font-size: 23px;
+        font-weight: 600;
+        color:#EEA42E;
+    }
+
+    .dataLabel{
+        font-size: 16px;
+        font-weight: 600;
+        color:#1F4C5D;
+    }
+
+    #awayData{
+        display: inline-block;
+        float: right;
+        width: 33%;
+        text-align: left;
+        background-image: url("../ressources/verticaldots@x2.png");
+        background-size: 5px 20.5px;
+        background-repeat: no-repeat;
+        background-position: 90% center;
+    /*    background-color: brown;*/
+    }
+
+    #dataType{
+        display: inline-block;
+    /*    background-color: chartreuse;*/
+    }
+
+    #scoreBox{
+        position: relative;
+        margin: 20px auto -41px auto;
+        width: 120px;
+        text-align: center;
+    /*    background-color: royalblue;*/
+        z-index:3;
+    } 
+
+    .scoreBoxClass{
+        font-weight: 700;
+        font-size: 35px;
+        color: #EEA42E;
+    }
+
+    #timeAndHalf{
+        display: inline-block;
+        float: left;
+        width: 35%;
+        text-align: right;
+        color: #1F4C5D;
+    /*    background-color: firebrick;*/
+    }
+
+    #liveIcon{
+        display: inline-block;
+        background-image: url("../ressources/livesymbol@x2.png");
+        background-size: 29.5px 8.5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 59px;
+        text-indent: -9999px;
+    /*    background-color: hotpink;*/
+    }
+
+    #stopHalfBtn{
+        display: inline-block;
+        float: right;
+        text-align: left;
+        background-image: url("../ressources/rightarrow@x2.png");
+        background-size: 5px 10px;
+        background-repeat: no-repeat;
+        background-position: 90% center;
+        width: 35%;
+        color: #029E9B;
+    /*    background-color: blueviolet; */
+    }
+
+    /*#### Right Menu V3 ####*/
+
+    #pitchContainer{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        background-image: url('../ressources/vertical_pitch@2x.png');
+        background-size: 100% 460px;
+        background-repeat: no-repeat;
+        background-position: center top;
+        -moz-box-shadow: 0px 1px 2px 0px #c0c0c0;
+        -moz-box-shadow: 0px 1px 2px 0px #656565;
+        -webkit-box-shadow: 0px 1px 2px 0px #656565;
+        -o-box-shadow: 0px 1px 2px 0px #656565;
+        box-shadow: 0px 1px 2px 0px #656565;
+    }
+
+    #pitchExpandBtn{
+        width: 100%;
+        height: 28px;
+        margin-top: -2px;
+        background-color: #029E9B;
+        background-image: url('../ressources/expandicon@x2.png');
+        background-size: 15px 7px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #foulProposalTitle{
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        line-height: 40px;
+        color: #9B9B9B;
+        text-align: left;
+        padding-left: 7%;
+        font-weight: 300;
+        border-width: 1px 0 1px 0;
+        border-style: solid;
+        border-color: #d8d8d8;
+        background-color: #ffffff;
+    }
 
 }
 
@@ -864,40 +866,39 @@ img.pitchimage{
     background-size: 12px 12px;
   }
     
-.logo{
-    background-image: url("../ressources/scout_soccer_logo@x2.png");
-    display: inline-block;
-    background-size: 59px 23px;
-    height: 23px;
-    overflow: hidden;
-    text-indent: -9999px;
-    width: 59px;
-    -webkit-transition: opacity 0.25s;
-    -o-transition: opacity 0.25s;
-    transition: opacity 0.25s;
-}
+    .logo{
+        background-image: url("../ressources/scout_soccer_logo@x2.png");
+        display: inline-block;
+        background-size: 59px 23px;
+        height: 23px;
+        overflow: hidden;
+        text-indent: -9999px;
+        width: 59px;
+        -webkit-transition: opacity 0.25s;
+        -o-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+    }
 
-#closePageBtn {
-    display: inline-block;
-    background-image: url("../ressources/close@x2.png");
-    background-size: 15px 15px;
-    height: 15px;
-    width: 15px;
-    float: left;
-    margin-left: 15px;
-    margin-top: 15px;
-}
+    #closePageBtn {
+        display: inline-block;
+        background-image: url("../ressources/close@x2.png");
+        background-size: 15px 15px;
+        height: 15px;
+        width: 15px;
+        float: left;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
 
-#validationPageBtn {
-    display: inline-block;
-    background-image: url("../ressources/validation@x2.png");
-    background-size: 18px 17px;
-    width: 18px;
-    height: 17px;
-    float: right;
-    margin-right: 15px;
-    margin-top: 14px;
-}
-    
-    
+    #validationPageBtn {
+        display: inline-block;
+        background-image: url("../ressources/validation@x2.png");
+        background-size: 18px 17px;
+        width: 18px;
+        height: 17px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 14px;
+    }
+      
 }

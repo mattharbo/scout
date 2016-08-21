@@ -1,11 +1,12 @@
 var divSelected = "";
 
-function openRightNav(){
-    document.getElementById("foulNavContainer").style.width="100%";
+function openRightNav(elem){
+    document.getElementById(elem).style.width="100%";
 }
 
-function closeRightNav(){
-    document.getElementById("foulNavContainer").style.width="0";
+function closeRightNav(elem){
+    
+    document.getElementById(elem).style.width="0";
     
     console.log(window.location.href +" :: Remove unit to "+divSelected.id);
     
@@ -47,5 +48,6 @@ function expandPitch(){
 function retractPitch(){
     document.getElementById("pitchContainer").style.height="250px";
     document.getElementById("pitchExpandBtn").style.backgroundImage='url("./ressources/expandicon@x2.png")';
-    document.getElementById("pitchExpandBtn").onclick="expandPitch();";
+    
+    document.getElementById("pitchExpandBtn").onclick=function(){};
 }

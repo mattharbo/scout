@@ -14,49 +14,80 @@
 	<body>
 <!--    http://smallenvelop.com/display-loading-icon-page-loads-completely/-->
         
-        <div id="foulNavContainer">
+<!--############# SHOOT CONTAINER PAGE 1 #############-->
+        <div id="shootNavContainerPage1">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav()"></div>
-                <div id="pageTitle">Foul</div>
-                <div id="validationPageBtn" onclick="submitRightNav();"></div>
-            </div><!--Header-->
+                <div id="closePageBtn" onclick="closeRightNav('shootNavContainerPage1');"></div>
+                <div id="pageTitle">Shoot (1/2)</div>
+            </div>
             
             <div id="pitchContainer"></div>
             
             <div id="pitchExpandBtn" onclick="expandPitch();"></div>
             
+            <div id="foulProposalTitle">What king of shoot?</div>
             
-            
-            
-            
-            
-            
-            
-            
-            <div id="foulSection2">
-                <span class="sectionTitle">2. Has a card been given?</span>
-                
-                <div id="foulCheckboxesBtn">
-                    <input type="checkbox" name="cardteam" value="yellowcard" id="card1"/>
-                    <label class="checkbox" for="card1">
-                        <div id="yellowcard">Yellow Card</div>
-                    </label>
+            <div id="foulPropositions">
 
-                    <input type="checkbox" name="cardteam" value="redcard" id="card2" />
-                    <label class="checkbox" for="card2">
-                        <div id="redcard">Red Card</div>
-                    </label>
-
-                    <input type="checkbox" name="cardteam" value="nowhistle" id="card3" />
-                    <label class="checkbox" for="card3">
-                        <div id="nowhistle">No Whistle</div>
-                    </label>
+                <div id="shoot" class="figureLine">
+                    Strike
                 </div>
+                
             </div>
             
+        </div>
+        
+<!--############# SHOOT CONTAINER PAGE 2 #############-->
+        <div id="shootNavContainerPage2">
             
-        </div><!--rightNav-->
+            <div id="header">
+                <div id="closePageBtn" onclick="closeRightNav('shootNavContainerPage2');"></div>
+                <div id="pageTitle">Shoot (2/2)</div>
+            </div>
+            
+            <div id="foulProposalTitle">Shoot accurancy?</div>
+            
+            <div id="foulPropositions">
+
+                radio button
+                
+            </div>
+            
+        </div>
+        
+<!--############# FOUL CONTAINER #############-->
+        <div id="foulNavContainer">
+            
+            <div id="header">
+                <div id="closePageBtn" onclick="closeRightNav('foulNavContainer');"></div>
+                <div id="pageTitle">Foul</div>
+                <div id="validationPageBtn" onclick="submitRightNav();"></div>
+            </div>
+            
+            <div id="pitchContainer"></div>
+            
+            <div id="pitchExpandBtn" onclick="expandPitch();"></div>
+            
+            <div id="foulProposalTitle">Foul details</div>
+            
+            <div id="foulPropositions">
+
+                <input type="checkbox" id="choice1" name="lists" />
+                
+                <label class="forcheckbox" for="choice1">Yellow card</label>
+
+                <input type="checkbox" id="choice2" name="lists" class="checkbox"/>
+                
+                <label class="forcheckbox" for="choice2">Red card</label>
+            
+                <input type="checkbox" id="choice3" name="lists" class="checkbox"/>
+                
+                <label class="forcheckbox" for="choice3">No whistle blow</label>
+                
+            </div>
+            
+        </div>
         
 		<div id="header">
             <a href="/" class="logo" id="logo_header">scout</a>
@@ -87,9 +118,9 @@
         </div>
         
         <div id="shoot" class="figureLine">
-            <div id="homeData" class="dataScore">0</div>
+            <div id="homeData" class="dataScore" onclick="openRightNav('shootNavContainerPage1');">0</div>
             <div id="dataType"  class="dataLabel">Shoot(s)</div>
-            <div id="awayData" class="dataScore">0</div>
+            <div id="awayData" class="dataScore" onclick="openRightNav('shootNavContainerPage1');">0</div>
         </div>
         
         <div id="cross" class="figureLine">
@@ -99,9 +130,9 @@
         </div>
         
         <div id="foul" class="figureLine">
-            <div id="homeData" class="dataScore" onclick="openRightNav();">0</div>
+            <div id="homeData" class="dataScore" onclick="openRightNav('foulNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Foul(s)</div>
-            <div id="awayData" class="dataScore">0</div>
+            <div id="awayData" class="dataScore" onclick="openRightNav('foulNavContainer');">0</div>
         </div>
         
         <div id="corner" class="figureLine">
