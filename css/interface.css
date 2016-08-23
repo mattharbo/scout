@@ -407,6 +407,14 @@ a:active {
         color: #FFFFFF;
         font-weight: 800;
     }
+    
+    #pageTitleNoValidation {
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: -5%;
+        color: #FFFFFF;
+        font-weight: 800;
+    }
 
     #validationPageBtn {
         display: inline-block;
@@ -418,37 +426,62 @@ a:active {
         margin-top: 14px;
     }
 
-    #foulNavContainer {
-        height: 100%;
-        width: 0%; /*100 instead of 0 to dev*/
-        position: fixed;
-        z-index: 1;
-        right: 0;
-        background-color: #F5F5F5;
+    .navContainer{
         overflow-x: hidden;
+        height: 100%;
+        right: 0;
         z-index:6;
+        background-color: #F5F5F5;
+        transition-duration: 0.1s;
+    }
+    
+    #turnoverNavContainer {
+        position: fixed;
+        width: 0%; /*100 instead of 0 to dev*/
     }
     
     #shootNavContainerPage1 {
-        height: 100%;
         width: 0%; /*100 instead of 0 to dev*/
         position: fixed;
-        z-index: 1;
-        right: 0;
-        background-color: #F5F5F5;
-        overflow-x: hidden;
-        z-index:6;
     }
     
     #shootNavContainerPage2 {
-        height: 100%;
         width: 0%; /*100 instead of 0 to dev*/
         position: fixed;
-        z-index: 1;
-        right: 0;
-        background-color: #F5F5F5;
-        overflow-x: hidden;
         z-index:7;
+        background-image: url("../ressources/bg_logo@x2.png");
+        background-repeat: no-repeat;
+        background-position: center 82%;
+        background-size: 243px 75.5px;
+    }
+    
+    #crossNavContainer {
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+    }
+    
+    #foulNavContainer {
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+    }
+    
+    #cornerNavContainer {
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+        background-image: url("../ressources/bg_logo@x2.png");
+        background-repeat: no-repeat;
+        background-position: center 70%;
+        background-size: 243px 75.5px;
+    }
+    
+    
+    #offsideNavContainer {
+        width: 0%; /*100 instead of 0 to dev*/
+        position: fixed;
+        background-image: url("../ressources/bg_logo@x2.png");
+        background-repeat: no-repeat;
+        background-position: center 82%;
+        background-size: 243px 75.5px;
     }
 
     #rightNavMainContent{
@@ -511,7 +544,7 @@ a:active {
         color:white;
     }
 
-    #foulPropositions{
+    #propositions{
         width: 100%;
         height: auto;
         margin-bottom: 20px;
@@ -527,7 +560,7 @@ a:active {
         text-align: left;
         padding-left: 7%;
         font-weight: 600;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid #E0E0E0;
     }
 
     input[type=checkbox] {
@@ -644,7 +677,7 @@ a:active {
         width: 100%;
         height: 73px;
         margin-top: -10px;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid #E0E0E0;
     /*    background-color: red;*/
     }
 
@@ -654,7 +687,7 @@ a:active {
         padding-top: 10px;
         font-size: 12px;
         font-weight: 400;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid #E0E0E0;
         background-color: #F5F5F5;
     }
 
@@ -722,10 +755,11 @@ a:active {
         height: 70px;
         line-height: 70px;
         background-color: white;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid #E0E0E0;
     }
 
-    #homeData{
+
+    .dataScoreHome{
         display: inline-block;
         float: left;
         width: 33%;
@@ -735,9 +769,6 @@ a:active {
         background-repeat: no-repeat;
         background-position: 10% center;
 /*        background-color: palegreen;*/
-    }
-
-    .dataScore{
         font-size: 23px;
         font-weight: 600;
         color:#EEA42E;
@@ -749,7 +780,7 @@ a:active {
         color:#1F4C5D;
     }
 
-    #awayData{
+    .dataScoreAway{
         display: inline-block;
         float: right;
         width: 33%;
@@ -759,6 +790,9 @@ a:active {
         background-repeat: no-repeat;
         background-position: 90% center;
     /*    background-color: brown;*/
+        font-size: 23px;
+        font-weight: 600;
+        color:#EEA42E;
     }
 
     #dataType{
@@ -816,10 +850,38 @@ a:active {
 
     /*#### Right Menu V3 ####*/
 
-    #pitchContainer{
+    #pitchContainerTurnover{
+        width: 100%;
+        height: 460px;
+        margin-top: 20px;
+    }
+    
+    #pitchContainerFoul{
         width: 100%;
         height: 250px;
         margin-top: 20px;
+    }
+    
+    #pitchContainerShoot{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    #pitchContainerCross{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    #pitchContainerOffside{
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    .pitchcontainerclass{
+        z-index: 9;
         background-image: url('../ressources/vertical_pitch@2x.png');
         background-size: 100% 460px;
         background-repeat: no-repeat;
@@ -831,18 +893,28 @@ a:active {
         box-shadow: 0px 1px 2px 0px #656565;
     }
 
-    #pitchExpandBtn{
+    #pitchExpandBtnShoot{
         width: 100%;
         height: 28px;
+        background-image: url('../ressources/expandicon@x2.png'); 
+    }
+    
+    #pitchExpandBtnFoul{
+        width: 100%;
+        height: 28px;
+        background-image: url('../ressources/expandicon@x2.png'); 
+    }
+    
+    .pitchExpandBtn{
+        z-index: 3;
         margin-top: -2px;
         background-color: #029E9B;
-        background-image: url('../ressources/expandicon@x2.png');
         background-size: 15px 7px;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
-    #foulProposalTitle{
+    #proposalTitle{
         width: 100%;
         height: 40px;
         margin-top: 20px;
@@ -853,9 +925,44 @@ a:active {
         font-weight: 300;
         border-width: 1px 0 1px 0;
         border-style: solid;
-        border-color: #d8d8d8;
+        border-color: #e0e0e0;
         background-color: #ffffff;
     }
+    
+    .proposalLineNext{
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border-bottom: 1px solid #E0E0E0;
+        color:#029E9B;
+        text-align: left;
+        padding-left: 7%;
+        font-weight: 600;
+        background-image: url("../ressources/nexticon@x2.png");
+        background-repeat: no-repeat;
+        background-position: 88%;
+        background-size: 8.5px 17.5px;
+    }
+    
+    .proposalLineValidation{
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        border-bottom: 1px solid #E0E0E0;
+        color:#029E9B;
+        text-align: left;
+        padding-left: 7%;
+        font-weight: 600;
+        background-image: url("../ressources/validationicon@x2.png");
+        background-repeat: no-repeat;
+        background-position: 88%;
+        background-size: 17.5px 16.5px;
+    }
+
 
 }
 

@@ -38,10 +38,11 @@ function alertSave() {
     alert("There is always a shoot before a save ! ;)");
 }
 
-function expandPitch(){
-    document.getElementById("pitchContainer").style.height="460px";
-    document.getElementById("pitchExpandBtn").style.backgroundImage='url("./ressources/retracticon@x2.png")';
-    document.getElementById("pitchExpandBtn").removeAttribute("onclick");
+function expandPitch(sourcediv, elem){
+    
+    document.getElementById(elem).style.height="460px";
+    document.getElementById(sourcediv.id).style.backgroundImage='url("./ressources/retracticon@x2.png")';
+    document.getElementById(sourcediv.id).removeAttribute("onclick");
      
 }
 
