@@ -1,4 +1,6 @@
 var divSelected = "";
+var pitchState = false;
+
 
 function openRightNav(elem){
     document.getElementById(elem).style.width="100%";
@@ -6,14 +8,18 @@ function openRightNav(elem){
 
 function closeRightNav(elem){
     
+    pitchState = false;
     document.getElementById(elem).style.width="0";
+    document.getElementById("pitchContainerShoot").style.height="250px";
+    document.getElementById("pitchContainerFoul").style.height="250px";
     
-    console.log(window.location.href +" :: Remove unit to "+divSelected.id);
+//    console.log(window.location.href +" :: Remove unit to "+divSelected.id);
     
-    var DivContent = document.getElementById(divSelected.id).textContent;
-    
-    document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)-1;
+//    var DivContent = document.getElementById(divSelected.id).textContent;
+//    
+//    document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)-1;
 }
+
 
 function submitRightNav(){
     document.getElementById("foulNavContainer").style.width="0";
@@ -21,6 +27,7 @@ function submitRightNav(){
     console.log(window.location.href +" :: Submit Unit for "+divSelected.id);
     
 }
+
 
 function addUnit(elem) {
     divSelected=elem;
@@ -38,17 +45,18 @@ function alertSave() {
     alert("There is always a shoot before a save ! ;)");
 }
 
-function expandPitch(sourcediv, elem){
+function expandCollapsePitch(sourcediv, elem){
     
-    document.getElementById(elem).style.height="460px";
-    document.getElementById(sourcediv.id).style.backgroundImage='url("./ressources/retracticon@x2.png")';
-    document.getElementById(sourcediv.id).removeAttribute("onclick");
-     
-}
-
-function retractPitch(){
-    document.getElementById("pitchContainer").style.height="250px";
-    document.getElementById("pitchExpandBtn").style.backgroundImage='url("./ressources/expandicon@x2.png")';
+    if(pitchState==false){
+        document.getElementById(elem).style.height="460px";
+        document.getElementById(sourcediv.id).style.backgroundImage='url("./ressources/retracticon@x2.png")';
+        
+        pitchState = true;
+    }else{
+        document.getElementById(elem).style.height="250px";
+        document.getElementById(sourcediv.id).style.backgroundImage='url("./ressources/expandicon@x2.png")';
+        
+        pitchState = false;
+    }
     
-    document.getElementById("pitchExpandBtn").onclick=function(){};
 }

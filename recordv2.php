@@ -6,7 +6,8 @@
         <script src='./js/scout.js'></script>
 
 		<link rel="stylesheet" href="./css/interface.css">
-		<link rel="icon" href="./img/favicon.png">
+<!--		<link rel="icon" href="./img/favicon.png">-->
+        <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -38,7 +39,7 @@
             
             <div id="pitchContainerShoot" class="pitchcontainerclass"></div>
             
-            <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandPitch(this, 'pitchContainerShoot');"></div>
+            <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div>
             
             <div id="proposalTitle">What king of shoot?</div>
             
@@ -136,9 +137,9 @@
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
-            <div id="pitchContainerFoul" class="pitchcontainerclass"></div>
+            <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
             
-            <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandPitch(this, 'pitchContainerFoul');"></div>
+            <div id="pitchContainerFoul" class="pitchfloulcontainerclass"></div>
             
             <div id="proposalTitle">Foul details</div>
             
@@ -206,12 +207,12 @@
         <div id="matchPresentation">
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
             <div id="hashContainer">
-                <div id="hashHome" class="hashTeam">#SCB</div>
-                <div id="hashAway" class="hashTeam">#PSG</div>
+                <div id="hashHome" class="hashTeam">#TOT</div>
+                <div id="hashAway" class="hashTeam">#LIV</div>
             </div>
             <div id="teamNameContainer">
-                <div id="teamNameHome" class="teamName">Sporting Club Bastia</div>
-                <div id="teamNameAway" class="teamName">Paris-Saint Germain</div>
+                <div id="teamNameHome" class="teamName">Tottenham Hotspur FC</div>
+                <div id="teamNameAway" class="teamName">Liverpool FC</div>
             </div>
         </div>
         
