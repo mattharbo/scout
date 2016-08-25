@@ -25,7 +25,9 @@
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
-            <div id="pitchContainerTurnover" class="pitchcontainerclass"></div>
+            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this);">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer">
+            </div>
             
         </div>        
         
