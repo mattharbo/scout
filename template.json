@@ -1,0 +1,53 @@
+[
+  {
+    "action": "turnover",
+    "team": "",
+    "time": "",
+    "x": "",
+    "y": ""
+  },
+  {
+    "action": "shoot",
+    "team": "",
+    "time": "",
+    "x": "",
+    "y": "",
+    "type": "",
+    "state": ""
+  },
+  {
+    "action": "cross",
+    "team": "",
+    "time": "",
+    "x": "",
+    "y": "",
+    "state": ""
+  },
+  {
+    "action": "foul",
+    "team": "",
+    "time": "",
+    "x": "",
+    "y": "",
+    "judgments": [
+      {
+        "yellow": true,
+        "red": false,
+        "nowhistle": false
+      }
+    ]
+  },
+  {
+    "action": "corner",
+    "team": "",
+    "time": "",
+    "type": ""
+  },
+  {
+    "action": "offside",
+    "team": "",
+    "time": "",
+    "x": "",
+    "y": ""
+  }
+]

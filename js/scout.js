@@ -2,12 +2,15 @@ var divSelected = "";
 var pitchState = false;
 
 //+gameID +eventID
-//turnover > team, position x, y
-//shoot > team, position x, y, type (strike, freekick, penalty), state(ontarget, save, goal)
-//cross > team, position x, y, state(intercepted, blocked, completed)
-//foul > team, position x, y, judgment[yellow, red, nowhistle]
-//corner > team, type (left, right)
-//offside > team, position x, y
+
+//turnover > action	team	time	x	y			
+//shoot >	action	team	time	x	y	type	state	
+//cross >	action	team	time	x	y		state	
+//foul >	action	team	time	x	y			[judgment]
+//corner >	action	team	time			type		
+//offside >	action	team	time	x	y			
+
+
 
 function openRightNav(selecteddiv, elem){
     
@@ -46,8 +49,8 @@ var lasteventY=0;
 function printMousePos(elem) {
     var thediv=elem.id;
     var rect = document.getElementById(thediv).getBoundingClientRect();
-    var mouseX = event.clientX;
-    var mouseY = event.clientY;
+    var mouseX = event.clientX-9;
+    var mouseY = event.clientY-20;
     var eventX=((mouseX-rect.left)/rect.width).toFixed(2);
     var eventY=((mouseY-rect.top)/rect.height).toFixed(2);
     
@@ -90,3 +93,9 @@ function expandCollapsePitch(sourcediv, elem){
     }
     
 }
+
+//PUSH ALL EVENT (IE ARRAY) TO SERVER
+//http://stackoverflow.com/questions/9001526/send-array-with-ajax-to-php-script
+
+//HELP TO CREATE AN ARRAY OF OBJECTS
+//http://stackoverflow.com/questions/1290131/javascript-how-to-create-an-array-of-object-literals-in-a-loop
