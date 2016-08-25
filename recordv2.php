@@ -223,39 +223,39 @@
         </div>
         
         <div id="turnover" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('turnoverNavContainer');">0</div>
+            <div id="turnoverHome" class="dataScoreHome" onclick="openRightNav(this,'turnoverNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Turnover(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('turnoverNavContainer');">0</div>
+            <div id="turnoverAway" class="dataScoreAway" onclick="openRightNav(this,'turnoverNavContainer');">0</div>
         </div>
         
         <div id="shoot" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('shootNavContainerPage1');">0</div>
+            <div id="shootHome" class="dataScoreHome" onclick="openRightNav(this,'shootNavContainerPage1');">0</div>
             <div id="dataType"  class="dataLabel">Shoot(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('shootNavContainerPage1');">0</div>
+            <div id="shootAway" class="dataScoreAway" onclick="openRightNav(this,'shootNavContainerPage1');">0</div>
         </div>
         
         <div id="cross" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('crossNavContainer');">0</div>
+            <div id="crossHome" class="dataScoreHome" onclick="openRightNav(this,'crossNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Crosse(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('crossNavContainer');">0</div>
+            <div id="crossAway" class="dataScoreAway" onclick="openRightNav(this,'crossNavContainer');">0</div>
         </div>
         
         <div id="foul" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('foulNavContainer');">0</div>
+            <div id="foulHome" class="dataScoreHome" onclick="openRightNav(this,'foulNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Foul(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('foulNavContainer');">0</div>
+            <div id="foulAway" class="dataScoreAway" onclick="openRightNav(this,'foulNavContainer');">0</div>
         </div>
         
         <div id="corner" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('cornerNavContainer');">0</div>
+            <div id="cornerHome" class="dataScoreHome" onclick="openRightNav(this,'cornerNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Corner Kick(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('cornerNavContainer');">0</div>
+            <div id="cornerAway" class="dataScoreAway" onclick="openRightNav(this,'cornerNavContainer');">0</div>
         </div>
         
         <div id="offside" class="figureLine">
-            <div id="" class="dataScoreHome" onclick="openRightNav('offsideNavContainer');">0</div>
+            <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Offside(s)</div>
-            <div id="" class="dataScoreAway" onclick="openRightNav('offsideNavContainer');">0</div>
+            <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer');">0</div>
         </div>
         
 	</body>

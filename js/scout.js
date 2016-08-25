@@ -2,8 +2,12 @@ var divSelected = "";
 var pitchState = false;
 
 
-function openRightNav(elem){
+function openRightNav(selecteddiv, elem){
+    
     document.getElementById(elem).style.width="100%";
+    
+    var DivContent = document.getElementById(selecteddiv.id).textContent;
+    document.getElementById(selecteddiv.id).innerHTML = parseInt(DivContent)+1;
 }
 
 function closeRightNav(elem){
