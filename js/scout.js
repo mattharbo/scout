@@ -1,8 +1,12 @@
+var lasteventX=0;
+var lasteventY=0;
 var divSelected = "";
+var divContainerSelected = "";
 var pitchState = false;
+var pitchPointerSelected = "";
+var events=[];
 
 //+gameID +eventID
-
 //turnover > action	team	time	x	y			
 //shoot >	action	team	time	x	y	type	state	
 //cross >	action	team	time	x	y		state	
@@ -10,43 +14,67 @@ var pitchState = false;
 //corner >	action	team	time			type		
 //offside >	action	team	time	x	y			
 
-
+//-------------------------
 
 function openRightNav(selecteddiv, elem){
+    divSelected = selecteddiv;
+    divContainerSelected = elem;
     
     document.getElementById(elem).style.width="100%";
     
-    var DivContent = document.getElementById(selecteddiv.id).textContent;
-    document.getElementById(selecteddiv.id).innerHTML = parseInt(DivContent)+1;
+    console.log(divSelected.id);
 }
 
-function closeRightNav(elem){
-    
+//-------------------------
+
+function closeRightNav(){
     pitchState = false;
-    document.getElementById(elem).style.width="0";
+    document.getElementById(divContainerSelected).style.width="0";
     document.getElementById("pitchContainerShoot").style.height="250px";
     document.getElementById("pitchContainerFoul").style.height="250px";
-    
-//    console.log(window.location.href +" :: Remove unit to "+divSelected.id);
-    
-//    var DivContent = document.getElementById(divSelected.id).textContent;
-//    
-//    document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)-1;
+
+    eraseTempData();
 }
+
+//-------------------------
 
 function submitRightNav(){
     document.getElementById("foulNavContainer").style.width="0";
     
-    console.log(window.location.href +" :: Submit Unit for "+divSelected.id);
-    console.log(lasteventX);
-    console.log(lasteventY);
+    if(lasteventX != 0 && lasteventY != 0){
+        
+        divid = divSelected.id;
+        nrbchar = divid.length;
+        
+        var newevent={
+        "action": divid.substring(0,nrbchar-4),
+        "team": divid.slice(-4),
+        "time": "",
+        "x": lasteventX,
+        "y": lasteventY
+        };
     
+        events.push(newevent);
+        
+        //Add a unit to the board
+        var DivContent = document.getElementById(divSelected.id).textContent;
+        document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)+1;
+        
+        divSelected = "";
+        document.getElementById(divContainerSelected).style.width="0%";
+        
+        divContainerSelected = "";
+        eraseTempData();
+        
+    }else{
+        console.log("Nothing to save :/");
+    }
 }
 
-var lasteventX=0;
-var lasteventY=0;
+//-------------------------
 
-function printMousePos(elem) {
+function printMousePos(elem, pitchpointerselec) {
+    var pitchicon = pitchpointerselec;
     var thediv=elem.id;
     var rect = document.getElementById(thediv).getBoundingClientRect();
     var mouseX = event.clientX-9;
@@ -57,14 +85,32 @@ function printMousePos(elem) {
     //Update global variables for last position 
     lasteventX=eventX;
     lasteventY=eventY;
+    pitchPointerSelected=pitchicon;
     
-    console.log("X position = " + Math.round(eventX*100) + " %");
-    console.log("Y position = " + Math.round(eventY*100) + " %");
+//    console.log("X position = " + Math.round(eventX*100) + " %");
+//    console.log("Y position = " + Math.round(eventY*100) + " %");
     
-    document.getElementById('pitchpointer').style.display= 'block';
-    document.getElementById('pitchpointer').style.left = Math.round(eventX*100)+'%';
-    document.getElementById('pitchpointer').style.top = Math.round(eventY*100)+'%';
+    document.getElementById(pitchicon).style.display= 'block';
+    document.getElementById(pitchicon).style.left = Math.round(eventX*100)+'%';
+    document.getElementById(pitchicon).style.top = Math.round(eventY*100)+'%';
 }
+
+//-------------------------
+
+function eraseTempData(){
+    lasteventX=0;
+    lasteventY=0;
+    divSelected = "";
+    divContainerSelected = "";
+    
+    if(pitchPointerSelected !== ""){
+        document.getElementById(pitchPointerSelected).style.display= 'none';
+        document.getElementById(pitchPointerSelected).style.left = '0%';
+        document.getElementById(pitchPointerSelected).style.top = '0%';
+    }
+}
+
+//-------------------------
 
 function addUnit(elem) {
     divSelected=elem;
@@ -77,6 +123,8 @@ function addUnit(elem) {
             
     //array insertion here
 }
+
+//-------------------------
 
 function expandCollapsePitch(sourcediv, elem){
     

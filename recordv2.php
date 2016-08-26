@@ -20,13 +20,13 @@
         <div id="turnoverNavContainer" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('turnoverNavContainer');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Turnover</div>
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
-            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this);">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer">
+            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer1">
             </div>
             
         </div>        
@@ -35,11 +35,13 @@
         <div id="shootNavContainerPage1" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('shootNavContainerPage1');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitleNoValidation">Shoot (1/2)</div>
             </div>
             
-            <div id="pitchContainerShoot" class="pitchcontainerclass"></div>
+            <div id="pitchContainerShoot" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer2');">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer2">
+            </div>
             
             <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div>
             
@@ -67,7 +69,7 @@
         <div id="shootNavContainerPage2" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('shootNavContainerPage2');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitleNoValidation">Shoot (2/2)</div>
             </div>
             
@@ -95,12 +97,14 @@
         <div id="crossNavContainer" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('crossNavContainer');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Cross</div>
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
-            <div id="pitchContainerCross" class="pitchcontainerclass"></div>
+            <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer3">
+            </div>
             
             <div id="proposalTitle">Cross details</div>
             
@@ -134,14 +138,16 @@
         <div id="foulNavContainer" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('foulNavContainer');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Foul</div>
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
             <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
             
-            <div id="pitchContainerFoul" class="pitchfloulcontainerclass"></div>
+            <div id="pitchContainerFoul" class="pitchfloulcontainerclass" onclick="printMousePos(this, 'pitchpointer4');">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer4">
+            </div>
             
             <div id="proposalTitle">Foul details</div>
             
@@ -167,7 +173,7 @@
         <div id="cornerNavContainer" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('cornerNavContainer');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitleNoValidation">Corner Kick</div>
             </div>
             
@@ -191,12 +197,14 @@
         <div id="offsideNavContainer" class="navContainer">
             
             <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav('offsideNavContainer');"></div>
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Offside</div>
                 <div id="validationPageBtn" onclick="submitRightNav();"></div>
             </div>
             
-            <div id="pitchContainerCross" class="pitchcontainerclass"></div>
+            <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');">
+                <img src="./ressources/pointer@x1.png" id="pitchpointer5">
+            </div>
             
         </div> 
         
