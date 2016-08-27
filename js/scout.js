@@ -1,3 +1,7 @@
+
+
+//-------------------------
+
 var lasteventX=0;
 var lasteventY=0;
 var divSelected = "";
@@ -5,6 +9,9 @@ var divContainerSelected = "";
 var pitchState = false;
 var pitchPointerSelected = "";
 var events=[];
+var period="0";
+var type="";
+var state="";
 
 //+gameID +eventID
 //turnover > action	team	time	x	y			
@@ -16,13 +23,46 @@ var events=[];
 
 //-------------------------
 
+function periodbtn(){
+    if(period==0){
+        document.getElementById("stopHalfBtn").innerHTML = "Start of 2nd Half";
+        period="1";
+    }else{
+        if(period==1){
+            document.getElementById("stopHalfBtn").innerHTML = "End of 2nd Half";
+            period="2";
+        }else{
+            if(period==2){
+                document.getElementById("stopHalfBtn").innerHTML = "Start of 1st OT";
+                period="3";
+            }else{
+                if(period==3){
+                    document.getElementById("stopHalfBtn").innerHTML = "End of 1st OT";
+                    period="4";
+                }else{
+                    if(period==4){
+                        document.getElementById("stopHalfBtn").innerHTML = "Start of 2nd OT";
+                        period="5";
+                    }else{
+                        if(period==5){
+                            document.getElementById("stopHalfBtn").innerHTML = "End of 2nd OT";
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+//-------------------------
+
 function openRightNav(selecteddiv, elem){
     divSelected = selecteddiv;
     divContainerSelected = elem;
     
     document.getElementById(elem).style.width="100%";
     
-    console.log(divSelected.id);
+    //console.log(divSelected.id);
 }
 
 //-------------------------
@@ -38,36 +78,90 @@ function closeRightNav(){
 
 //-------------------------
 
+function next(elem, parentdiv, childdiv){
+    if(lasteventX != 0 && lasteventY != 0){
+        type=elem.id;
+        openRightNav(elem, childdiv);
+        document.getElementById(parentdiv).style.width="0";
+    }else{
+        window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
+    }
+}
+
+//-------------------------
+
+function nexttwo(elem){
+    state=elem.id;
+    console.log(state);
+}
+
+//-------------------------
+
 function submitRightNav(){
     document.getElementById("foulNavContainer").style.width="0";
     
     if(lasteventX != 0 && lasteventY != 0){
-        
+    
         divid = divSelected.id;
         nrbchar = divid.length;
         
-        var newevent={
-        "action": divid.substring(0,nrbchar-4),
-        "team": divid.slice(-4),
-        "time": "",
-        "x": lasteventX,
-        "y": lasteventY
-        };
-    
+        console.log("Submission for "+divid);
+        
+        if(divid == "turnoverHome" || divid == "turnoverAway"){
+            var newevent={
+                "action": divid.substring(0,nrbchar-4),
+                "team": divid.slice(-4).toLowerCase(),
+                "time": "",
+                "x": lasteventX,
+                "y": lasteventY
+            };
+        }
+        
+        if(divid == "crossHome" || divid == "crossAway"){
+            //DEFINE VARIABLE HERE
+            
+            //FOR RADIO BUTTON
+            //var gender = document.querySelector('input[name = "foultype"]:checked').value;
+        }
+        
+        if(divid == "foulHome" || divid == "foulAway"){
+            var fouljudgment = [];
+            var yellowcardbool = document.getElementById("yellowcard").checked;
+            var redcardbool = document.getElementById("redcard").checked;
+            var nowhistlebool = document.getElementById("nowhistle").checked;
+            
+            if(yellowcardbool==true){
+                fouljudgment.push(yellowcard.value);
+            }
+            if(redcardbool==true){
+                fouljudgment.push(redcard.value);
+            }
+            if(nowhistlebool==true){
+                fouljudgment.push(nowhistle.value);
+            }
+            
+            var newevent={
+                "action": divid.substring(0,nrbchar-4),
+                "team": divid.slice(-4).toLowerCase(),
+                "time": "",
+                "x": lasteventX,
+                "y": lasteventY,
+                "judgments":fouljudgment
+            };
+        }
+        
+        //Record event in array
         events.push(newevent);
         
         //Add a unit to the board
         var DivContent = document.getElementById(divSelected.id).textContent;
         document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)+1;
-        
-        divSelected = "";
         document.getElementById(divContainerSelected).style.width="0%";
         
-        divContainerSelected = "";
         eraseTempData();
         
     }else{
-        console.log("Nothing to save :/");
+        window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
     }
 }
 
@@ -102,12 +196,19 @@ function eraseTempData(){
     lasteventY=0;
     divSelected = "";
     divContainerSelected = "";
+    document.getElementById("yellowcard").checked=false;
+    document.getElementById("redcard").checked=false;
+    document.getElementById("nowhistle").checked=false;
     
     if(pitchPointerSelected !== ""){
         document.getElementById(pitchPointerSelected).style.display= 'none';
         document.getElementById(pitchPointerSelected).style.left = '0%';
         document.getElementById(pitchPointerSelected).style.top = '0%';
     }
+    
+    pitchPointerSelected="";
+    type="";
+    state="";
 }
 
 //-------------------------
@@ -140,6 +241,37 @@ function expandCollapsePitch(sourcediv, elem){
         pitchState = false;
     }
     
+}
+
+//-------------------------
+
+function ajax_post(){
+    // Create our XMLHttpRequest object
+    var hr = new XMLHttpRequest();
+    // Create some variables we need to send to our PHP file
+    var url = "./script/script.php";
+    
+    var vars = "table_content="+JSON.stringify(events);
+    
+    hr.open("POST", url, true);
+    
+    // Set content type header information for sending url encoded variables in the request
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    // Access the onreadystatechange event for the XMLHttpRequest object
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var return_data = hr.responseText;
+			document.getElementById("testsubmit").innerHTML = return_data;
+	    }
+    }
+    
+    // Send the data to PHP now... and wait for response to update the status div
+    hr.send(vars); // Actually execute the request
+    document.getElementById("testsubmit").innerHTML = "Processing...";
+    
+    //REDIRECTION WORKS!!!!
+    //window.location = "http://www.google.com";
 }
 
 //PUSH ALL EVENT (IE ARRAY) TO SERVER

@@ -3,9 +3,10 @@
 		<title>Scout • By scouters for players</title>
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
         
+        <link rel="stylesheet" href="./css/interface.css">
+        
         <script src='./js/scout.js'></script>
 
-		<link rel="stylesheet" href="./css/interface.css">
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
 
@@ -49,7 +50,7 @@
             
             <div id="propositions">
 
-                <div id="strike" class="proposalLineNext">
+                <div id="strike" class="proposalLineNext" onclick="next(this,'shootNavContainerPage1','shootNavContainerPage2');">
                     Strike
                 </div>
                 
@@ -77,7 +78,7 @@
             
             <div id="propositions">
                 
-                <div id="ontarget" class="proposalLineValidation">
+                <div id="ontarget" class="proposalLineValidation" onclick="nexttwo(this);submitRightNav();">
                     On target
                 </div>
                 
@@ -153,15 +154,15 @@
             
             <div id="propositions">
 
-                <input type="checkbox" id="yellowcard" name="foultype" />
+                <input type="checkbox" id="yellowcard" name="foultype" value="yellowcard" class="checkbox"/>
                 
                 <label class="forcheckbox" for="yellowcard">Yellow card</label>
 
-                <input type="checkbox" id="redcard" name="foultype" class="checkbox"/>
+                <input type="checkbox" id="redcard" name="foultype" class="checkbox" value="redcard"/>
                 
                 <label class="forcheckbox" for="redcard">Red card</label>
             
-                <input type="checkbox" id="nowhistle" name="foultype" class="checkbox"/>
+                <input type="checkbox" id="nowhistle" name="foultype" class="checkbox" value="nowhistle"/>
                 
                 <label class="forcheckbox" for="nowhistle">No whistle blow</label>
                 
@@ -217,19 +218,19 @@
         <div id="matchPresentation">
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
             <div id="hashContainer">
-                <div id="hashHome" class="hashTeam">#TOT</div>
-                <div id="hashAway" class="hashTeam">#LIV</div>
+                <div id="hashHome" class="hashTeam">#MON</div>
+                <div id="hashAway" class="hashTeam">#PSG</div>
             </div>
             <div id="teamNameContainer">
-                <div id="teamNameHome" class="teamName">Tottenham Hotspur FC</div>
-                <div id="teamNameAway" class="teamName">Liverpool FC</div>
+                <div id="teamNameHome" class="teamName">AS Monaco FC</div>
+                <div id="teamNameAway" class="teamName">Paris Saint-Germain</div>
             </div>
         </div>
         
         <div id="timeBox">
-            <div id="timeAndHalf">1st Half - 32:00</div>
+            <div id="timeAndHalf">1st Half - 00:00</div>
             <div id="liveIcon">_</div>
-            <div id="stopHalfBtn">End of 1st Period</div>
+            <div id="stopHalfBtn" onclick="periodbtn();">End of 1st Half</div>
         </div>
         
         <div id="turnover" class="figureLine">
@@ -266,6 +267,11 @@
             <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer');">0</div>
             <div id="dataType"  class="dataLabel">Offside(s)</div>
             <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer');">0</div>
+        </div>
+        
+<!--TO BE REMOVED-->
+        <div id="testsubmit" class="figureLine" onclick="ajax_post();">
+            SUBMIT (Test btn)
         </div>
         
 	</body>
