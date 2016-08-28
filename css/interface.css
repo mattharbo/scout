@@ -505,41 +505,28 @@ a:active {
         border-bottom: 1px solid #EEEEEE;
     /*    background-color: blue;*/
     }
-
-    #foulRadioBtn{
-      display: inline-block;
-      width:90%;
-      margin:0 0 20px 0;
-    /*    background-color:purple;*/
-    }
-
-    .radios .radio{
+    
+    .radios .forradiobtn{
         background-color:white;
         color:#029E9B;
-        background-color:#FAFAFA;
-        border-radius: 5px;
         display:inline-block;
-        border: 1px solid #029E9B;
-        width:140px;
-        height:30px   
+        width:100%;
+        line-height:50px;
+        height:50px;   
     }
 
-    .radio{
-        text-align:center;
-        line-height:30px;
-    /*
-        margin-right:1%;
-        margin-left:1%;
-    */
-        font-size: 13px;
-        font-weight: 800;
+    .forradiobtn{
+        text-align: left;
+        padding-left: 7%;
+        font-weight: 600;
+        border-bottom: 1px solid #E0E0E0;
     }
 
     .radios input[type=radio]{
         display:none
     }
 
-    .radios input[type=radio]:checked + .radio{
+    .radios input[type=radio]:checked + .forradiobtn{
         background-color:#029E9B;
         color:white;
     }
@@ -620,8 +607,6 @@ a:active {
         font-size: 19px;
         color: #FFFFFF;
     }
-
-    /*FOR RADIO BUTTON > http://jsfiddle.net/ob9ardLz/*/
 
     #liveRecordContainer{
         display: inline-block;
