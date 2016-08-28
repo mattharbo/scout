@@ -1,5 +1,3 @@
-
-
 //-------------------------
 
 var lasteventX=0;
@@ -56,13 +54,13 @@ function periodbtn(){
 
 //-------------------------
 
-function openRightNav(selecteddiv, elem){
-    divSelected = selecteddiv;
-    divContainerSelected = elem;
+function openRightNav(divwherefunctioncalled, maincontainer){
+    divSelected = divwherefunctioncalled;
+    divContainerSelected = maincontainer;
     
-    document.getElementById(elem).style.width="100%";
+    document.getElementById(maincontainer).style.width="100%";
     
-    //console.log(divSelected.id);
+    console.log("Window opened: "+divSelected.id);
 }
 
 //-------------------------
@@ -70,19 +68,23 @@ function openRightNav(selecteddiv, elem){
 function closeRightNav(){
     pitchState = false;
     document.getElementById(divContainerSelected).style.width="0";
+   
+    //Exceptions management
     document.getElementById("pitchContainerShoot").style.height="250px";
     document.getElementById("pitchContainerFoul").style.height="250px";
 
+    console.log("Window closed: "+divContainerSelected);
+    
     eraseTempData();
 }
 
 //-------------------------
 
-function next(elem, parentdiv, childdiv){
+function stepone(divwherefunctioncalled, maincontainer, childcontainer){
     if(lasteventX != 0 && lasteventY != 0){
-        type=elem.id;
-        openRightNav(elem, childdiv);
-        document.getElementById(parentdiv).style.width="0";
+        type=divwherefunctioncalled.id;
+        openRightNav(divSelected, childcontainer);
+        document.getElementById(maincontainer).style.width="0";
     }else{
         window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
     }
@@ -90,15 +92,14 @@ function next(elem, parentdiv, childdiv){
 
 //-------------------------
 
-function nexttwo(elem){
-    state=elem.id;
+function steptwo(divwherefunctioncalled){
+    state=divwherefunctioncalled.id;
     console.log(state);
 }
 
 //-------------------------
 
 function submitRightNav(){
-    document.getElementById("foulNavContainer").style.width="0";
     
     if(lasteventX != 0 && lasteventY != 0){
     
@@ -106,6 +107,8 @@ function submitRightNav(){
         nrbchar = divid.length;
         
         console.log("Submission for "+divid);
+        
+        //***** TURNOVERS *****
         
         if(divid == "turnoverHome" || divid == "turnoverAway"){
             var newevent={
@@ -117,12 +120,32 @@ function submitRightNav(){
             };
         }
         
+        //***** SHOOTS *****
+        //action	team	time	x	y	type	state
+        
+        if(divid == "shootHome" || divid == "shootAway"){
+            var newevent={
+                "action": divid.substring(0,nrbchar-4),
+                "team": divid.slice(-4).toLowerCase(),
+                "time": "",
+                "x": lasteventX,
+                "y": lasteventY,
+                "type":type,
+                "state":state
+            };
+        }
+        
+        //***** CROSSES *****
+        //action	team	time	x	y		state	
+        
         if(divid == "crossHome" || divid == "crossAway"){
             //DEFINE VARIABLE HERE
             
             //FOR RADIO BUTTON
             //var gender = document.querySelector('input[name = "foultype"]:checked').value;
         }
+        
+        //***** FOULS *****
         
         if(divid == "foulHome" || divid == "foulAway"){
             var fouljudgment = [];
@@ -150,6 +173,22 @@ function submitRightNav(){
             };
         }
         
+        //***** CORNER KICKS *****
+        //action	team	time			type		
+        
+        
+        //***** OFFSIDES *****
+        
+        if(divid == "offsideHome" || divid == "offsideAway"){
+            var newevent={
+                "action": divid.substring(0,nrbchar-4),
+                "team": divid.slice(-4).toLowerCase(),
+                "time": "",
+                "x": lasteventX,
+                "y": lasteventY
+            };
+        }
+        
         //Record event in array
         events.push(newevent);
         
@@ -160,8 +199,9 @@ function submitRightNav(){
         
         eraseTempData();
         
+        console.log(events);
     }else{
-        window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
+        window.alert("Locate the action on the pitch before going further...or close the window ;)");
     }
 }
 

@@ -50,15 +50,15 @@
             
             <div id="propositions">
 
-                <div id="strike" class="proposalLineNext" onclick="next(this,'shootNavContainerPage1','shootNavContainerPage2');">
+                <div id="strike" class="proposalLineNext" onclick="stepone(this,'shootNavContainerPage1','shootNavContainerPage2');">
                     Strike
                 </div>
                 
-                <div id="freekick" class="proposalLineNext">
+                <div id="freekick" class="proposalLineNext" onclick="stepone(this,'shootNavContainerPage1','shootNavContainerPage2');">
                     Free kick
                 </div>
                 
-                <div id="penalty" class="proposalLineNext">
+                <div id="penalty" class="proposalLineNext" onclick="stepone(this,'shootNavContainerPage1','shootNavContainerPage2');">
                     Penalty kick
                 </div>
                 
@@ -78,15 +78,15 @@
             
             <div id="propositions">
                 
-                <div id="ontarget" class="proposalLineValidation" onclick="nexttwo(this);submitRightNav();">
+                <div id="ontarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
                     On target
                 </div>
                 
-                <div id="save" class="proposalLineValidation">
+                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
                     Saved
                 </div>
                 
-                <div id="goal" class="proposalLineValidation">
+                <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
                     Goal
                 </div>
                 
