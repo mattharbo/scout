@@ -174,11 +174,11 @@
             
             <div id="propositions">
                 
-                <div id="leftside" class="proposalLineValidation">
+                <div id="leftside" class="proposalLineValidation" onclick="typeSelection('left');submitRightNav();">
                     Left side
                 </div>
                 
-                <div id="rightside" class="proposalLineValidation">
+                <div id="rightside" class="proposalLineValidation" onclick="typeSelection('right');submitRightNav();">
                     Right side
                 </div>
                 

@@ -99,115 +99,147 @@ function steptwo(divwherefunctioncalled){
 
 //-------------------------
 
+function typeSelection(typetosubmit){
+    type=typetosubmit;
+    console.log(type);
+}
+
+//-------------------------
+
 function submitRightNav(){
     
-    if(lasteventX != 0 && lasteventY != 0){
-    
+    if(divSelected.id == "cornerHome" || divSelected.id == "cornerAway"){
         divid = divSelected.id;
         nrbchar = divid.length;
         
-        console.log("Submission for "+divid);
-        
-        //***** TURNOVERS *****
-        
-        if(divid == "turnoverHome" || divid == "turnoverAway"){
-            var newevent={
-                "action": divid.substring(0,nrbchar-4),
-                "team": divid.slice(-4).toLowerCase(),
-                "time": "",
-                "x": lasteventX,
-                "y": lasteventY
-            };
-        }
-        
-        //***** SHOOTS *****
-        //action	team	time	x	y	type	state
-        
-        if(divid == "shootHome" || divid == "shootAway"){
-            var newevent={
-                "action": divid.substring(0,nrbchar-4),
-                "team": divid.slice(-4).toLowerCase(),
-                "time": "",
-                "x": lasteventX,
-                "y": lasteventY,
-                "type":type,
-                "state":state
-            };
-        }
-        
-        //***** CROSSES *****
-        //action	team	time	x	y		state	
-        
-        if(divid == "crossHome" || divid == "crossAway"){
-            state = document.querySelector('input[name = "crosstype"]:checked').id;
-            
-            var newevent={
-                "action": divid.substring(0,nrbchar-4),
-                "team": divid.slice(-4).toLowerCase(),
-                "time": "",
-                "x": lasteventX,
-                "y": lasteventY,
-                "state":state
-            };
-        }
-        
-        //***** FOULS *****
-        
-        if(divid == "foulHome" || divid == "foulAway"){
-            var fouljudgment = [];
-            var yellowcardbool = document.getElementById("yellowcard").checked;
-            var redcardbool = document.getElementById("redcard").checked;
-            var nowhistlebool = document.getElementById("nowhistle").checked;
-            
-            if(yellowcardbool==true){
-                fouljudgment.push(yellowcard.value);
-            }
-            if(redcardbool==true){
-                fouljudgment.push(redcard.value);
-            }
-            if(nowhistlebool==true){
-                fouljudgment.push(nowhistle.value);
-            }
-            
-            var newevent={
-                "action": divid.substring(0,nrbchar-4),
-                "team": divid.slice(-4).toLowerCase(),
-                "time": "",
-                "x": lasteventX,
-                "y": lasteventY,
-                "judgments":fouljudgment
-            };
-        }
-        
         //***** CORNER KICKS *****
-        //action	team	time			type		
-        
-        
-        //***** OFFSIDES *****
-        
-        if(divid == "offsideHome" || divid == "offsideAway"){
-            var newevent={
-                "action": divid.substring(0,nrbchar-4),
-                "team": divid.slice(-4).toLowerCase(),
-                "time": "",
-                "x": lasteventX,
-                "y": lasteventY
-            };
-        }
+        //action	team	time			type
+        var newevent={
+            "action": divid.substring(0,nrbchar-4),
+            "team": divid.slice(-4).toLowerCase(),
+            "time": "",
+            "type":type
+        };
         
         //Record event in array
         events.push(newevent);
-        
+
         //Add a unit to the board
         var DivContent = document.getElementById(divSelected.id).textContent;
         document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)+1;
         document.getElementById(divContainerSelected).style.width="0%";
-        
+
         eraseTempData();
-        
+
         console.log(events);
+        
     }else{
-        window.alert("Locate the action on the pitch before going further...or close the window ;)");
+    
+        if(lasteventX != 0 && lasteventY != 0){
+
+            divid = divSelected.id;
+            nrbchar = divid.length;
+
+            console.log("Submission for "+divid);
+
+            //***** TURNOVERS *****
+            //action	team	time	x	y
+
+            if(divid == "turnoverHome" || divid == "turnoverAway"){
+                var newevent={
+                    "action": divid.substring(0,nrbchar-4),
+                    "team": divid.slice(-4).toLowerCase(),
+                    "time": "",
+                    "x": lasteventX,
+                    "y": lasteventY
+                };
+            }
+
+            //***** SHOOTS *****
+            //action	team	time	x	y	type	state
+
+            if(divid == "shootHome" || divid == "shootAway"){
+                var newevent={
+                    "action": divid.substring(0,nrbchar-4),
+                    "team": divid.slice(-4).toLowerCase(),
+                    "time": "",
+                    "x": lasteventX,
+                    "y": lasteventY,
+                    "type":type,
+                    "state":state
+                };
+            }
+
+            //***** CROSSES *****
+            //action	team	time	x	y		state	
+
+            if(divid == "crossHome" || divid == "crossAway"){
+                state = document.querySelector('input[name = "crosstype"]:checked').id;
+
+                var newevent={
+                    "action": divid.substring(0,nrbchar-4),
+                    "team": divid.slice(-4).toLowerCase(),
+                    "time": "",
+                    "x": lasteventX,
+                    "y": lasteventY,
+                    "state":state
+                };
+            }
+
+            //***** FOULS *****
+
+            if(divid == "foulHome" || divid == "foulAway"){
+                var fouljudgment = [];
+                var yellowcardbool = document.getElementById("yellowcard").checked;
+                var redcardbool = document.getElementById("redcard").checked;
+                var nowhistlebool = document.getElementById("nowhistle").checked;
+
+                if(yellowcardbool==true){
+                    fouljudgment.push(yellowcard.value);
+                }
+                if(redcardbool==true){
+                    fouljudgment.push(redcard.value);
+                }
+                if(nowhistlebool==true){
+                    fouljudgment.push(nowhistle.value);
+                }
+
+                var newevent={
+                    "action": divid.substring(0,nrbchar-4),
+                    "team": divid.slice(-4).toLowerCase(),
+                    "time": "",
+                    "x": lasteventX,
+                    "y": lasteventY,
+                    "judgments":fouljudgment
+                };
+            }		
+
+            //***** OFFSIDES *****
+
+            if(divid == "offsideHome" || divid == "offsideAway"){
+                var newevent={
+                    "action": divid.substring(0,nrbchar-4),
+                    "team": divid.slice(-4).toLowerCase(),
+                    "time": "",
+                    "x": lasteventX,
+                    "y": lasteventY
+                };
+            }
+
+            //Record event in array
+            events.push(newevent);
+
+            //Add a unit to the board
+            var DivContent = document.getElementById(divSelected.id).textContent;
+            document.getElementById(divSelected.id).innerHTML = parseInt(DivContent)+1;
+            document.getElementById(divContainerSelected).style.width="0%";
+
+            eraseTempData();
+
+            console.log(events);
+        }else{
+            window.alert("Locate the action on the pitch before going further...or close the window ;)");
+        }
     }
 }
 
