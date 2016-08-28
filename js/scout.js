@@ -139,10 +139,16 @@ function submitRightNav(){
         //action	team	time	x	y		state	
         
         if(divid == "crossHome" || divid == "crossAway"){
-            //DEFINE VARIABLE HERE
+            state = document.querySelector('input[name = "crosstype"]:checked').id;
             
-            //FOR RADIO BUTTON
-            //var gender = document.querySelector('input[name = "foultype"]:checked').value;
+            var newevent={
+                "action": divid.substring(0,nrbchar-4),
+                "team": divid.slice(-4).toLowerCase(),
+                "time": "",
+                "x": lasteventX,
+                "y": lasteventY,
+                "state":state
+            };
         }
         
         //***** FOULS *****
@@ -239,6 +245,9 @@ function eraseTempData(){
     document.getElementById("yellowcard").checked=false;
     document.getElementById("redcard").checked=false;
     document.getElementById("nowhistle").checked=false;
+    document.getElementById("intercepted").checked=false;
+    document.getElementById("blocked").checked=false;
+    document.getElementById("completed").checked=false;
     
     if(pitchPointerSelected !== ""){
         document.getElementById(pitchPointerSelected).style.display= 'none';

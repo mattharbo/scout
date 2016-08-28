@@ -109,29 +109,21 @@
             
             <div id="proposalTitle">Cross details</div>
             
-            <div id="propositions">
+            <div id="propositions" class="radios">
 
-                <input type="checkbox" id="intercepted" name="crosstype" />
+               <input type="radio" name="crosstype" id="intercepted"/>
                 
-                <label class="forcheckbox" for="intercepted">Intercepted</label>
-
-                <input type="checkbox" id="blocked" name="crosstype" class="checkbox"/>
+                <label class="forradiobtn" for="intercepted">Intercepted</label>
+    
+                <input type="radio" name="crosstype" id="blocked" />
                 
-                <label class="forcheckbox" for="blocked">Blocked</label>
-            
-                <input type="checkbox" id="completed" name="crosstype" class="checkbox"/>
+                <label class="forradiobtn" for="blocked">Blocked</label>
+    
+                <input type="radio" name="crosstype" id="completed" />
                 
-                <label class="forcheckbox" for="completed">Completed</label>
+                <label class="forradiobtn" for="completed">Completed</label>
                 
             </div>
-            
-            <div id="foulRadioBtn" class="radios">
-                    <input type="radio" name="foulTeam" value="home" id="foul1">
-                    <label class="radio" for="foul1">#SCB</label>
-
-                    <input type="radio" name="foulTeam" value="away" id="foul2">
-                    <label class="radio" for="foul2">#PSG</label>
-                </div>
             
         </div>      
         
