@@ -17,9 +17,32 @@ $gameevents = json_decode($_POST['table_content'], true);
 //$pathtofile = "../template.json";
 //$gameevents = json_decode(file_get_contents($pathtofile), true);
 
-foreach($gameevents as $d){    
-    $txt = $d['action'];
-    echo $txt."<br>";
+foreach($gameevents as $record){    
+    $action = $record['action'];
+    echo $action."<br>";
+    
+    $team = $record['team'];
+    echo $team."<br>";
+    
+    $time = $record['time'];
+    echo $time."<br>";
+    
+    $xposition = $record['x'];
+    echo $xposition."<br>";
+    
+    $yposition = $record['y'];
+    echo $yposition."<br>";
+    
+    $type = $record['type'];
+    echo $type."<br>";
+    
+    $state = $record['state'];
+    echo $state."<br>";
+    
+    $judgments = $record['judgments'];
+    echo $judgments."<br>";
 }
+
+
 
 ?>

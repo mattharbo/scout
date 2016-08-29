@@ -168,6 +168,17 @@ function submitRightNav(){
                     "type":type,
                     "state":state
                 };
+                
+                if(state == "goal"){
+                    var scoreDivContent = document.getElementById(scoreBox).textContent;
+                    
+                    //Find the hyphen
+                    var hyphenPos = scoreDivContent.indexOf("-");
+                    
+                    console.log(hyphenPos);
+                    
+                    //document.getElementById(scoreBox).innerHTML = parseInt(DivContent)+1;
+                }
             }
 
             //***** CROSSES *****

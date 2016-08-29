@@ -1,9 +1,9 @@
 <html lang="en">
 	<head>
 		<title>Scout • By scouters for players</title>
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
-        
+		
         <link rel="stylesheet" href="./css/interface.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
         
         <script src='./js/scout.js'></script>
 
