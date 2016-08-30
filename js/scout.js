@@ -58,6 +58,10 @@ function openRightNav(divwherefunctioncalled, maincontainer){
     divSelected = divwherefunctioncalled;
     divContainerSelected = maincontainer;
     
+    if(type == "penalty"){
+        document.getElementById("blocked").style.display="none";
+    }
+    
     document.getElementById(maincontainer).style.width="100%";
     
     console.log("Window opened: "+divSelected.id);
@@ -83,6 +87,13 @@ function closeRightNav(){
 function stepone(divwherefunctioncalled, maincontainer, childcontainer){
     if(lasteventX != 0 && lasteventY != 0){
         type=divwherefunctioncalled.id;
+        
+        //Management penalty position
+        if(type == "penalty"){
+            lasteventX = 0.48;
+            lasteventY = 0.17;
+        }
+        
         openRightNav(divSelected, childcontainer);
         document.getElementById(maincontainer).style.width="0";
     }else{
@@ -303,6 +314,7 @@ function eraseTempData(){
     document.getElementById("intercepted").checked=false;
     document.getElementById("blocked").checked=false;
     document.getElementById("completed").checked=false;
+    document.getElementById("blocked").style.display="block";
     
     if(pitchPointerSelected !== ""){
         document.getElementById(pitchPointerSelected).style.display= 'none';

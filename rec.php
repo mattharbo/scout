@@ -35,7 +35,7 @@
             </div>
             
             <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer1">
+                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer1">
             </div>
             
         </div>        
@@ -49,7 +49,7 @@
             </div>
             
             <div id="pitchContainerShoot" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer2');">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer2">
+                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer2">
             </div>
             
             <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div>
@@ -86,12 +86,16 @@
             
             <div id="propositions">
                 
-                <div id="ontarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
-                    On target
+                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                    Off target
+                </div>
+                
+                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                    Blocked (Field player)
                 </div>
                 
                 <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
-                    Saved
+                    Saved (GK)
                 </div>
                 
                 <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
@@ -112,7 +116,7 @@
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer3">
+                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer3">
             </div>
             
             <div id="proposalTitle">Cross details</div>
@@ -121,11 +125,11 @@
 
                <input type="radio" name="crosstype" id="intercepted"/>
                 
-                <label class="forradiobtn" for="intercepted">Intercepted</label>
+                <label class="forradiobtn" for="intercepted">Intercepted (GK)</label>
     
                 <input type="radio" name="crosstype" id="blocked" />
                 
-                <label class="forradiobtn" for="blocked">Blocked</label>
+                <label class="forradiobtn" for="blocked">Blocked (Field player)</label>
     
                 <input type="radio" name="crosstype" id="completed" />
                 
@@ -147,7 +151,7 @@
             <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
             
             <div id="pitchContainerFoul" class="pitchfloulcontainerclass" onclick="printMousePos(this, 'pitchpointer4');">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer4">
+                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer4">
             </div>
             
             <div id="proposalTitle">Foul details</div>
@@ -204,7 +208,7 @@
             </div>
             
             <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');">
-                <img src="./ressources/pointer@x1.png" id="pitchpointer5">
+                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer5">
             </div>
             
         </div> 
