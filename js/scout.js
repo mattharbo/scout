@@ -94,14 +94,12 @@ function stepone(divwherefunctioncalled, maincontainer, childcontainer){
 
 function steptwo(divwherefunctioncalled){
     state=divwherefunctioncalled.id;
-    console.log(state);
 }
 
 //-------------------------
 
 function typeSelection(typetosubmit){
     type=typetosubmit;
-    console.log(type);
 }
 
 //-------------------------
@@ -169,15 +167,29 @@ function submitRightNav(){
                     "state":state
                 };
                 
+                //Update the score board
                 if(state == "goal"){
-                    var scoreDivContent = document.getElementById(scoreBox).textContent;
+                    var goalSide = divid.slice(-4);
                     
-                    //Find the hyphen
-                    var hyphenPos = scoreDivContent.indexOf("-");
+                    var scoreDivContent = document.getElementById('scoreBox').textContent;
                     
-                    console.log(hyphenPos);
-                    
-                    //document.getElementById(scoreBox).innerHTML = parseInt(DivContent)+1;
+                    var hyphenPos = scoreDivContent.indexOf("-");//Knowing that 0 is 1st pos
+                    var scoreHomeTemp = scoreDivContent.substring(0, (hyphenPos-1));
+                    var scoreAwayTemp = scoreDivContent.substring((hyphenPos+2),scoreDivContent.length);
+                                        
+                    //If "home" is selected then change the content between pos 0 and "hyphen"-1 pos
+                    if(goalSide == "Home"){
+                        var mystring1 = String(parseInt(scoreHomeTemp)+1);
+                        var mystring2 = mystring1.concat(" - ");
+                        
+                        document.getElementById('scoreBox').innerHTML = mystring2.concat(scoreAwayTemp);
+                    }else{
+                        //If "away" is selected then change the content between "hyphen" pos + 2 and the total lenght of the string 
+                        var mystring1 = scoreHomeTemp;
+                        var mystring2 = mystring1.concat(" - ");
+                        
+                        document.getElementById('scoreBox').innerHTML = mystring2.concat(String(parseInt(scoreAwayTemp)+1)); 
+                    }
                 }
             }
 

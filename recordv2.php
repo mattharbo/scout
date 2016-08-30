@@ -1,6 +1,13 @@
 <html lang="en">
 	<head>
 		<title>Scout • By scouters for players</title>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("1000");
+        })
+        </script>
 		
         <link rel="stylesheet" href="./css/interface.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
@@ -15,7 +22,8 @@
 	</head>
 	<body>
 <!--    http://smallenvelop.com/display-loading-icon-page-loads-completely/-->
-        
+<!--############# LOADER #############-->
+        <div class="loader"></div>
 
 <!--############# TURNOVER CONTAINER #############-->
         <div id="turnoverNavContainer" class="navContainer">
@@ -265,6 +273,5 @@
         <div id="testsubmit" class="figureLine" onclick="ajax_post();">
             SUBMIT (Test btn)
         </div>
-        
 	</body>
 </html>
