@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./css/interface.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
         
-        <script src='./js/scout.js'></script>
+        <script type="text/javascript" src='./js/scout.js'></script>
 
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
@@ -91,7 +91,7 @@
                 </div>
                 
                 <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
-                    Blocked (Field player)
+                    Blocked
                 </div>
                 
                 <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
@@ -129,7 +129,7 @@
     
                 <input type="radio" name="crosstype" id="blocked" />
                 
-                <label class="forradiobtn" for="blocked">Blocked (Field player)</label>
+                <label class="forradiobtn" for="blocked">Blocked</label>
     
                 <input type="radio" name="crosstype" id="completed" />
                 
