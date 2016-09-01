@@ -1,0 +1,1257 @@
+[{
+    "action": "shoot",
+    "team": "away",
+    "period": 1,
+    "time": 17,
+    "x": "0.62",
+    "y": "0.22",
+    "type": "strike",
+    "state": "goal"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 18,
+    "x": "0.13",
+    "y": "0.26",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 18,
+    "x": "0.61",
+    "y": "0.65"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 19,
+    "x": "0.70",
+    "y": "0.51"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 1,
+    "time": 19,
+    "x": "0.26",
+    "y": "0.21",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 20,
+    "x": "0.90",
+    "y": "0.84"
+}, {
+    "action": "corner",
+    "team": "away",
+    "period": 1,
+    "time": 20,
+    "type": "left"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 21,
+    "x": "0.74",
+    "y": "0.87"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 21,
+    "x": "0.87",
+    "y": "0.18",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 21,
+    "x": "0.58",
+    "y": "0.19",
+    "type": "strike",
+    "state": "goal"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 1,
+    "time": 23,
+    "x": "0.31",
+    "y": "0.29",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 23,
+    "x": "0.82",
+    "y": "0.77"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 23,
+    "x": "0.18",
+    "y": "0.27"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 23,
+    "x": "0.87",
+    "y": "0.74"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 23,
+    "x": "0.21",
+    "y": "0.23"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 24,
+    "x": "0.33",
+    "y": "0.65"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 1,
+    "time": 24,
+    "x": "0.34",
+    "y": "0.08",
+    "state": "block"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 26,
+    "x": "0.90",
+    "y": "0.49",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 26,
+    "x": "0.59",
+    "y": "0.82"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 26,
+    "x": "0.38",
+    "y": "0.87"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 27,
+    "x": "0.92",
+    "y": "0.53"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 27,
+    "x": "0.55",
+    "y": "0.59"
+}, {
+    "action": "corner",
+    "team": "away",
+    "period": 1,
+    "time": 27,
+    "type": "left"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 1,
+    "time": 28,
+    "x": "0.36",
+    "y": "0.13",
+    "type": "strike",
+    "state": "goal"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 30,
+    "x": "0.89",
+    "y": "0.23",
+    "state": "block"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 1,
+    "time": 30,
+    "type": "right"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 30,
+    "x": "0.68",
+    "y": "0.42",
+    "type": "strike",
+    "state": "blocked"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 1,
+    "time": 30,
+    "type": "right"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 31,
+    "x": "0.61",
+    "y": "0.22"
+}, {
+    "action": "offside",
+    "team": "home",
+    "period": 1,
+    "time": 31,
+    "x": "0.34",
+    "y": "0.30"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 31,
+    "x": "0.34",
+    "y": "0.71"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 32,
+    "x": "0.87",
+    "y": "0.16",
+    "state": "block"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 1,
+    "time": 32,
+    "type": "right"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 32,
+    "x": "0.53",
+    "y": "0.16",
+    "type": "strike",
+    "state": "blocked"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 34,
+    "x": "0.57",
+    "y": "0.29",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 34,
+    "x": "0.92",
+    "y": "0.62"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 35,
+    "x": "0.30",
+    "y": "0.68"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 36,
+    "x": "0.23",
+    "y": "0.48"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 36,
+    "x": "0.30",
+    "y": "0.90"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 37,
+    "x": "0.33",
+    "y": "0.70"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 37,
+    "x": "0.12",
+    "y": "0.14",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 37,
+    "x": "0.67",
+    "y": "0.14",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 38,
+    "x": "0.15",
+    "y": "0.56"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 38,
+    "x": "0.15",
+    "y": "0.30"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 1,
+    "time": 39,
+    "x": "0.53",
+    "y": "0.50",
+    "type": "strike",
+    "state": "blocked"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 40,
+    "x": "0.55",
+    "y": "0.58"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 40,
+    "x": "0.38",
+    "y": "0.63"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 40,
+    "x": "0.89",
+    "y": "0.40",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 40,
+    "x": "0.30",
+    "y": "0.62"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 1,
+    "time": 40,
+    "x": "0.13",
+    "y": "0.33",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 40,
+    "x": "0.79",
+    "y": "0.50"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 41,
+    "x": "0.23",
+    "y": "0.52"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 41,
+    "x": "0.57",
+    "y": "0.79"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 1,
+    "time": 43,
+    "x": "0.78",
+    "y": "0.34",
+    "state": "completed"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 1,
+    "time": 43,
+    "x": "0.45",
+    "y": "0.87"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 43,
+    "x": "0.14",
+    "y": "0.35"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 1,
+    "time": 43,
+    "x": "0.73",
+    "y": "0.36",
+    "state": "intercepted"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 28,
+    "x": "0.29",
+    "y": "0.61",
+    "state": "completed"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 44,
+    "x": "0.43",
+    "y": "0.77"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 45,
+    "x": "0.05",
+    "y": "0.40",
+    "state": "completed"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 45+1,
+    "x": "0.87",
+    "y": "0.17",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 1,
+    "time": 45+1,
+    "x": "0.32",
+    "y": "0.16",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 45+1,
+    "x": "0.12",
+    "y": "0.06",
+    "state": "completed"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 1,
+    "time": 45+1,
+    "x": "0.76",
+    "y": "0.01",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 1,
+    "time": 45+1,
+    "x": "0.08",
+    "y": "0.83"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 46,
+    "x": "0.15",
+    "y": "0.38"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 46,
+    "x": "0.09",
+    "y": "0.80"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 47,
+    "x": "0.23",
+    "y": "0.54"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 47,
+    "x": "0.81",
+    "y": "0.90"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 48,
+    "x": "0.01",
+    "y": "0.54"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 48,
+    "x": "0.85",
+    "y": "0.61"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 49,
+    "x": "0.29",
+    "y": "0.33"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 49,
+    "x": "0.57",
+    "y": "0.69"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 50,
+    "x": "0.78",
+    "y": "0.54"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 50,
+    "x": "0.16",
+    "y": "0.57",
+    "judgments": []
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 50,
+    "x": "0.03",
+    "y": "0.16",
+    "state": "block"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 51,
+    "x": "0.87",
+    "y": "0.44",
+    "state": "block"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 51,
+    "x": "0.87",
+    "y": "0.30",
+    "state": "block"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 52,
+    "x": "0.84",
+    "y": "0.09",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 52,
+    "x": "0.57",
+    "y": "0.22"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 53,
+    "x": "0.17",
+    "y": "0.72"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 53,
+    "x": "0.58",
+    "y": "0.51"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 53,
+    "x": "0.84",
+    "y": "0.48"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 2,
+    "time": 53,
+    "x": "0.61",
+    "y": "0.35",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 2,
+    "time": 54,
+    "x": "0.25",
+    "y": "0.30",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 54,
+    "x": "0.83",
+    "y": "0.34",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 55,
+    "x": "0.26",
+    "y": "0.12"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 55,
+    "x": "0.49",
+    "y": "0.24"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 2,
+    "time": 55,
+    "x": "0.37",
+    "y": "0.36",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 56,
+    "x": "0.26",
+    "y": "0.57"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 56,
+    "x": "0.36",
+    "y": "0.70"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 57,
+    "x": "0.10",
+    "y": "0.54",
+    "state": "intercepted"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 58,
+    "x": "0.28",
+    "y": "0.49"
+}, {
+    "action": "offside",
+    "team": "home",
+    "period": 2,
+    "time": 58,
+    "x": "0.31",
+    "y": "0.55"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 59,
+    "x": "0.66",
+    "y": "0.80"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 59,
+    "x": "0.74",
+    "y": "0.30",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 2,
+    "time": 60,
+    "x": "0.37",
+    "y": "0.49",
+    "type": "strike",
+    "state": "save"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 2,
+    "time": 60,
+    "type": "left"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 60,
+    "x": "0.08",
+    "y": "0.36",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 60,
+    "x": "0.36",
+    "y": "0.17"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 2,
+    "time": 60,
+    "x": "0.45",
+    "y": "0.47",
+    "type": "strike",
+    "state": "save"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 61,
+    "x": "0.79",
+    "y": "0.11",
+    "state": "block"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 61,
+    "x": "0.85",
+    "y": "0.08",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 62,
+    "x": "0.59",
+    "y": "0.60"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 62,
+    "x": "0.25",
+    "y": "0.13",
+    "state": "intercepted"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 62,
+    "x": "0.55",
+    "y": "0.60"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 63,
+    "x": "0.46",
+    "y": "0.35",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 63,
+    "x": "0.26",
+    "y": "0.61"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 63,
+    "x": "0.65",
+    "y": "0.59"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 64,
+    "x": "0.83",
+    "y": "0.17",
+    "state": "block"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 2,
+    "time": 64,
+    "type": "right"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 2,
+    "time": 65,
+    "type": "right"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 2,
+    "time": 66,
+    "x": "0.53",
+    "y": "0.43",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 67,
+    "x": "0.13",
+    "y": "0.64"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 67,
+    "x": "0.76",
+    "y": "0.88"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 67,
+    "x": "0.23",
+    "y": "0.42"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 68,
+    "x": "0.17",
+    "y": "0.65"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 2,
+    "time": 68,
+    "type": "left"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 69,
+    "x": "0.66",
+    "y": "0.80"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 70,
+    "x": "0.59",
+    "y": "0.59"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 70,
+    "x": "0.58",
+    "y": "0.53",
+    "judgments": []
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 70,
+    "x": "0.82",
+    "y": "0.14",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "home",
+    "period": 2,
+    "time": 71,
+    "x": "0.50",
+    "y": "0.16",
+    "type": "strike",
+    "state": "offtarget"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 71,
+    "x": "0.79",
+    "y": "0.46"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 71,
+    "x": "0.61",
+    "y": "0.40",
+    "judgments": []
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 72,
+    "x": "0.78",
+    "y": "0.44",
+    "state": "completed"
+}, {
+    "action": "offside",
+    "team": "home",
+    "period": 2,
+    "time": 72,
+    "x": "0.27",
+    "y": "0.28"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 73,
+    "x": "0.37",
+    "y": "0.31",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 73,
+    "x": "0.19",
+    "y": "0.82"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 73,
+    "x": "0.64",
+    "y": "0.73"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 74,
+    "x": "0.01",
+    "y": "0.62"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 74,
+    "x": "0.24",
+    "y": "0.81"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 74,
+    "x": "0.23",
+    "y": "0.83",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 75,
+    "x": "0.56",
+    "y": "0.52"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 75,
+    "x": "0.79",
+    "y": "0.60"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 76,
+    "x": "0.06",
+    "y": "0.36"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 77,
+    "x": "0.71",
+    "y": "0.68"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 78,
+    "x": "0.32",
+    "y": "0.12",
+    "state": "intercepted"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 78,
+    "x": "0.39",
+    "y": "0.22",
+    "judgments": []
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 79,
+    "x": "0.20",
+    "y": "0.08",
+    "state": "block"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 79,
+    "x": "0.46",
+    "y": "0.05",
+    "judgments": []
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 79,
+    "x": "0.66",
+    "y": "0.55",
+    "judgments": []
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 81,
+    "x": "0.18",
+    "y": "0.02",
+    "state": "completed"
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 2,
+    "time": 81,
+    "x": "0.33",
+    "y": "0.06",
+    "type": "strike",
+    "state": "goal"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 82,
+    "x": "0.18",
+    "y": "0.69"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 82,
+    "x": "0.58",
+    "y": "0.49"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 83,
+    "x": "0.79",
+    "y": "0.23",
+    "state": "intercepted"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 83,
+    "x": "0.83",
+    "y": "0.36",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 84,
+    "x": "0.63",
+    "y": "0.55"
+}, {
+    "action": "foul",
+    "team": "away",
+    "period": 2,
+    "time": 85,
+    "x": "0.38",
+    "y": "0.51",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 85,
+    "x": "0.64",
+    "y": "0.73"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 86,
+    "x": "0.71",
+    "y": "0.82",
+    "judgments": []
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 87,
+    "x": "0.03",
+    "y": "0.33"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 87,
+    "x": "0.93",
+    "y": "0.52"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 88,
+    "x": "0.40",
+    "y": "0.68",
+    "judgments": []
+}, {
+    "action": "shoot",
+    "team": "away",
+    "period": 2,
+    "time": 89,
+    "x": "0.57",
+    "y": "0.45",
+    "type": "strike",
+    "state": "save"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 89,
+    "x": "0.53",
+    "y": "0.72"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 89,
+    "x": "0.67",
+    "y": "0.31"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 90,
+    "x": "0.34",
+    "y": "0.68"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 90,
+    "x": "0.81",
+    "y": "0.42"
+}, {
+    "action": "turnover",
+    "team": "away",
+    "period": 2,
+    "time": 90,
+    "x": "0.73",
+    "y": "0.50"
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 91,
+    "x": "0.20",
+    "y": "0.35",
+    "state": "block"
+}, {
+    "action": "turnover",
+    "team": "home",
+    "period": 2,
+    "time": 91,
+    "x": "0.48",
+    "y": "0.69"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 91,
+    "x": "0.81",
+    "y": "0.27",
+    "state": "block"
+}, {
+    "action": "foul",
+    "team": "home",
+    "period": 2,
+    "time": 92,
+    "x": "0.51",
+    "y": "0.52",
+    "judgments": ["yellowcard"]
+}, {
+    "action": "cross",
+    "team": "away",
+    "period": 2,
+    "time": 93,
+    "x": "0.75",
+    "y": "0.16",
+    "state": "block"
+}, {
+    "action": "corner",
+    "team": "home",
+    "period": 2,
+    "time": 93,
+    "type": "left"
+}, {
+    "action": "cross",
+    "team": "home",
+    "period": 2,
+    "time": 94,
+    "x": "0.16",
+    "y": "0.30",
+    "state": "block"
+}]
