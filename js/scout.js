@@ -126,7 +126,8 @@ function submitRightNav(){
         var newevent={
             "action": divid.substring(0,nrbchar-4),
             "team": divid.slice(-4).toLowerCase(),
-            "time": "",
+            "period":period,
+            "time": displayMinuteEvent(eventminute),
             "type":type
         };
         
@@ -158,7 +159,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY
                 };
@@ -171,7 +173,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "type":type,
@@ -213,7 +216,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "state":state
@@ -241,7 +245,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "judgments":fouljudgment
@@ -254,7 +259,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY
                 };
