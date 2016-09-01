@@ -824,7 +824,7 @@ a:active {
     }
 
     #liveIcon{
-        display: inline-block;
+        display: none;
         background-image: url("../ressources/livesymbol@x2.gif");
         background-size: 29.5px 8.5px;
         background-repeat: no-repeat;

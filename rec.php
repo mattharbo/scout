@@ -235,7 +235,7 @@
         <div id="timeBox">
             <div id="timeAndHalf">1st Half - 00:00</div>
             <div id="liveIcon">_</div>
-            <div id="stopHalfBtn" onclick="chronoStart();">End of 1st Half</div>
+            <div id="stopHalfBtn" onclick="chronoStart();">Start of 1st Half</div>
         </div>
         
         <div id="turnover" class="figureLine">
@@ -275,8 +275,10 @@
         </div>
         
 <!--TO BE REMOVED-->
+<!--
         <div id="testsubmit" class="figureLine" onclick="ajax_post();">
             SUBMIT (Test btn)
         </div>
+-->
 	</body>
 </html>

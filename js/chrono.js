@@ -1,7 +1,8 @@
 //From http://www.proglogic.com/code/javascript/time/chronometer.php
 
 var eventminute=0;
-var period=1;
+var period=0;
+var stoprec=true;
 
 var start = 0 //date and time when chrono launch
 var end = 0 //(CURRENT) date and time always updated at each loop
@@ -47,6 +48,8 @@ function displayMinuteEvent(varmin){
 }
 
 function chronoStart(){
+    stoprec=false;
+    period=period+1;
     if(period==1){
         document.getElementById("stopHalfBtn").innerHTML = "End of 1st Half";
     }
@@ -56,6 +59,7 @@ function chronoStart(){
     document.getElementById("stopHalfBtn").onclick = chronoStop;
     start = new Date();
 	chrono()
+    document.getElementById("liveIcon").style.display="inline-block"
 }
 
 function chrono(){
@@ -86,8 +90,14 @@ function chrono(){
 }
 
 function chronoStop(){
-    period=2;
+    stoprec=true;
     document.getElementById("stopHalfBtn").innerHTML = "Start 2nd half";
     document.getElementById("stopHalfBtn").onclick = chronoStart
 	clearTimeout(timerID);
+    document.getElementById("liveIcon").style.display="none"
+    if(period==2){
+        document.getElementById("liveIcon").style.display="none"
+        document.getElementById("stopHalfBtn").innerHTML = "SAVE";
+        document.getElementById("stopHalfBtn").onclick=ajax_post();
+    }
 }
