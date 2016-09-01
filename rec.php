@@ -223,12 +223,12 @@
         <div id="matchPresentation">
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
             <div id="hashContainer">
-                <div id="hashHome" class="hashTeam">#MON</div>
-                <div id="hashAway" class="hashTeam">#PSG</div>
+                <div id="hashHome" class="hashTeam">#ITA</div>
+                <div id="hashAway" class="hashTeam">#FRA</div>
             </div>
             <div id="teamNameContainer">
-                <div id="teamNameHome" class="teamName">AS Monaco FC</div>
-                <div id="teamNameAway" class="teamName">Paris Saint-Germain</div>
+                <div id="teamNameHome" class="teamName">Italia</div>
+                <div id="teamNameAway" class="teamName">France</div>
             </div>
         </div>
         
