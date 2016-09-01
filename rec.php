@@ -128,10 +128,10 @@
                 
                 <label class="forradiobtn" for="intercepted">Intercepted (GK)</label>
     
-                <input type="radio" name="crosstype" id="blocked" />
+                <input type="radio" name="crosstype" id="block" />
                 
-                <label class="forradiobtn" for="blocked">Blocked</label>
-    
+                <label class="forradiobtn" for="block">Blocked</label>
+                
                 <input type="radio" name="crosstype" id="completed" />
                 
                 <label class="forradiobtn" for="completed">Completed</label>
