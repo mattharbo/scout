@@ -13,6 +13,7 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
         
         <script type="text/javascript" src='./js/scout.js'></script>
+        <script type="text/javascript" src='./js/chrono.js'></script>
 
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
@@ -127,10 +128,10 @@
                 
                 <label class="forradiobtn" for="intercepted">Intercepted (GK)</label>
     
-                <input type="radio" name="crosstype" id="blocked" />
+                <input type="radio" name="crosstype" id="block" />
                 
-                <label class="forradiobtn" for="blocked">Blocked</label>
-    
+                <label class="forradiobtn" for="block">Blocked</label>
+                
                 <input type="radio" name="crosstype" id="completed" />
                 
                 <label class="forradiobtn" for="completed">Completed</label>
@@ -234,7 +235,7 @@
         <div id="timeBox">
             <div id="timeAndHalf">1st Half - 00:00</div>
             <div id="liveIcon">_</div>
-            <div id="stopHalfBtn" onclick="periodbtn();">End of 1st Half</div>
+            <div id="stopHalfBtn" onclick="chronoStart();">Start of 1st Half</div>
         </div>
         
         <div id="turnover" class="figureLine">
@@ -274,8 +275,10 @@
         </div>
         
 <!--TO BE REMOVED-->
+<!--
         <div id="testsubmit" class="figureLine" onclick="ajax_post();">
             SUBMIT (Test btn)
         </div>
+-->
 	</body>
 </html>

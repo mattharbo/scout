@@ -7,7 +7,6 @@ var divContainerSelected = "";
 var pitchState = false;
 var pitchPointerSelected = "";
 var events=[];
-var period="0";
 var type="";
 var state="";
 
@@ -21,50 +20,22 @@ var state="";
 
 //-------------------------
 
-function periodbtn(){
-    if(period==0){
-        document.getElementById("stopHalfBtn").innerHTML = "Start of 2nd Half";
-        period="1";
-    }else{
-        if(period==1){
-            document.getElementById("stopHalfBtn").innerHTML = "End of 2nd Half";
-            period="2";
-        }else{
-            if(period==2){
-                document.getElementById("stopHalfBtn").innerHTML = "Start of 1st OT";
-                period="3";
-            }else{
-                if(period==3){
-                    document.getElementById("stopHalfBtn").innerHTML = "End of 1st OT";
-                    period="4";
-                }else{
-                    if(period==4){
-                        document.getElementById("stopHalfBtn").innerHTML = "Start of 2nd OT";
-                        period="5";
-                    }else{
-                        if(period==5){
-                            document.getElementById("stopHalfBtn").innerHTML = "End of 2nd OT";
-                        }
-                    }
-                }
-            }
-        }
-    }   
-}
-
-//-------------------------
-
 function openRightNav(divwherefunctioncalled, maincontainer){
-    divSelected = divwherefunctioncalled;
-    divContainerSelected = maincontainer;
     
-    if(type == "penalty"){
-        document.getElementById("blocked").style.display="none";
+    if(stoprec==false){
+        divSelected = divwherefunctioncalled;
+        divContainerSelected = maincontainer;
+
+        if(type == "penalty"){
+            document.getElementById("blocked").style.display="none";
+        }
+
+        document.getElementById(maincontainer).style.width="100%";
+
+        console.log("Window opened: "+divSelected.id);
+    }else{
+        window.alert("Chrono is not started.");
     }
-    
-    document.getElementById(maincontainer).style.width="100%";
-    
-    console.log("Window opened: "+divSelected.id);
 }
 
 //-------------------------
@@ -126,7 +97,8 @@ function submitRightNav(){
         var newevent={
             "action": divid.substring(0,nrbchar-4),
             "team": divid.slice(-4).toLowerCase(),
-            "time": "",
+            "period":period,
+            "time": displayMinuteEvent(eventminute),
             "type":type
         };
         
@@ -158,7 +130,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY
                 };
@@ -171,7 +144,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "type":type,
@@ -213,7 +187,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "state":state
@@ -241,7 +216,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY,
                     "judgments":fouljudgment
@@ -254,7 +230,8 @@ function submitRightNav(){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
                     "team": divid.slice(-4).toLowerCase(),
-                    "time": "",
+                    "period":period,
+                    "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
                     "y": lasteventY
                 };
@@ -378,13 +355,13 @@ function ajax_post(){
     hr.onreadystatechange = function() {
 	    if(hr.readyState == 4 && hr.status == 200) {
 		    var return_data = hr.responseText;
-			document.getElementById("testsubmit").innerHTML = return_data;
+			document.getElementById("stopHalfBtn").innerHTML = return_data;
 	    }
     }
     
     // Send the data to PHP now... and wait for response to update the status div
     hr.send(vars); // Actually execute the request
-    document.getElementById("testsubmit").innerHTML = "Processing...";
+    document.getElementById("stopHalfBtn").innerHTML = "Processing...";
     
     //REDIRECTION WORKS!!!!
     //window.location = "http://www.google.com";

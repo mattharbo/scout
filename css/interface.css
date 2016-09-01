@@ -824,7 +824,7 @@ a:active {
     }
 
     #liveIcon{
-        display: inline-block;
+        display: none;
         background-image: url("../ressources/livesymbol@x2.gif");
         background-size: 29.5px 8.5px;
         background-repeat: no-repeat;
@@ -838,10 +838,12 @@ a:active {
         display: inline-block;
         float: right;
         text-align: left;
+/*
         background-image: url("../ressources/rightarrow@x2.png");
         background-size: 5px 10px;
         background-repeat: no-repeat;
         background-position: 90% center;
+*/
         width: 35%;
         color: #029E9B;
     /*    background-color: blueviolet; */
