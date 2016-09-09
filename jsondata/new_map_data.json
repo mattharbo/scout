@@ -1,1 +1,1 @@
-[]
+[{"action":"turnover","team":"away","period":1,"time":1,"x":"0.83","y":"0.18"},{"action":"shoot","team":"away","period":1,"time":1,"x":"0.56","y":"0.57","type":"strike","state":"goal"},{"action":"foul","team":"home","period":2,"time":46,"x":"0.23","y":"0.38","judgments":["yellowcard"]},{"action":"corner","team":"away","period":2,"time":47,"type":"right"}]

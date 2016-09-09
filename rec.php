@@ -226,12 +226,12 @@
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
             <div id="liveIcon">_</div>
             <div id="hashContainer">
-                <div id="hashHome" class="hashTeam">#ITA</div>
-                <div id="hashAway" class="hashTeam">#FRA</div>
+                <div id="hashHome" class="hashTeam">#PSG</div>
+                <div id="hashAway" class="hashTeam">#ASSE</div>
             </div>
             <div id="teamNameContainer">
-                <div id="teamNameHome" class="teamName">Italia</div>
-                <div id="teamNameAway" class="teamName">France</div>
+                <div id="teamNameHome" class="teamName">Paris Saint-Germain</div>
+                <div id="teamNameAway" class="teamName">AS Saint-Etienne</div>
             </div>
         </div>
         
