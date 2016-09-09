@@ -700,7 +700,7 @@ a:active {
         text-align: left;
         height: 40px;
         width: 50%;
-    /*    background-color: bisque;*/
+/*        background-color: bisque;*/
         z-index:2;
     }
 
@@ -804,7 +804,7 @@ a:active {
         margin: 20px auto -41px auto;
         width: 120px;
         text-align: center;
-    /*    background-color: royalblue;*/
+/*        background-color: royalblue;*/
         z-index:3;
     } 
 
@@ -814,24 +814,30 @@ a:active {
         color: #EEA42E;
     }
 
-    #timeAndHalf{
-        display: inline-block;
-        float: left;
-        width: 35%;
-        text-align: right;
-        color: #1F4C5D;
-    /*    background-color: firebrick;*/
-    }
+    
 
     #liveIcon{
         display: none;
+        position:inherit;
+        margin: 40px auto -58px auto;
+        z-index:3;
+        text-align: center;        
         background-image: url("../ressources/livesymbol@x2.gif");
         background-size: 29.5px 8.5px;
         background-repeat: no-repeat;
         background-position: center center;
         width: 59px;
         text-indent: -9999px;
-    /*    background-color: hotpink;*/
+/*        background-color: hotpink;*/
+    }
+    
+    #timeAndHalf{
+        display: inline-block;
+        float: left;
+        width: 38%;
+        text-align: right;
+        color: #1F4C5D;
+    /*    background-color: firebrick;*/
     }
 
     #stopHalfBtn{
@@ -844,7 +850,7 @@ a:active {
         background-repeat: no-repeat;
         background-position: 90% center;
 */
-        width: 35%;
+        width: 38%;
         color: #029E9B;
     /*    background-color: blueviolet; */
     }

@@ -59,7 +59,7 @@ function chronoStart(){
     document.getElementById("stopHalfBtn").onclick = chronoStop;
     start = new Date();
 	chrono()
-    document.getElementById("liveIcon").style.display="inline-block"
+    document.getElementById("liveIcon").style.display="block"
 }
 
 function chrono(){

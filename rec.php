@@ -224,6 +224,7 @@
         
         <div id="matchPresentation">
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
+            <div id="liveIcon">_</div>
             <div id="hashContainer">
                 <div id="hashHome" class="hashTeam">#ITA</div>
                 <div id="hashAway" class="hashTeam">#FRA</div>
@@ -235,8 +236,7 @@
         </div>
         
         <div id="timeBox">
-            <div id="timeAndHalf">1st Half - 00:00</div>
-            <div id="liveIcon">_</div>
+            <div id="timeAndHalf">1st Half - 00:00</div>   
             <div id="stopHalfBtn" onclick="chronoStart();">Start of 1st Half</div>
         </div>
         
