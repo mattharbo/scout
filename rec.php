@@ -2,7 +2,7 @@
 	<head>
 		<title>Scout • By scouters for players</title>
         
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="./js/jquery-latest.js"></script>
         <script type="text/javascript">
         $(window).load(function() {
             $(".loader").fadeOut("1000");
@@ -10,7 +10,7 @@
         </script>
 		
         <link rel="stylesheet" href="./css/interface.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
+<!--        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>-->
         
         <script type="text/javascript" src='./js/scout.js'></script>
         <script type="text/javascript" src='./js/chrono.js'></script>

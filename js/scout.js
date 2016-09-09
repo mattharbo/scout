@@ -289,9 +289,8 @@ function eraseTempData(){
     document.getElementById("redcard").checked=false;
     document.getElementById("nowhistle").checked=false;
     document.getElementById("intercepted").checked=false;
-    document.getElementById("blocked").checked=false;
+    document.getElementById("block").checked=false;
     document.getElementById("completed").checked=false;
-    document.getElementById("blocked").style.display="block";
     
     if(pitchPointerSelected !== ""){
         document.getElementById(pitchPointerSelected).style.display= 'none';
