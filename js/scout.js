@@ -313,8 +313,6 @@ function addUnit(elem) {
     var DivContent = document.getElementById(elem.id).textContent;
     
     document.getElementById(elem.id).innerHTML = parseInt(DivContent)+1;
-            
-    //array insertion here
 }
 
 //-------------------------

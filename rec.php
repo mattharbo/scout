@@ -136,6 +136,8 @@
                 
                 <label class="forradiobtn" for="completed">Completed</label>
                 
+                <input type="radio" name="crosstype" id="incompleted" />
+                
                 <label class="forradiobtn" for="incompleted">Incompleted</label>
                 
             </div>
@@ -217,7 +219,6 @@
         </div> 
         
 <!--############# DEFAULT VIEW #############-->
-        
 		<div id="header">
             <a href="/" class="logo" id="logo_header">scout</a>
         </div><!--Header-->
@@ -275,12 +276,6 @@
             <div id="dataType"  class="dataLabel">Offside(s)</div>
             <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer');">0</div>
         </div>
-        
-<!--TO BE REMOVED-->
-<!--
-        <div id="testsubmit" class="figureLine" onclick="ajax_post();">
-            SUBMIT (Test btn)
-        </div>
--->
+
 	</body>
 </html>
