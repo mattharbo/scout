@@ -1,20 +1,9 @@
 <html lang="en">
 	<head>
 		<title>Scout • By scouters for players</title>
-        
-        <script type="text/javascript" src="./js/jquery-latest.js"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-            $(".loader").fadeOut("1000");
-        })
-        </script>
-		
+    
         <link rel="stylesheet" href="./css/interface.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
-        
-        <script type="text/javascript" src='./js/scout.js'></script>
-        <script type="text/javascript" src='./js/chrono.js'></script>
-
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
 
@@ -22,9 +11,9 @@
 		
 	</head>
 	<body>
-<!--    http://smallenvelop.com/display-loading-icon-page-loads-completely/-->
-<!--############# LOADER #############-->
-        <div class="loader"></div>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
 <!--############# TURNOVER CONTAINER #############-->
         <div id="turnoverNavContainer" class="navContainer">
@@ -276,6 +265,18 @@
             <div id="dataType"  class="dataLabel">Offside(s)</div>
             <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer');">0</div>
         </div>
+        
+        <!--############# SCRIPTS #############-->
+        
+        <script type="text/javascript" src="./js/jquery-latest.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#preloader').fadeOut('slow',function(){$(this).remove();});
 
+            });
+       </script>
+        <script type="text/javascript" src='./js/scout.js'></script>
+        <script type="text/javascript" src='./js/chrono.js'></script>
+        
 	</body>
 </html>
