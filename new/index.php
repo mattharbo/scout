@@ -16,20 +16,23 @@
         <!-- Preloader -->
         <div id="preloader"></div>
         
-        <div id="header">
-            <div id="closePageBtn" onclick="closeRightNav();"></div>
-            <div id="pageTitleNoValidation">New game</div>
-        </div>
-        
+<!--
         <div id="newTeamNameContainer">
             <div id="newTeamNameHome" class="formTeamName">hh</div>
             <div id="versusCol" class="versusTeamName">VS.</div>
             <div id="newTeamNameAway" class="formTeamName">aa</div>
         </div>
+-->
         
         
         <!--############# Form Step 3 #############-->
+        
         <div id="formStepThree" class="formNextContainer">
+            
+            <div id="header">
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
+                <div id="pageTitleNoValidation">New game</div>
+            </div>
 
             <div id="titleStepTwo" class="dataLabel">Game details</div>
 
@@ -39,32 +42,80 @@
             </div>
 
             <div id="field">
-                <div id="fieldCompetitionStep" class="fieldName">Competition step</div>
-                <input type="text" id="fieldCompetitionStepContent" class="fieldContent" placeholder="Competition Step" maxlength="20" onclick="getfocus(this, fieldCompetitionStep)">
+                <div id="fieldCompetitionStep" class="fieldName">Competition stage</div>
+                <input type="text" id="fieldCompetitionStepContent" class="fieldContent" placeholder="Competition stage" maxlength="20" onclick="getfocus(this, fieldCompetitionStep)">
             </div>
             
-            <div id="fieldWithSelect">
+            <div id="field">
                 
-                <select class="selectMonth">
-                    <option selected>Month</option>
-                    <?php
-                    for($m=1;$m<=12;$m++){
-                        $monthName = date('F', mktime(0, 0, 0, $m, 10));
-                        echo "<option value='".$monthName."'>".$monthName."</option>";
-                    }
-                    ?>
-                </select>
+                 <div id="fieldMonth">
+                    <div id="fieldMonthId" class="fieldName">Month</div>
+                    <select id="fieldMonthIdContent" class="selectMonth" onclick="getfocus(this, fieldMonthId)">
+                        <option selected>Month</option>
+                        <?php
+                        for($m=1;$m<=12;$m++){
+                            $monthName = date('F', mktime(0, 0, 0, $m, 10));
+                            echo "<option value='".$monthName."'>".$monthName."</option>";
+                        }?>
+                    </select>
+                </div>
+                
+                <div id="fieldDay">
+                    <div id="fieldDayId" class="fieldName">Day</div>
+                    <input type="text" pattern="[0-9]*" id="fieldDayIdContent" class="fieldDay" placeholder="Day" maxlength="2" onclick="getfocus(this, fieldDayId)">
+                </div>
+                
+                <div id="fieldYear">
+                    <div id="fieldYearId" class="fieldName">Year</div>
+                    <input type="text" pattern="[0-9]*" id="fieldYearIdContent" class="fieldYear" placeholder="Year" maxlength="4" onclick="getfocus(this, fieldYearId)">
+                </div>
                      
+            </div>
+            
+            <div id="field">
+                <div id="fieldHour">
+                    <div id="fieldHourId" class="fieldName">Hour</div>
+                    <select id="fieldHourIdContent" class="selectMonth" onclick="getfocus(this, fieldHourId)">
+                        <option selected>Hour</option>
+                        <?php
+                        for($h=0;$h<=23;$h++){
+                            if($h<=9){
+                                $h="0".$h;
+                            }
+                            echo "<option value='".$h."'>".$h."</option>";
+                        }?>
+                    </select>
+                </div>
+                
+                <div id="fieldMinute">
+                    <div id="fieldMinuteId" class="fieldName">Minute</div>
+                    <select id="fieldMinuteIdContent" class="selectMonth" onclick="getfocus(this, fieldMinuteId)">
+                        <option selected>Minute</option>
+                        <?php
+                        for($s=0;$s<=59;$s++){
+                            if($s<=9){
+                                $s="0".$s;
+                            }
+                            echo "<option value='".$s."'>".$s."</option>";
+                        }?>
+                    </select>
+                </div>
+                
             </div>
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="stepThree('formStepThree')">Next</div>
+            <div id="submissionForm" class="formBtn" onclick="stepThree('formStepThree')">Submit</div>
 
         </div>
         
         <!--############# Form Step 2 #############-->
         <div id="formStepTwo" class="formNextContainer">
+            
+            <div id="header">
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
+                <div id="pageTitleNoValidation">New game</div>
+            </div>
 
             <div id="titleStepTwo" class="dataLabel">Away team information</div>
 
@@ -85,6 +136,11 @@
         </div>
         
         <!--############# Form Step 1 #############-->
+        
+        <div id="header">
+                <div id="closePageBtn" onclick="closeRightNav();"></div>
+                <div id="pageTitleNoValidation">New game</div>
+            </div>
         
         <div id="titleStepOne" class="dataLabel">Home team information</div>
         

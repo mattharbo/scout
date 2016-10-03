@@ -456,7 +456,7 @@ a:active {
         right: 0;
         z-index:6;
         background-color: #ffffff;
-        transition-duration: 0.2s;
+        transition-duration: 0.1s;
     }
     
     #turnoverNavContainer {
@@ -472,7 +472,7 @@ a:active {
     
     #formStepThree {
         position: fixed;
-        width: 100%; /*100 instead of 0 to dev*/
+        width: 0%; /*100 instead of 0 to dev*/
         z-index:3;
     }
     
@@ -699,7 +699,6 @@ a:active {
         height: 73px;
         margin-top: -10px;
         border-bottom: 1px solid #E0E0E0;
-    /*    background-color: red;*/
     }
 
     #timeBox{
@@ -724,7 +723,6 @@ a:active {
         text-align: left;
         height: 40px;
         width: 50%;
-/*        background-color: bisque;*/
         z-index:2;
     }
 
@@ -733,7 +731,6 @@ a:active {
         text-align: right;
         height: 40px;
         width: 50%;
-    /*    background-color: orange;*/
         z-index:2;
     }
 
@@ -748,17 +745,11 @@ a:active {
         margin: auto;
         z-index:2;
     }
-    
-    #newTeamNameContainer{    
-        width: 90%;
-        margin: 30px auto;
-    }
 
     #teamNameHome{
         float: left;
         text-align: left;
         width: 50%;
-    /*    background-color: orchid;*/
         z-index:2;
     }
 
@@ -766,29 +757,13 @@ a:active {
         float: right;
         text-align: right;
         width: 50%;
-    /*    background-color: bisque;*/
         z-index:2;
     }
-    
-    #newTeamNameHome{
-        visibility: hidden;
-        float: left;
-        text-align: right;
-        padding-right: 2%;
-        width: 43%;
-    }
 
-    #newTeamNameAway{
-        visibility: hidden;
-        float: right;
-        text-align: left;
-        padding-left: 2%;
-        width: 43%;
-    }
-    
     #versusCol{
         visibility: hidden;
         display: inline-block;
+        vertical-align: bottom;
         text-align: center;
         width: 10%;
     }
@@ -797,21 +772,6 @@ a:active {
         font-weight: 200;
         font-size: 15px;
         color: #143542;
-    }
-    
-    .formTeamName{
-        font-weight: 400;
-        font-size: 15px;
-        color: #000000;
-/*        color: #D8D8D8;*/
-/*        color: #143542;*/
-    }
-    
-    .versusTeamName{
-        font-weight: 500;
-        font-size: 13px;
-        color: #000000;
-/*        color: #D8D8D8;*/
     }
 
     .figureLine{
@@ -823,7 +783,6 @@ a:active {
         background-color: white;
         border-bottom: 1px solid #E0E0E0;
     }
-
 
     .dataScoreHome{
         display: inline-block;
@@ -1058,23 +1017,44 @@ a:active {
     }
 
     #titleStepOne{
-        margin: 70px 0 0 30px;
+        margin: 30px 0 0 30px;
     }
     
     #titleStepTwo{
-        margin: 40px 0 0 30px;
+        margin: 30px 0 0 30px;
     }
     
     #field{
         width: 90%;
         margin: 25px auto;
-/*        background-color: yellowgreen;*/
     }
     
-    #fieldWithSelect{
-        width: 90%;
-        margin: 25px auto;
-        background-color: yellowgreen;
+    #fieldMonth{
+        float: left;
+        width: 40%;
+        margin-right: 5%;
+    }
+    
+    #fieldHour{
+        float: left;
+        width: 45%;
+    }
+    
+    #fieldMinute{
+        float: right;
+        width: 45%;
+    }
+    
+    
+    #fieldDay{
+        display: inline-block;
+        width: 20%;
+        margin-right: 5%;
+    }
+    
+    #fieldYear{
+        float: right;
+        width: 30%;
     }
     
     .fieldName{
@@ -1083,7 +1063,6 @@ a:active {
         font-size: 12px;
         color: #029E9B;
         padding-left: 10px;
-/*        background-color: firebrick;*/
     }
     
     select {
@@ -1109,10 +1088,10 @@ a:active {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: 135px;
         font-weight: 300;
+        width: 100%;
         font-size: 18px;
-        height: 40px;
+        height: 45px;
     }
     
     input {
@@ -1128,7 +1107,7 @@ a:active {
     
     input[type="text"].fieldContent
     {
-      width: 100%;
+        width: 100%;
         height: 45px;
         border-bottom: 1px #D8D8D8 solid;
 /*        border-bottom: 2px #029E9B solid;*/
@@ -1141,6 +1120,35 @@ a:active {
         padding-left: 10px;
     }
     
+    input[type="text"].fieldDay
+    {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: 100;
+        font-size: 16px;
+        color: #000000;
+        padding-left: 10px;
+    }
+    
+    input[type="text"].fieldYear
+    {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: 100;
+        font-size: 16px;
+        color: #000000;
+        padding-left: 10px;
+    }
     
     #previousForm{
         float: left;
