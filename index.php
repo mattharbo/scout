@@ -7,7 +7,7 @@
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 		
 	</head>
 	<body>

@@ -1,5 +1,3 @@
-//-------------------------
-
 var lasteventX=0;
 var lasteventY=0;
 var divSelected = "";
