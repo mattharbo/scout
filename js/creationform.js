@@ -4,6 +4,9 @@ var newawayteam = "";
 var newawayhash = "";
 var newcompetition = "";
 var newstage = "";
+var newmonth = "";
+var newday = "";
+var newyear = "";
 var newhour = "";
 var newminute = "";
 
@@ -34,4 +37,14 @@ function stepThree(targetContainer){
 //    
 //    document.getElementById('newTeamNameAway').style.visibility="visible";
     document.getElementById(targetContainer).style.width="100%";
+}
+
+function submitNewGame(){
+    newcompetition=document.getElementById("fieldCompetitionContent").value;
+    newstage=document.getElementById("fieldCompetitionStepContent").value;
+    newmonth=document.getElementById("fieldMonthIdContent").value;
+    newday=document.getElementById("fieldDayIdContent").value;
+    newyear=document.getElementById("fieldYearIdContent").value;
+    newhour=document.getElementById("fieldHourIdContent").value;
+    newminute=document.getElementById("fieldMinuteIdContent").value;
 }

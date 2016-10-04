@@ -16,15 +16,6 @@
         <!-- Preloader -->
         <div id="preloader"></div>
         
-<!--
-        <div id="newTeamNameContainer">
-            <div id="newTeamNameHome" class="formTeamName">hh</div>
-            <div id="versusCol" class="versusTeamName">VS.</div>
-            <div id="newTeamNameAway" class="formTeamName">aa</div>
-        </div>
--->
-        
-        
         <!--############# Form Step 3 #############-->
         
         <div id="formStepThree" class="formNextContainer">
@@ -105,7 +96,7 @@
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="stepThree('formStepThree')">Submit</div>
+            <div id="submissionForm" class="formBtn" onclick="submitNewGame()">Submit</div>
 
         </div>
         
