@@ -15,8 +15,7 @@ function dbconnexion(){
     }
 }
 
-function dbrequest($sql){
-    
+function dbwrite($sql){
     if (mysqli_multi_query($GLOBALS['conn'], $sql)) {
         echo "New records created successfully";
     } else {
@@ -24,7 +23,19 @@ function dbrequest($sql){
     }
     
     return $GLOBALS['conn'];
+}
+
+function dbread($query){
+    $req = mysqli_query($GLOBALS['conn'], $query);
+
+    $rows = [];
+    while($row = mysqli_fetch_array($req))
+    {
+        $rows[] = $row;
+    }
     
+    //echo $rows[0][0];
+    return $rows;
 }
 
 function dbclosing(){

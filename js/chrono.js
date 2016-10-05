@@ -96,8 +96,8 @@ function chronoStop(){
 	clearTimeout(timerID);
     document.getElementById("liveIcon").style.display="none"
     if(period==2){
-        document.getElementById("liveIcon").style.display="none"
+        document.getElementById("liveIcon").style.display="none";
         document.getElementById("stopHalfBtn").innerHTML = "SAVE";
-        document.getElementById("stopHalfBtn").onclick=ajax_post();
+        document.getElementById("stopHalfBtn").onclick=ajax_post("./script/script.php");
     }
 }

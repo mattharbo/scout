@@ -4,9 +4,8 @@
 		
         <link rel="stylesheet" href="../css/interface.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
-
 <!--		<link rel="icon" href="./img/favicon.png">-->
-        <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../ressources/touch-icon-iphone.png">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 		
@@ -96,7 +95,7 @@
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="submitNewGame()">Submit</div>
+            <div id="submissionForm" class="formBtn" onclick="submitNewGame(), form_ajax_post('./new.php')">Submit</div>
 
         </div>
         
@@ -122,7 +121,7 @@
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="stepThree('formStepThree')">Next</div>
+            <div id="submissionForm" class="formBtn" onclick="goToStepThree('formStepThree')">Next</div>
 
         </div>
         
@@ -145,7 +144,7 @@
             <input type="text" id="fieldHashHomeContent" class="fieldContent" placeholder="Short name" maxlength="4" onclick="getfocus(this, fieldHashHome)">
         </div>
         
-        <div id="submissionForm" class="formBtn" onclick="stepTwo('formStepTwo')">Next</div>
+        <div id="submissionForm" class="formBtn" onclick="goToStepTwo('formStepTwo')">Next</div>
         
          <!--############# SCRIPTS #############-->
         
