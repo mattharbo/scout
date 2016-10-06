@@ -47,7 +47,7 @@ function form_ajax_post(targeturl){
     // Create some variables we need to send to our PHP file
     //var url = targeturl;
     
-    var vars = "table_content="+JSON.stringify(forminfo);
+    var vars = "table_information="+JSON.stringify(forminfo);
     
     hr.open("POST", targeturl, true);
     
@@ -58,7 +58,8 @@ function form_ajax_post(targeturl){
     hr.onreadystatechange = function() {
 	    if(hr.readyState == 4 && hr.status == 200) {
 		    var return_data = hr.responseText;
-			document.getElementById("submissionForm").innerHTML = "Saved";
+//			document.getElementById("submissionForm").innerHTML = "Saved";
+            document.getElementById("submissionForm").innerHTML = return_data;
 	    }
     }
     
@@ -67,5 +68,5 @@ function form_ajax_post(targeturl){
     document.getElementById("submissionForm").innerHTML = "Processing...";
     
     //REDIRECTION WORKS!!!!
-    window.location = "../";
+    //window.location = "../";
 }
