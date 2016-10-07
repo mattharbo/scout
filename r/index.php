@@ -2,12 +2,12 @@
 	<head>
 		<title>Scout • By scouters for players</title>
     
-        <link rel="stylesheet" href="./css/interface.css">
+        <link rel="stylesheet" href="../css/interface.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
 <!--		<link rel="icon" href="./img/favicon.png">-->
-        <link rel="apple-touch-icon" sizes="120x120" href="./ressources/touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../ressources/touch-icon-iphone.png">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 		
 	</head>
 	<body>
@@ -25,7 +25,7 @@
             </div>
             
             <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');">
-                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer1">
+                <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer1">
             </div>
             
         </div>        
@@ -39,7 +39,7 @@
             </div>
             
             <div id="pitchContainerShoot" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer2');">
-                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer2">
+                <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer2">
             </div>
             
             <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div>
@@ -106,7 +106,7 @@
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
-                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer3">
+                <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer3">
             </div>
             
             <div id="proposalTitle">Cross details</div>
@@ -145,7 +145,7 @@
             <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
             
             <div id="pitchContainerFoul" class="pitchfloulcontainerclass" onclick="printMousePos(this, 'pitchpointer4');">
-                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer4">
+                <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer4">
             </div>
             
             <div id="proposalTitle">Foul details</div>
@@ -202,7 +202,7 @@
             </div>
             
             <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');">
-                <img src="./ressources/pointer@x2.png" height="22" width="17" id="pitchpointer5">
+                <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer5">
             </div>
             
         </div> 
@@ -268,15 +268,15 @@
         
         <!--############# SCRIPTS #############-->
         
-        <script type="text/javascript" src="./js/jquery-latest.js"></script>
+        <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#preloader').fadeOut('slow',function(){$(this).remove();});
 
             });
        </script>
-        <script type="text/javascript" src='./js/scout.js'></script>
-        <script type="text/javascript" src='./js/chrono.js'></script>
+        <script type="text/javascript" src='../js/recordpage.js'></script>
+        <script type="text/javascript" src='../js/chrono.js'></script>
         
 	</body>
 </html>

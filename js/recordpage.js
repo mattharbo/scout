@@ -1,5 +1,3 @@
-//-------------------------
-
 var lasteventX=0;
 var lasteventY=0;
 var divSelected = "";
@@ -335,15 +333,15 @@ function expandCollapsePitch(sourcediv, elem){
 
 //-------------------------
 
-function ajax_post(){
+function ajax_post(targeturl){
     // Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
     // Create some variables we need to send to our PHP file
-    var url = "./script/script.php";
+    //var url = targeturl;
     
     var vars = "table_content="+JSON.stringify(events);
     
-    hr.open("POST", url, true);
+    hr.open("POST", targeturl, true);
     
     // Set content type header information for sending url encoded variables in the request
     hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

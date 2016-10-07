@@ -1,4 +1,5 @@
 /* ******************** PRELOADER ******************** */
+
 #preloader {
 	position: fixed;
 	left: 0;
@@ -9,21 +10,8 @@
 	height: 100%;
     background-color: white;
 	overflow: visible;
+    visibility: visible;
 }
-
-/*
-.loader {
-
-position : fixed;
-z-index: 9999;
-background : url('../ressources/loader.gif') 50% 50% no-repeat;
-top : 0px;
-left : 0px;
-height : 100%;
-width : 100%;
-cursor : wait;
-}
-*/
 
 html {
   box-sizing: border-box;
@@ -62,7 +50,7 @@ a:active {
   text-decoration: none;
 }
 
-/*RESPONSIVE EXAMPLE*/
+/*RESPONSIVE*/
 @media screen and (max-width: 600px){
 
     #header{
@@ -439,7 +427,7 @@ a:active {
     #pageTitleNoValidation {
         display: inline-block;
         margin-top: 15px;
-        margin-left: -5%;
+        margin-left: -7%;
         color: #FFFFFF;
         font-weight: 800;
     }
@@ -463,14 +451,35 @@ a:active {
         transition-duration: 0.1s;
     }
     
+    .formNextContainer{
+        overflow-x: hidden;
+        height: 100%;
+        right: 0;
+        z-index:6;
+        background-color: #ffffff;
+        transition-duration: 0.1s;
+    }
+    
     #turnoverNavContainer {
         position: fixed;
         width: 0%; /*100 instead of 0 to dev*/
     }
     
-    #shootNavContainerPage1 {
-        width: 0%; /*100 instead of 0 to dev*/
+    #formStepTwo {
         position: fixed;
+        width: 0%; /*100 instead of 0 to dev*/
+        z-index:2;
+    }
+    
+    #formStepThree {
+        position: fixed;
+        width: 0%; /*100 instead of 0 to dev*/
+        z-index:3;
+    }
+    
+    #shootNavContainerPage1 {
+        position: fixed;
+        width: 0%; /*100 instead of 0 to dev*/
     }
     
     #shootNavContainerPage2 {
@@ -691,7 +700,6 @@ a:active {
         height: 73px;
         margin-top: -10px;
         border-bottom: 1px solid #E0E0E0;
-    /*    background-color: red;*/
     }
 
     #timeBox{
@@ -716,7 +724,6 @@ a:active {
         text-align: left;
         height: 40px;
         width: 50%;
-/*        background-color: bisque;*/
         z-index:2;
     }
 
@@ -725,7 +732,6 @@ a:active {
         text-align: right;
         height: 40px;
         width: 50%;
-    /*    background-color: orange;*/
         z-index:2;
     }
 
@@ -745,7 +751,6 @@ a:active {
         float: left;
         text-align: left;
         width: 50%;
-    /*    background-color: orchid;*/
         z-index:2;
     }
 
@@ -753,13 +758,20 @@ a:active {
         float: right;
         text-align: right;
         width: 50%;
-    /*    background-color: bisque;*/
         z-index:2;
-    } 
+    }
+
+    #versusCol{
+        visibility: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        text-align: center;
+        width: 10%;
+    }
 
     .teamName{
         font-weight: 200;
-        font-size: 13px;
+        font-size: 15px;
         color: #143542;
     }
 
@@ -772,7 +784,6 @@ a:active {
         background-color: white;
         border-bottom: 1px solid #E0E0E0;
     }
-
 
     .dataScoreHome{
         display: inline-block;
@@ -1006,7 +1017,156 @@ a:active {
         background-size: 17.5px 16.5px;
     }
 
-
+    #titleStepOne{
+        margin: 30px 0 0 30px;
+    }
+    
+    #titleStepTwo{
+        margin: 30px 0 0 30px;
+    }
+    
+    #field{
+        width: 90%;
+        margin: 25px auto;
+    }
+    
+    #fieldMonth{
+        float: left;
+        width: 40%;
+        margin-right: 5%;
+    }
+    
+    #fieldHour{
+        float: left;
+        width: 45%;
+    }
+    
+    #fieldMinute{
+        float: right;
+        width: 45%;
+    }
+    
+    
+    #fieldDay{
+        display: inline-block;
+        width: 20%;
+        margin-right: 5%;
+    }
+    
+    #fieldYear{
+        float: right;
+        width: 30%;
+    }
+    
+    .fieldName{
+        visibility: hidden;
+        font-weight: 300;
+        font-size: 12px;
+        color: #029E9B;
+        padding-left: 10px;
+    }
+    
+    select {
+       -webkit-appearance: none;
+    }
+    
+    select.selectMonth {
+        -webkit-appearance: button;
+        -webkit-border-radius: 0px;
+        -webkit-padding-start: 10px;
+        -webkit-user-select: none;
+        background-image: url(../ressources/trianglebtn@x2.png);
+        background-size: 12px 8px;
+        background-position: 90% center;
+        background-repeat: no-repeat;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        background-color: white;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: #029E9B;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 300;
+        width: 100%;
+        font-size: 18px;
+        height: 45px;
+    }
+    
+    input {
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #029E9B !important;
+        font-weight: 300;
+        font-size: 18px;
+    }
+    
+    input[type="text"].fieldContent
+    {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: 100;
+        font-size: 16px;
+        color: #000000;
+        padding-left: 10px;
+    }
+    
+    input[type="text"].fieldDay
+    {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: 100;
+        font-size: 16px;
+        color: #000000;
+        padding-left: 10px;
+    }
+    
+    input[type="text"].fieldYear
+    {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px #D8D8D8 solid;
+/*        border-bottom: 2px #029E9B solid;*/
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: 100;
+        font-size: 16px;
+        color: #000000;
+        padding-left: 10px;
+    }
+    
+    #previousForm{
+        float: left;
+        padding-left: 10%;
+    }
+    
+    #submissionForm{
+        float: right;
+        padding-right: 10%;
+    }
+    
+    .formBtn{
+        margin: 25px 0 0 0;
+        color: #029E9B;
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
