@@ -1,10 +1,19 @@
 <?php
 
-//Step 1: Create teams
-//Step 2: Retrieve team id
-//Step 3: Create game
-
+//Retrieve information from creation form
 $informationarray = json_decode($_POST['table_information'], true);
+
+//Define variables to uniq ID creation
+$prefix="T";
+$random1=rand();
+$random2=rand();
+$time=time();
+$team1=md5($random1.$time);
+$team2=md5($random2.$time);
+
+//Define home and away teams uniq IDs
+$hometeamuniqid = $prefix.$team1;
+$awayteamuniqid = $prefix.$team2;
 
 //$informationarray['0']=full home team name
 //$informationarray['1']=hash home team name
@@ -20,18 +29,18 @@ $informationarray = json_decode($_POST['table_information'], true);
 
 include '../script/dbincludes.php';
 
-$querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`) VALUES (NULL, '2016-10-04 08:35:18', '006', '007', NULL, '0');";
+$querycreateteamhome = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$hometeamuniqid."', '".$informationarray[0]."', '".$informationarray[1]."', '');";
 
-$querycreateteam = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES (4, 'test', 'TES', 'Taormina');";
+$querycreateteamaway = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$awayteamuniqid."', '".$informationarray[2]."', '".$informationarray[3]."', '');";
 
-//Conditions to be added to this query in order to get the last team created
-$queryretrieveteam = "SELECT * FROM `team` LIMIT 0,1000;";
+$querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$hometeamuniqid."', '".$awayteamuniqid."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
 
 dbconnexion();
-//dbwrite($query);
-$test = dbread($queryretrieveteam);
+dbwrite($querycreateteamhome);
+dbwrite($querycreateteamaway);
+dbwrite($querycreategame);
 dbclosing();
 
-//echo $test[0]['teamname'];
+echo "Data Saved";
 
 ?>

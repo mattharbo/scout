@@ -44,8 +44,6 @@ function submitNewGame(){
 function form_ajax_post(targeturl){
     // Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
-    // Create some variables we need to send to our PHP file
-    //var url = targeturl;
     
     var vars = "table_information="+JSON.stringify(forminfo);
     
@@ -67,6 +65,6 @@ function form_ajax_post(targeturl){
     hr.send(vars); // Actually execute the request
     document.getElementById("submissionForm").innerHTML = "Processing...";
     
-    //REDIRECTION WORKS!!!!
+    //REDIRECTION WORKS!!!! > Should be through the listing page (to be developed)
     //window.location = "../";
 }
