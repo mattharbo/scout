@@ -95,7 +95,7 @@
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="submitNewGame(), form_ajax_post('./new.php')">Submit</div>
+            <div id="submissionForm" class="formBtn" onclick="submitNewGame(), form_ajax_post('../script/new.php')">Submit</div>
 
         </div>
         

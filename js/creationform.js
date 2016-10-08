@@ -66,5 +66,5 @@ function form_ajax_post(targeturl){
     document.getElementById("submissionForm").innerHTML = "Processing...";
     
     //REDIRECTION WORKS!!!! > Should be through the listing page (to be developed)
-    //window.location = "../";
+    window.location = "../l/";
 }

@@ -58,7 +58,8 @@ a:active {
         height: 45px;
         text-align: center;
 /*        background-color: #029E9B;*/
-        background: linear-gradient(50deg, #0093e7, #00cc86);
+/*        background: linear-gradient(50deg, #0093e7, #00cc86);*/
+        background: linear-gradient(50deg, #00a5a7, #00739A);
     }
 
     #logo_header{
