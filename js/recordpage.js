@@ -1,6 +1,7 @@
 var lasteventX=0;
 var lasteventY=0;
 var divSelected = "";
+var refteam = "";
 var divContainerSelected = "";
 var pitchState = false;
 var pitchPointerSelected = "";
@@ -18,11 +19,12 @@ var state="";
 
 //-------------------------
 
-function openRightNav(divwherefunctioncalled, maincontainer){
+function openRightNav(divwherefunctioncalled, maincontainer, teamid){
     
     if(stoprec==false){
         divSelected = divwherefunctioncalled;
         divContainerSelected = maincontainer;
+        refteam = teamid;
 
         if(type == "penalty"){
             document.getElementById("blocked").style.display="none";
@@ -94,7 +96,8 @@ function submitRightNav(){
         //action	team	time			type
         var newevent={
             "action": divid.substring(0,nrbchar-4),
-            "team": divid.slice(-4).toLowerCase(),
+            "team": refteam,
+            //"team": divid.slice(-4).toLowerCase(),
             "period":period,
             "time": displayMinuteEvent(eventminute),
             "type":type
@@ -127,7 +130,8 @@ function submitRightNav(){
             if(divid == "turnoverHome" || divid == "turnoverAway"){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
-                    "team": divid.slice(-4).toLowerCase(),
+                    "team": refteam,
+                    //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
@@ -141,7 +145,8 @@ function submitRightNav(){
             if(divid == "shootHome" || divid == "shootAway"){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
-                    "team": divid.slice(-4).toLowerCase(),
+                    "team": refteam,
+                    //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
@@ -184,7 +189,8 @@ function submitRightNav(){
 
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
-                    "team": divid.slice(-4).toLowerCase(),
+                    "team": refteam,
+                    //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
@@ -213,7 +219,8 @@ function submitRightNav(){
 
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
-                    "team": divid.slice(-4).toLowerCase(),
+                    "team": refteam,
+                    //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
@@ -227,7 +234,8 @@ function submitRightNav(){
             if(divid == "offsideHome" || divid == "offsideAway"){
                 var newevent={
                     "action": divid.substring(0,nrbchar-4),
-                    "team": divid.slice(-4).toLowerCase(),
+                    "team": refteam,
+                    //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
                     "x": lasteventX,
@@ -282,6 +290,7 @@ function eraseTempData(){
     lasteventX=0;
     lasteventY=0;
     divSelected = "";
+    refteam = "";
     divContainerSelected = "";
     document.getElementById("yellowcard").checked=false;
     document.getElementById("redcard").checked=false;

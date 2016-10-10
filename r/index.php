@@ -1,3 +1,22 @@
+<?
+if (isset ($_GET["id"])) { 
+    $gameid = $_GET["id"];
+    
+    include '../script/dbincludes.php';
+        
+        $retrieveopenedgames="select game.gameid, team1.teamname, team1.teamnickname, team2.teamname, team2.teamnickname
+        from game
+        join team as team1 on game.gamehometeam = team1.teamid
+        join team as team2 on game.gameawayteam = team2.teamid
+        where game.gameid=$gameid";
+        
+        dbconnexion();
+        $resultsarray = dbread($retrieveopenedgames);
+        dbclosing();
+    
+} else { 
+    header('Location: ../404/');
+}?>
 <html lang="en">
 	<head>
 		<title>Scout • By scouters for players</title>
@@ -216,12 +235,12 @@
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
             <div id="liveIcon">_</div>
             <div id="hashContainer">
-                <div id="hashHome" class="hashTeam">#TOT</div>
-                <div id="hashAway" class="hashTeam">#ASM</div>
+                <div id="hashHome" class="hashTeam">#<?echo $resultsarray[0][2];?></div>
+                <div id="hashAway" class="hashTeam">#<?echo $resultsarray[0][4];?></div>
             </div>
             <div id="teamNameContainer">
-                <div id="teamNameHome" class="teamName">Tottenham Hotspurs FC</div>
-                <div id="teamNameAway" class="teamName">AS Monaco FC</div>
+                <div id="teamNameHome" class="teamName"><?echo $resultsarray[0][1];?></div>
+                <div id="teamNameAway" class="teamName"><?echo $resultsarray[0][3];?></div>
             </div>
         </div>
         
@@ -231,9 +250,9 @@
         </div>
         
         <div id="turnover" class="figureLine">
-            <div id="turnoverHome" class="dataScoreHome" onclick="openRightNav(this,'turnoverNavContainer');">0</div>
+            <div id="turnoverHome" class="dataScoreHome" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][2];?>');">0</div>
             <div id="dataType"  class="dataLabel">Turnover(s)</div>
-            <div id="turnoverAway" class="dataScoreAway" onclick="openRightNav(this,'turnoverNavContainer');">0</div>
+            <div id="turnoverAway" class="dataScoreAway" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][4];?>');">0</div>
         </div>
         
         <div id="shoot" class="figureLine">
@@ -243,27 +262,27 @@
         </div>
         
         <div id="cross" class="figureLine">
-            <div id="crossHome" class="dataScoreHome" onclick="openRightNav(this,'crossNavContainer');">0</div>
+            <div id="crossHome" class="dataScoreHome" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][2];?>');">0</div>
             <div id="dataType"  class="dataLabel">Crosse(s)</div>
-            <div id="crossAway" class="dataScoreAway" onclick="openRightNav(this,'crossNavContainer');">0</div>
+            <div id="crossAway" class="dataScoreAway" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][4];?>');">0</div>
         </div>
         
         <div id="foul" class="figureLine">
-            <div id="foulHome" class="dataScoreHome" onclick="openRightNav(this,'foulNavContainer');">0</div>
+            <div id="foulHome" class="dataScoreHome" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][2];?>');">0</div>
             <div id="dataType"  class="dataLabel">Foul(s)</div>
-            <div id="foulAway" class="dataScoreAway" onclick="openRightNav(this,'foulNavContainer');">0</div>
+            <div id="foulAway" class="dataScoreAway" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][4];?>');">0</div>
         </div>
         
         <div id="corner" class="figureLine">
-            <div id="cornerHome" class="dataScoreHome" onclick="openRightNav(this,'cornerNavContainer');">0</div>
+            <div id="cornerHome" class="dataScoreHome" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][2];?>');">0</div>
             <div id="dataType"  class="dataLabel">Corner Kick(s)</div>
-            <div id="cornerAway" class="dataScoreAway" onclick="openRightNav(this,'cornerNavContainer');">0</div>
+            <div id="cornerAway" class="dataScoreAway" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][4];?>');">0</div>
         </div>
         
         <div id="offside" class="figureLine">
-            <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer');">0</div>
+            <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][2];?>');">0</div>
             <div id="dataType"  class="dataLabel">Offside(s)</div>
-            <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer');">0</div>
+            <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][4];?>');">0</div>
         </div>
         
         <!--############# SCRIPTS #############-->

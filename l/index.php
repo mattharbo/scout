@@ -26,7 +26,7 @@
         
         include '../script/dbincludes.php';
         
-        $retrieveopenedgames="select game.gamedate, game.gamecompetition, game.gamestage, team1.teamname, team2.teamname
+        $retrieveopenedgames="select game.gameid, game.gamedate, game.gamecompetition, game.gamestage, team1.teamname, team2.teamname
         from game
         join team as team1 on game.gamehometeam = team1.teamid
         join team as team2 on game.gameawayteam = team2.teamid
@@ -39,10 +39,12 @@
         
         //Max number of game retrieved by the query
         for ($p=0; $p<=count($resultsarray);$p++){
-            //Number of colomn asked by the query
-            for ($z=0; $z<=4;$z++){
-                echo $resultsarray[$p][$z];
-            }
+            echo "<a href=../r/?id=".$resultsarray[$p][0].">";
+                //Number of colomn asked by the query
+                for ($z=1; $z<=5;$z++){
+                    echo $resultsarray[$p][$z];
+                }
+            echo "</a>";
             echo "<br><br>";
         }
         
