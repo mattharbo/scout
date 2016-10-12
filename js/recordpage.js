@@ -65,7 +65,7 @@ function stepone(divwherefunctioncalled, maincontainer, childcontainer){
             lasteventY = 0.17;
         }
         
-        openRightNav(divSelected, childcontainer);
+        openRightNav(divSelected, childcontainer, refteam);
         document.getElementById(maincontainer).style.width="0";
     }else{
         window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
