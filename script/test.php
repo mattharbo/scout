@@ -8,7 +8,7 @@ $informationarrayday="04";
 $informationarrayhour="18";
 $informationarraymin="32";
 
-echo mergedate($informationarrayyear, $informationarraymonth, $informationarrayday, $informationarrayhour, $informationarraymin);
+//echo mergedate($informationarrayyear, $informationarraymonth, $informationarrayday, $informationarrayhour, $informationarraymin);
 
 
 ////hour minute second month day year
@@ -16,5 +16,12 @@ echo mergedate($informationarrayyear, $informationarraymonth, $informationarrayd
 //
 //$date = date('Y-m-d H:i:s', $testdate);
 //echo $date;
-    
+
+$datetimeinput ="2016-12-25 20:45:00";
+
+echo returndateday($datetimeinput);
+echo returndatemonth($datetimeinput);
+echo returndatehour($datetimeinput);
+
+
 ?>

@@ -30,6 +30,10 @@ body {
 /*    text-align: center;*/
 }
 
+.bodygreybg{
+    background-color: #F5F5F5;
+}
+
 a:link {
   color: none;
   text-decoration: none;
@@ -66,6 +70,77 @@ a:active {
         position: relative;
         margin: 12px auto;
     }
+    
+    #gamelistentry{
+        width: 100%;
+        height: 80px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #BEBEBE;
+    }
+    
+    #gamelistdate{
+        float:left;
+        width: 22%;
+        padding-top: 17px;
+        text-align: center;
+        color: #EEA42E;
+/*        background-color: aqua;*/
+    }
+    
+    #gamelistdatenumber{
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+    }
+    
+    #gamelistdatemonth{
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+    }
+    
+    #gamelistinfo{
+        float: right;
+        width: 78%;
+        height: 71px;
+        padding-top: 10px;
+        background-image: url("../ressources/nexticonlisting@x2.png");
+        background-repeat: no-repeat;
+        background-position: 95%;
+        background-size: 7.5px 15px;
+/*        background-color: yellowgreen;*/
+    }
+    
+    .gamelistinfocompet{
+        font-size: 15px;
+        font-weight: 500;
+        color: #1F4C5D;
+    }
+    
+    .gamelistinfohour{
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 300;
+        padding-left: 10px;
+        color: #B4B4B4;
+    }
+    
+    .gamelistinfohometeam{
+        display: block;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 27px;
+        color: black;
+    }
+    
+    .gamelistinfoawayteam{
+        display: block;
+        font-size: 14px;
+        line-height: 10px;
+        font-weight: 100;
+        color: black;
+    }
+    
 
     #scoreContainer{
         position: relative;

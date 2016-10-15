@@ -95,7 +95,7 @@
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
 
-            <div id="submissionForm" class="formBtn" onclick="submitNewGame(), form_ajax_post('../script/new.php')">Submit</div>
+            <div id="submissionForm" class="formBtn" onclick="submitNewGame(), form_ajax_post('../script/newgame.php')">Submit</div>
 
         </div>
         
@@ -128,7 +128,7 @@
         <!--############# Form Step 1 #############-->
         
         <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav();"></div>
+                <div id="closePageBtn" onclick="closeWindow('../');"></div>
                 <div id="pageTitleNoValidation">New game</div>
             </div>
         
@@ -156,7 +156,6 @@
             });
        </script>
         <script type="text/javascript" src='../js/creationform.js'></script>
-
 
 	</body>
 </html>
