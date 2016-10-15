@@ -55,6 +55,12 @@ function closeRightNav(){
 
 //-------------------------
 
+function closeWindow(path){
+    window.location = path;    
+}
+
+//-------------------------
+
 function stepone(divwherefunctioncalled, maincontainer, childcontainer){
     if(lasteventX != 0 && lasteventY != 0){
         type=divwherefunctioncalled.id;

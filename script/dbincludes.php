@@ -1,10 +1,21 @@
 <?php
 
-$GLOBALS['servername'] = "eu-cdbr-west-01.cleardb.com";
-$GLOBALS['username'] = "bf9408c30c58cb";
-$GLOBALS['password'] = "28dd5e4e";
-$GLOBALS['dbname'] = "heroku_2c007d1d9463440";
-$GLOBALS['conn'] = "";
+//$GLOBALS['servername'] = "localhost";
+//$GLOBALS['username'] = "root";
+//$GLOBALS['password'] = "root";
+//$GLOBALS['dbname'] = "scout";
+
+//$GLOBALS['conn'] = "";
+
+//$GLOBALS['servername'] = "eu-cdbr-west-01.cleardb.com";
+//$GLOBALS['username'] = "bf9408c30c58cb";
+//$GLOBALS['password'] = "28dd5e4e";
+//$GLOBALS['dbname'] = "heroku_2c007d1d9463440";
+
+$GLOBALS['servername'] = getenv('servername');
+$GLOBALS['username'] = getenv('username');
+$GLOBALS['password'] = getenv('password');
+$GLOBALS['dbname'] = getenv('dbname');
 
 function dbconnexion(){
     // Create connection
@@ -61,6 +72,24 @@ function mergedate($year,$month,$day,$hour,$minutes){
     $finaldate = date('Y-m-d H:i:s', $concatdate);
     
     return $finaldate;
+}
+
+function returndateday($datetime){
+    $secondhyphen=strrpos($datetime,"-");
+    $stringtoreturn=substr($datetime, $secondhyphen+1, 2);
+    return $stringtoreturn;
+}
+
+function returndatemonth($datetime){
+    $firsthyphen=strpos($datetime,"-");
+    $stringtoreturn=substr($datetime, $firsthyphen+1, 2);
+    return date('M', mktime(0,0,0,$stringtoreturn,10));
+}
+
+function returndatehour($datetime){
+    $firstdots=strpos($datetime,":");    
+    $stringtoreturn=substr($datetime, $firstdots-2, 5);
+    return $stringtoreturn;
 }
 
 ?>

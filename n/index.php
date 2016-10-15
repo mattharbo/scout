@@ -128,7 +128,7 @@
         <!--############# Form Step 1 #############-->
         
         <div id="header">
-                <div id="closePageBtn" onclick="closeRightNav();"></div>
+                <div id="closePageBtn" onclick="closeWindow('../');"></div>
                 <div id="pageTitleNoValidation">New game</div>
             </div>
         
@@ -156,7 +156,6 @@
             });
        </script>
         <script type="text/javascript" src='../js/creationform.js'></script>
-
 
 	</body>
 </html>

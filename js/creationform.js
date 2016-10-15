@@ -41,6 +41,10 @@ function submitNewGame(){
     console.log(forminfo);
 }
 
+function closeWindow(path){
+    window.location = path;    
+}
+
 function form_ajax_post(targeturl){
     // Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
@@ -65,6 +69,6 @@ function form_ajax_post(targeturl){
     hr.send(vars); // Actually execute the request
     document.getElementById("submissionForm").innerHTML = "Processing...";
     
-    //REDIRECTION WORKS!!!! > Should be through the listing page (to be developed)
-    window.location = "../l/";
+    //REDIRECTION > Should be through the listing page (to be developed)
+    window.location.replace("../l/");
 }
