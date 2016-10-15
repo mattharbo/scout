@@ -46,7 +46,6 @@
             echo "<br><br>";
         }
         
-	echo $my_env_var = getenv('TESTVAR');
         ?>
         
         <!--############# SCRIPTS #############-->
