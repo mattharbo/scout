@@ -2,6 +2,8 @@ var lasteventX=0;
 var lasteventY=0;
 var divSelected = "";
 var refteam = "";
+var refopponentteam = "";
+var refgame = "";
 var divContainerSelected = "";
 var pitchState = false;
 var pitchPointerSelected = "";
@@ -19,12 +21,14 @@ var state="";
 
 //-------------------------
 
-function openRightNav(divwherefunctioncalled, maincontainer, teamid){
+function openRightNav(divwherefunctioncalled, maincontainer, teamid, opponentteamid, gameid){
     
     if(stoprec==false){
         divSelected = divwherefunctioncalled;
         divContainerSelected = maincontainer;
         refteam = teamid;
+        refopponentteam = opponentteamid;
+        refgame = gameid;
 
         if(type == "penalty"){
             document.getElementById("blocked").style.display="none";
@@ -71,7 +75,7 @@ function stepone(divwherefunctioncalled, maincontainer, childcontainer){
             lasteventY = 0.17;
         }
         
-        openRightNav(divSelected, childcontainer, refteam);
+        openRightNav(divSelected, childcontainer, refteam, refopponentteam, refgame);
         document.getElementById(maincontainer).style.width="0";
     }else{
         window.alert("Nothing to save ! Locate the action on the pitch...or close the window ;)");
@@ -101,8 +105,10 @@ function submitRightNav(){
         //***** CORNER KICKS *****
         //action	team	time			type
         var newevent={
+            "game": refgame,
             "action": divid.substring(0,nrbchar-4),
             "team": refteam,
+            "opponent":refopponentteam,
             //"team": divid.slice(-4).toLowerCase(),
             "period":period,
             "time": displayMinuteEvent(eventminute),
@@ -135,8 +141,10 @@ function submitRightNav(){
 
             if(divid == "turnoverHome" || divid == "turnoverAway"){
                 var newevent={
+                    "game": refgame,
                     "action": divid.substring(0,nrbchar-4),
                     "team": refteam,
+                    "opponent":refopponentteam,
                     //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
@@ -150,8 +158,10 @@ function submitRightNav(){
 
             if(divid == "shootHome" || divid == "shootAway"){
                 var newevent={
+                    "game": refgame,
                     "action": divid.substring(0,nrbchar-4),
                     "team": refteam,
+                    "opponent":refopponentteam,
                     //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
@@ -194,8 +204,10 @@ function submitRightNav(){
                 state = document.querySelector('input[name = "crosstype"]:checked').id;
 
                 var newevent={
+                    "game": refgame,
                     "action": divid.substring(0,nrbchar-4),
                     "team": refteam,
+                    "opponent":refopponentteam,
                     //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
@@ -224,8 +236,10 @@ function submitRightNav(){
                 }
 
                 var newevent={
+                    "game": refgame,
                     "action": divid.substring(0,nrbchar-4),
                     "team": refteam,
+                    "opponent":refopponentteam,
                     //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
@@ -239,8 +253,10 @@ function submitRightNav(){
 
             if(divid == "offsideHome" || divid == "offsideAway"){
                 var newevent={
+                    "game": refgame,
                     "action": divid.substring(0,nrbchar-4),
                     "team": refteam,
+                    "opponent":refopponentteam,
                     //"team": divid.slice(-4).toLowerCase(),
                     "period":period,
                     "time": displayMinuteEvent(eventminute),
@@ -297,6 +313,8 @@ function eraseTempData(){
     lasteventY=0;
     divSelected = "";
     refteam = "";
+    refopponentteam = "";
+    refgame = "";
     divContainerSelected = "";
     document.getElementById("yellowcard").checked=false;
     document.getElementById("redcard").checked=false;
@@ -375,6 +393,32 @@ function ajax_post(targeturl){
     
     //REDIRECTION WORKS!!!!
     //window.location = "http://www.google.com";
+}
+
+//-------------------------
+
+function event_ajax_post(targeturl){
+    var hr = new XMLHttpRequest();
+    
+    var vars = "event_information="+JSON.stringify(events);
+    
+    hr.open("POST", targeturl, true);
+    
+    // Set content type header information for sending url encoded variables in the request
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    // Access the onreadystatechange event for the XMLHttpRequest object
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var return_data = hr.responseText;
+			//document.getElementById("resultsdata").innerHTML = return_data;
+	    }
+    }
+    
+    hr.send(vars);
+    //document.getElementById("stopHalfBtn").innerHTML = "Processing...";
+    
+    events=[];//Erase data events
 }
 
 //PUSH ALL EVENT (IE ARRAY) TO SERVER

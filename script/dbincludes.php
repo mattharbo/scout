@@ -1,20 +1,16 @@
 <?php
 
+$GLOBALS['conn'] = "";
+
 //$GLOBALS['servername'] = "localhost";
 //$GLOBALS['username'] = "root";
 //$GLOBALS['password'] = "root";
 //$GLOBALS['dbname'] = "scout";
 
-$GLOBALS['conn'] = "";
 $GLOBALS['servername'] = getenv('servername');
 $GLOBALS['username'] = getenv('username');
 $GLOBALS['password'] = getenv('password');
 $GLOBALS['dbname'] = getenv('dbname');
-
-//$GLOBALS['servername'] = "eu-cdbr-west-01.cleardb.com";
-//$GLOBALS['username'] = "bf9408c30c58cb";
-//$GLOBALS['password'] = "28dd5e4e";
-//$GLOBALS['dbname'] = "heroku_2c007d1d9463440";
 
 function dbconnexion(){
     // Create connection
