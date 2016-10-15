@@ -40,7 +40,8 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Turnover</div>
-                <div id="validationPageBtn" onclick="submitRightNav();"></div>
+                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
+<!--                <div id="validationPageBtn" onclick="submitRightNav();"></div>-->
             </div>
             
             <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');">
@@ -95,19 +96,19 @@ if (isset ($_GET["id"])) {
             
             <div id="propositions">
                 
-                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
                     Off target
                 </div>
                 
-                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
                     Blocked
                 </div>
                 
-                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
                     Saved (GK)
                 </div>
                 
-                <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();">
+                <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
                     Goal
                 </div>
                 
@@ -121,7 +122,7 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Cross</div>
-                <div id="validationPageBtn" onclick="submitRightNav();"></div>
+                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
@@ -158,7 +159,7 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Foul</div>
-                <div id="validationPageBtn" onclick="submitRightNav();"></div>
+                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
             </div>
             
             <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
@@ -199,11 +200,11 @@ if (isset ($_GET["id"])) {
             
             <div id="propositions">
                 
-                <div id="leftside" class="proposalLineValidation" onclick="typeSelection('left');submitRightNav();">
+                <div id="leftside" class="proposalLineValidation" onclick="typeSelection('left');submitRightNav();event_ajax_post('../script/postevent.php');">
                     Left side
                 </div>
                 
-                <div id="rightside" class="proposalLineValidation" onclick="typeSelection('right');submitRightNav();">
+                <div id="rightside" class="proposalLineValidation" onclick="typeSelection('right');submitRightNav();event_ajax_post('../script/postevent.php');">
                     Right side
                 </div>
                 
@@ -217,7 +218,7 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Offside</div>
-                <div id="validationPageBtn" onclick="submitRightNav();"></div>
+                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
             </div>
             
             <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');">
@@ -250,39 +251,39 @@ if (isset ($_GET["id"])) {
         </div>
         
         <div id="turnover" class="figureLine">
-            <div id="turnoverHome" class="dataScoreHome" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="turnoverHome" class="dataScoreHome" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Turnover(s)</div>
-            <div id="turnoverAway" class="dataScoreAway" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="turnoverAway" class="dataScoreAway" onclick="openRightNav(this,'turnoverNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <div id="shoot" class="figureLine">
-            <div id="shootHome" class="dataScoreHome" onclick="openRightNav(this,'shootNavContainerPage1', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="shootHome" class="dataScoreHome" onclick="openRightNav(this,'shootNavContainerPage1', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Shoot(s)</div>
-            <div id="shootAway" class="dataScoreAway" onclick="openRightNav(this,'shootNavContainerPage1', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="shootAway" class="dataScoreAway" onclick="openRightNav(this,'shootNavContainerPage1', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <div id="cross" class="figureLine">
-            <div id="crossHome" class="dataScoreHome" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="crossHome" class="dataScoreHome" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Crosse(s)</div>
-            <div id="crossAway" class="dataScoreAway" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="crossAway" class="dataScoreAway" onclick="openRightNav(this,'crossNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <div id="foul" class="figureLine">
-            <div id="foulHome" class="dataScoreHome" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="foulHome" class="dataScoreHome" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Foul(s)</div>
-            <div id="foulAway" class="dataScoreAway" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="foulAway" class="dataScoreAway" onclick="openRightNav(this,'foulNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <div id="corner" class="figureLine">
-            <div id="cornerHome" class="dataScoreHome" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="cornerHome" class="dataScoreHome" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Corner Kick(s)</div>
-            <div id="cornerAway" class="dataScoreAway" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="cornerAway" class="dataScoreAway" onclick="openRightNav(this,'cornerNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <div id="offside" class="figureLine">
-            <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][3];?>');">0</div>
+            <div id="offsideHome" class="dataScoreHome" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][3];?>', '<?echo $resultsarray[0][6];?>', '<?echo $gameid;?>');">0</div>
             <div id="dataType"  class="dataLabel">Offside(s)</div>
-            <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][6];?>');">0</div>
+            <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
         <!--############# SCRIPTS #############-->

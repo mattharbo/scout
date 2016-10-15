@@ -116,7 +116,7 @@
 
             <div id="field">
                 <div id="fieldHashAway" class="fieldName">Short name</div>
-                <input type="text" id="fieldHashAwayContent" class="fieldContent" placeholder="Short name" maxlength="4" onclick="getfocus(this, fieldHashAway)">
+                <input type="text" id="fieldHashAwayContent" class="fieldContent" placeholder="Short name" maxlength="5" onclick="getfocus(this, fieldHashAway)">
             </div>
             
             <div id="previousForm" class="formBtn" onclick="">Previous</div>
@@ -141,7 +141,7 @@
         
         <div id="field">
             <div id="fieldHashHome" class="fieldName">Short name</div>
-            <input type="text" id="fieldHashHomeContent" class="fieldContent" placeholder="Short name" maxlength="4" onclick="getfocus(this, fieldHashHome)">
+            <input type="text" id="fieldHashHomeContent" class="fieldContent" placeholder="Short name" maxlength="5" onclick="getfocus(this, fieldHashHome)">
         </div>
         
         <div id="submissionForm" class="formBtn" onclick="goToStepTwo('formStepTwo')">Next</div>
