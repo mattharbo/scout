@@ -1,27 +1,32 @@
-<?
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Autocomplete using PHP/MySQL and jQuery</title>
+    
+<!--    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">-->
 
-include '../script/dbincludes.php';
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+</head>
+ 
+<body>
 
-$informationarrayyear="2015";
-$informationarraymonth="July";
-$informationarrayday="04";
-$informationarrayhour="18";
-$informationarraymin="32";
+    <div class="ui-widget">
+        <label for="skills">Skills: </label>
+        <input id="skills">
+    </div>
+    
+    <div id="result"></div>
+    
+    <script>
+    $(function() {
+        $( "#skills" ).autocomplete({
+            source: 'search.php',
+        })
 
-//echo mergedate($informationarrayyear, $informationarraymonth, $informationarrayday, $informationarrayhour, $informationarraymin);
+    });
+    </script>
 
-
-////hour minute second month day year
-//$testdate=mktime(0, 0, 0, 7, 1, $informationarrayyear);
-//
-//$date = date('Y-m-d H:i:s', $testdate);
-//echo $date;
-
-$datetimeinput ="2016-12-25 20:45:00";
-
-echo returndateday($datetimeinput);
-echo returndatemonth($datetimeinput);
-echo returndatehour($datetimeinput);
-
-
-?>
+</body>
+</html>
