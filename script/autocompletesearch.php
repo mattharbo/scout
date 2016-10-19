@@ -1,14 +1,14 @@
 <?php
 
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'scout');
+//define('DB_SERVER', 'localhost');
+//define('DB_USER', 'root');
+//define('DB_PASSWORD', 'root');
+//define('DB_NAME', 'scout');
 
-//define('DB_SERVER', getenv('servername'));
-//define('DB_USER', getenv('username'));
-//define('DB_PASSWORD', getenv('password'));
-//define('DB_NAME', getenv('dbname'));
+define('DB_SERVER', getenv('servername'));
+define('DB_USER', getenv('username'));
+define('DB_PASSWORD', getenv('password'));
+define('DB_NAME', getenv('dbname'));
 
 
 if (isset($_GET['term'])){
