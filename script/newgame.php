@@ -26,19 +26,65 @@ $awayteamuniqid = $prefix.$team2;
 //$informationarray['8']=year
 //$informationarray['9']=hour
 //$informationarray['10']=minute
+//$informationarray['11']=hometeamifknowninbase
+//$informationarray['12']=hometeamifknowninbase
 
 include '../script/dbincludes.php';
 
-$querycreateteamhome = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$hometeamuniqid."', '".$informationarray[0]."', '".$informationarray[1]."', '');";
-
-$querycreateteamaway = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$awayteamuniqid."', '".$informationarray[2]."', '".$informationarray[3]."', '');";
-
-$querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$hometeamuniqid."', '".$awayteamuniqid."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
-
 dbconnexion();
-dbwrite($querycreateteamhome);
-dbwrite($querycreateteamaway);
-dbwrite($querycreategame);
+
+//If new home team then team creation
+if($informationarray['11'] == '' ){
+    
+    $querycreateteamhome = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$hometeamuniqid."', '".$informationarray[0]."', '".$informationarray[1]."', '');";
+    
+    dbwrite($querycreateteamhome); 
+}
+
+
+//If new away team then team creation
+if($informationarray['12'] == '' ){
+    
+    $querycreateteamaway = "INSERT INTO `team` (`teamid`, `teamname`, `teamnickname`, `teamcity`) VALUES ('".$awayteamuniqid."', '".$informationarray[2]."', '".$informationarray[3]."', '');";
+    
+    dbwrite($querycreateteamaway);
+}
+
+//4 case studies
+
+//Both home and away teams are knew
+if($informationarray['11'] == '' &&  $informationarray['12'] == '' ){
+    
+    $querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$hometeamuniqid."', '".$awayteamuniqid."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
+    
+    dbwrite($querycreategame);
+    
+}
+
+//Away team is retrieved from BDD and Home team is knew
+if($informationarray['11'] == '' &&  $informationarray['12'] != '' ){
+
+    $querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$hometeamuniqid."', '".$informationarray[12]."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
+    
+    dbwrite($querycreategame);
+}
+
+//Home team is retrieved from BDD and Away team is knew
+if($informationarray['11'] != '' &&  $informationarray['12'] == '' ){
+    
+    $querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$informationarray[11]."', '".$awayteamuniqid."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
+    
+    dbwrite($querycreategame);
+}
+
+//Both home and away teams are retrieved from BDD
+if($informationarray['11'] != '' &&  $informationarray['12'] != '' ){
+    
+    $querycreategame = "INSERT INTO `game` (`gameid`, `gamedate`, `gamehometeam`, `gameawayteam`, `gamestadium`, `gamestatus`, `gamecompetition`, `gamestage`) VALUES (NULL, '".mergedate($informationarray[8], $informationarray[6], $informationarray[7], $informationarray[9], $informationarray[10])."', '".$informationarray[11]."', '".$informationarray[12]."', NULL, '0', '".$informationarray['4']."', '".$informationarray['5']."');";
+    
+    dbwrite($querycreategame);
+}
+
 dbclosing();
 
 echo "Data Saved";

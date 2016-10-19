@@ -35,7 +35,9 @@ function submitNewGame(){
         document.getElementById("fieldDayIdContent").value,
         document.getElementById("fieldYearIdContent").value,
         document.getElementById("fieldHourIdContent").value,
-        document.getElementById("fieldMinuteIdContent").value
+        document.getElementById("fieldMinuteIdContent").value,
+        newhometeamid,
+        newawayteamid
     );
     
     console.log(forminfo);
