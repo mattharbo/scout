@@ -3,6 +3,7 @@
 		<title>Scout • By scouters for players</title>
 		
         <link rel="stylesheet" href="../css/interface.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
 <!--		<link rel="icon" href="./img/favicon.png">-->
         <link rel="apple-touch-icon" sizes="120x120" href="../ressources/touch-icon-iphone.png">
@@ -111,7 +112,7 @@
 
             <div id="field">
                 <div id="fieldNameAway" class="fieldName">Full name</div>
-                <input type="text" id="fieldNameAwayContent" class="fieldContent" placeholder="Full name" maxlength="25" onclick="getfocus(this, fieldNameAway)">
+                <input type="text" id="fieldNameAwayContent" class="fieldContentAway" placeholder="Full name" maxlength="25" onclick="getfocus(this, fieldNameAway)">
             </div>
 
             <div id="field">
@@ -136,7 +137,7 @@
         
         <div id="field">
             <div id="fieldNameHome" class="fieldName">Full name</div>
-            <input type="text" id="fieldNameHomeContent" class="fieldContent" placeholder="Full name" maxlength="25" onclick="getfocus(this, fieldNameHome)">
+            <input type="text" id="fieldNameHomeContent" class="fieldContentHome" placeholder="Full name" maxlength="25" onclick="getfocus(this, fieldNameHome)">
         </div>
         
         <div id="field">
@@ -156,6 +157,46 @@
             });
        </script>
         <script type="text/javascript" src='../js/creationform.js'></script>
+        
+        
+        <!-- For autocomplete-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>	
+        <script type="text/javascript">
+            
+        var newhometeamid="";
+        var newawayteamid="";
+
+        $(function() {
+
+            //autocompleteHomeTeamName
+            $(".fieldContentHome").autocomplete({
+                source: "../script/autocompletesearch.php",
+                minLength: 1,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#fieldNameHomeContent").val(ui.item.label);
+                    $("#fieldHashHomeContent").val(ui.item.value2);
+
+                    newhometeamid=ui.item.value;
+                }
+            });
+            
+            //autocompleteAwayTeamName
+            $(".fieldContentAway").autocomplete({
+                source: "../script/autocompletesearch.php",
+                minLength: 1,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#fieldNameAwayContent").val(ui.item.label);
+                    $("#fieldHashAwayContent").val(ui.item.value2);
+                    
+                    newawayteamid=ui.item.value;
+                }
+            });	
+
+        });
+        </script>
 
 	</body>
 </html>
