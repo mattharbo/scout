@@ -1,9 +1,14 @@
 <?php
 
-//define('DB_SERVER', 'eu-cdbr-west-01.cleardb.com');
-//define('DB_USER', 'bf9408c30c58cb');
-//define('DB_PASSWORD', '28dd5e4e');
-//define('DB_NAME', 'heroku_2c007d1d9463440');
+$GLOBALS['servername']='eu-cdbr-west-01.cleardb.com';
+$GLOBALS['username']='bf9408c30c58cb';
+$GLOBALS['password']='28dd5e4e';
+$GLOBALS['dbname']='heroku_2c007d1d9463440';
+
+//$GLOBALS['servername']='localhost';
+//$GLOBALS['username']='root';
+//$GLOBALS['password']='root';
+//$GLOBALS['dbname']='scout';
 
 define('DB_SERVER', $GLOBALS['servername']);
 define('DB_USER', $GLOBALS['username']);
