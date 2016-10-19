@@ -5,10 +5,14 @@
 //define('DB_PASSWORD', 'root');
 //define('DB_NAME', 'scout');
 
-define('DB_SERVER', getenv('servername'));
-define('DB_USER', getenv('username'));
-define('DB_PASSWORD', getenv('password'));
-define('DB_NAME', getenv('dbname'));
+$GLOBALS['servername'] = getenv('servername');
+$GLOBALS['username'] = getenv('username');
+$GLOBALS['password'] = getenv('password');
+$GLOBALS['dbname'] = getenv('dbname');
+define('DB_SERVER', $GLOBALS['servername']);
+define('DB_USER', $GLOBALS['username']);
+define('DB_PASSWORD', $GLOBALS['password']);
+define('DB_NAME', $GLOBALS['dbname']);
 
 
 if (isset($_GET['term'])){
