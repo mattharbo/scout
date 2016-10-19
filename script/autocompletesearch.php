@@ -1,14 +1,9 @@
 <?php
 
-//define('DB_SERVER', 'localhost');
-//define('DB_USER', 'root');
-//define('DB_PASSWORD', 'root');
-//define('DB_NAME', 'scout');
-
-$GLOBALS['servername'] = getenv('servername');
-$GLOBALS['username'] = getenv('username');
-$GLOBALS['password'] = getenv('password');
-$GLOBALS['dbname'] = getenv('dbname');
+define('DB_SERVER', 'eu-cdbr-west-01.cleardb.com');
+define('DB_USER', 'bf9408c30c58cb');
+define('DB_PASSWORD', '28dd5e4e');
+define('DB_NAME', 'heroku_2c007d1d9463440');
 
 //define('DB_SERVER', $GLOBALS['servername']);
 //define('DB_USER', $GLOBALS['username']);
@@ -20,7 +15,7 @@ if (isset($_GET['term'])){
 	$return_arr = array();
 
 	try {
-	    $conn = new PDO("mysql:host=".$GLOBALS['servername'].";port=8889;dbname=".$GLOBALS['dbname'], $GLOBALS['username'], $GLOBALS['password']);
+	    $conn = new PDO("mysql:host=".DB_SERVER.";port=8889;dbname=".DB_NAME, DB_USER, DB_PASSWORD);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    
 	    $stmt = $conn->prepare('SELECT teamid, teamname, teamnickname FROM team WHERE teamname LIKE :term');
