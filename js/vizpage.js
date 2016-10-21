@@ -1,39 +1,63 @@
-//var previousrow;
-//
-//window.setInterval(function(){
-//    //call your function here
-//    
-//    console.log("Array lenght: "+rawdatafromdb.length);
-//    
-//    var rowwished=rawdatafromdb.length-1;
-//    
-//    console.log("Last row printed: "+previousrow);
-//    
-//    if (rowwished!=previousrow){
-//        
-//        show_image('../ressources/pointer@x2.png', 
-//        17, 22, 
-//        (rawdatafromdb[rowwished].eventposx)*100,
-//        (rawdatafromdb[rowwished].eventposy)*100);
-//        
-//        console.log("Img Printed!!");
-//        
-//        previousrow=rowwished;
-//        
-//    }
-//      
-//}, 1000);
+var firstload=0;
+var previousrow;
 
-//Replace previous function by ajax DB call...
+//Call the function on first load
+loaddata();
 
+//Call the function to fetch new data every 5 seconds
+setInterval(function(){
+    loaddata()
+}, 5000);
 
-for (var x in rawdatafromdb) {   
-    //console.log("x:"+(rawdatafromdb[x].eventposx)*100+"y:"+(rawdatafromdb[x].eventposy)*100);
-    
-    show_image('../ressources/pointer@x2.png', 
-        17, 22, 
-    (rawdatafromdb[x].eventposx)*100,
-    (rawdatafromdb[x].eventposy)*100);
+function loaddata(){
+
+    $(function() 
+      {
+        $.ajax({                                      
+          url: '../script/fetchgameevents.php/?gameid='+gameidfromphp,
+          dataType: 'json',
+          success: function(data)
+            {
+                //Nombre de ligne dans la BDD (ie events pour ce match)
+                var rowwished=data.length-1;
+                
+                //1er chargement de la page de viz d'un match
+                if(firstload==0){
+                    
+                    //Parcours de tous les evenements passes 
+                    for (u = 1; u <= rowwished; u++) {
+                        
+                        //Affichage de tous les evenements passes
+                        show_image('../ressources/pointer@x2.png', 17, 22, (data[u].eventposx)*100,(data[u].eventposy)*100);
+
+                    }
+                    
+                    //Boolean de 1er load de page a true
+                    firstload=1;
+                    
+                }else{
+                    
+                    //Post 1er chargement de la page de viz d'un match
+                    if (rowwished!=previousrow){
+                        
+                        //Recuperation du nombre d'evenement non affichage pendant la periode du timer
+                        nbofeventstodisplay=rowwished-previousrow;
+                        
+                        //Affichage de tous les elements manquants lors de la periode de timer
+                        for (i = (rowwished-nbofeventstodisplay+1); i <= rowwished; i++) {
+
+                            show_image('../ressources/pointer@x2.png', 17, 22, (data[i].eventposx)*100,(data[i].eventposy)*100);
+
+                        }
+
+                        //Recuperation de la derniere ligne affichee
+                        previousrow=rowwished;
+
+                    }   
+                }              
+            } 
+        });
+    })
 }
 
 function show_image(src, width, height, left, top) {

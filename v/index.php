@@ -1,18 +1,10 @@
 <?
-if (isset ($_GET["id"])) { 
-    $gameid = $_GET["id"];
-    
-    include '../script/dbincludes.php';
-        
-    $retrievegameevents="select *
-    from event
-    where event.eventgame=$gameid";
-    
-//    and event.eventaction='cross'
-        
-    dbconnexion();
-    $eventsarray = dbread($retrievegameevents);
-    dbclosing();
+if (isset ($_GET["id"])) {
+?>
+<script>
+    var gameidfromphp = <?php echo $_GET["id"]?>;
+</script>
+<?
     
 } else { 
     header('Location: ../404/');
@@ -43,10 +35,6 @@ if (isset ($_GET["id"])) {
         
     <div id="pitchContainerDataviz" class="pitchcontainerclass">
     </div>
-        
-    <script>
-        var rawdatafromdb = <?php echo json_encode($eventsarray)?>;    
-    </script>
         
     <!-- ~ SCRIPTS ~ -->
         
