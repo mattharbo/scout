@@ -73,7 +73,7 @@ function chrono(){
 
     
     if(min != eventminute){
-        console.log("Minute change");
+        //console.log("Minute change");
         eventminute=min;
     }
     
