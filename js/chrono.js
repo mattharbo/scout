@@ -97,7 +97,11 @@ function chronoStop(){
     document.getElementById("liveIcon").style.display="none"
     if(period==2){
         document.getElementById("liveIcon").style.display="none";
-        document.getElementById("stopHalfBtn").innerHTML = "SAVE";
-        document.getElementById("stopHalfBtn").onclick=ajax_post("./script/script.php");
+        
+        window.location = "../";
+        //HERE insert game status to 1 un DB....
+        
+//        document.getElementById("stopHalfBtn").innerHTML = "SAVE";
+//        document.getElementById("stopHalfBtn").onclick=ajax_post("./script/script.php");
     }
 }
