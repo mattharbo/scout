@@ -1,8 +1,10 @@
 <?
 if (isset ($_GET["id"])) {
+    
 ?>
 <script>
     var gameidfromphp = <?php echo $_GET["id"]?>;
+    var teamtowatched = '<?php echo $_GET["team"]?>';
 </script>
 <?
     

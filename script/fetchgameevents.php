@@ -1,10 +1,12 @@
 <?php
 
 $gameid = $_GET["gameid"];
+$teamid = $_GET["teamid"];
 
 include './dbincludes.php';
 
-$retrievegameevents="select * from event where event.eventgame=$gameid";
+$retrievegameevents="select * from event where eventgame=$gameid
+and eventteamid='$teamid'";
     
 //    and event.eventaction='cross'
         

@@ -14,7 +14,7 @@ function loaddata(){
     $(function() 
       {
         $.ajax({                                      
-          url: '../script/fetchgameevents.php/?gameid='+gameidfromphp,
+          url: '../script/fetchgameevents.php/?gameid='+gameidfromphp+"&teamid="+teamtowatched,
           dataType: 'json',
           success: function(data)
             {
@@ -61,7 +61,7 @@ function loaddata(){
 }
 
 function show_image(src, width, height, left, top) {
-    var img = document.createElement("img");
+   var img = document.createElement("img");
     
     img.src = src;
     img.width = width;
