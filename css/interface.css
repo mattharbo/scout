@@ -1001,7 +1001,8 @@ a:active {
     
     #pitchContainerFoul{
         width: 100%;
-        height: 250px;
+        height: 460px;
+        margin-top: 20px;
     }
     
     #pitchContainerShoot{
