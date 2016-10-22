@@ -1,32 +1,3 @@
-//var previousrow;
-//
-//window.setInterval(function(){
-//    //call your function here
-//    
-//    console.log("Array lenght: "+rawdatafromdb.length);
-//    
-//    var rowwished=rawdatafromdb.length-1;
-//    
-//    console.log("Last row printed: "+previousrow);
-//    
-//    if (rowwished!=previousrow){
-//        
-//        show_image('../ressources/pointer@x2.png', 
-//        17, 22, 
-//        (rawdatafromdb[rowwished].eventposx)*100,
-//        (rawdatafromdb[rowwished].eventposy)*100);
-//        
-//        console.log("Img Printed!!");
-//        
-//        previousrow=rowwished;
-//        
-//    }
-//      
-//}, 1000);
-
-//Replace previous function by ajax DB call...
-
-
 for (var x in rawdatafromdb) {   
     //console.log("x:"+(rawdatafromdb[x].eventposx)*100+"y:"+(rawdatafromdb[x].eventposy)*100);
     
