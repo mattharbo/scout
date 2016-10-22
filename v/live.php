@@ -44,7 +44,7 @@ if (isset ($_GET["id"])) {
             $('#preloader').fadeOut('slow',function(){$(this).remove();});
         });
     </script>
-    <script type="text/javascript" src='../js/vizpage.js'></script>
+    <script type="text/javascript" src='../js/vizpagelive.js'></script>
         
 	</body>
 </html>
