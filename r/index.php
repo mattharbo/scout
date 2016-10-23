@@ -31,10 +31,10 @@ if (isset ($_GET["id"])) {
 	</head>
 	<body>
 
-    <!-- Preloader -->
+    <!-- ~ Preloader ~ -->
     <div id="preloader"></div>
 
-<!--############# TURNOVER CONTAINER #############-->
+        <!-- ~ TURNOVER CONTAINER ~ -->
         <div id="turnoverNavContainer" class="navContainer">
             
             <div id="header">
@@ -50,7 +50,7 @@ if (isset ($_GET["id"])) {
             
         </div>        
         
-<!--############# SHOOT CONTAINER PAGE 1 #############-->
+        <!-- ~ SHOOT CONTAINER PAGE 1 ~ -->
         <div id="shootNavContainerPage1" class="navContainer">
             
             <div id="header">
@@ -84,7 +84,7 @@ if (isset ($_GET["id"])) {
             
         </div>
         
-<!--############# SHOOT CONTAINER PAGE 2 #############-->
+        <!-- ~ SHOOT CONTAINER PAGE 2 ~ -->
         <div id="shootNavContainerPage2" class="navContainer">
             
             <div id="header">
@@ -116,7 +116,7 @@ if (isset ($_GET["id"])) {
             
         </div>
 
-<!--############# CROSS CONTAINER #############-->
+        <!-- ~ CROSS CONTAINER ~ -->
         <div id="crossNavContainer" class="navContainer">
             
             <div id="header">
@@ -153,7 +153,7 @@ if (isset ($_GET["id"])) {
             
         </div>      
         
-<!--############# FOUL CONTAINER #############-->
+        <!-- ~ FOUL CONTAINER ~ -->
         <div id="foulNavContainer" class="navContainer">
             
             <div id="header">
@@ -162,7 +162,7 @@ if (isset ($_GET["id"])) {
                 <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
             </div>
             
-            <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>
+<!--            <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>-->
             
             <div id="pitchContainerFoul" class="pitchfloulcontainerclass" onclick="printMousePos(this, 'pitchpointer4');">
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer4">
@@ -188,7 +188,7 @@ if (isset ($_GET["id"])) {
             
         </div>
         
-<!--############# CORNER KICK #############-->
+        <!-- ~ CORNER KICK ~ -->
         <div id="cornerNavContainer" class="navContainer">
             
             <div id="header">
@@ -212,7 +212,7 @@ if (isset ($_GET["id"])) {
             
         </div>
         
-<!--############# OFFSIDE CONTAINER #############-->
+        <!-- ~ OFFSIDE CONTAINER ~ -->
         <div id="offsideNavContainer" class="navContainer">
             
             <div id="header">
@@ -227,10 +227,10 @@ if (isset ($_GET["id"])) {
             
         </div> 
         
-<!--############# DEFAULT VIEW #############-->
+        <!-- ~ DEFAULT VIEW ~ -->
 		<div id="header">
             <a href="/" class="logo" id="logo_header">scout</a>
-        </div><!--Header-->
+        </div>
         
         <div id="matchPresentation">
             <div id="scoreBox" class="scoreBoxClass">0 - 0</div>
@@ -286,7 +286,7 @@ if (isset ($_GET["id"])) {
             <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
         
-        <!--############# SCRIPTS #############-->
+        <!-- ~ SCRIPTS ~ -->
         
         <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript">

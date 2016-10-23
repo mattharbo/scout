@@ -287,23 +287,28 @@ function submitRightNav(){
 function printMousePos(elem, pitchpointerselec) {
     var pitchicon = pitchpointerselec;
     var thediv=elem.id;
+    
     var rect = document.getElementById(thediv).getBoundingClientRect();
+    
     var mouseX = event.clientX-9;
     var mouseY = event.clientY-20;
+    
     var eventX=((mouseX-rect.left)/rect.width).toFixed(2);
-    var eventY=((mouseY-rect.top)/rect.height).toFixed(2);
+    var eventY=((mouseY-rect.top)/460).toFixed(2);
+   
+    var eventYtodisplayinallpitch=((mouseY-rect.top)/rect.height).toFixed(2);
     
     //Update global variables for last position 
     lasteventX=eventX;
     lasteventY=eventY;
     pitchPointerSelected=pitchicon;
     
-//    console.log("X position = " + Math.round(eventX*100) + " %");
-//    console.log("Y position = " + Math.round(eventY*100) + " %");
+    //console.log("X position = " + Math.round(eventX*100) + " %");
+    //console.log("Y position = " + Math.round(eventY*100) + " %");
     
     document.getElementById(pitchicon).style.display= 'block';
     document.getElementById(pitchicon).style.left = Math.round(eventX*100)+'%';
-    document.getElementById(pitchicon).style.top = Math.round(eventY*100)+'%';
+    document.getElementById(pitchicon).style.top = Math.round(eventYtodisplayinallpitch*100)+'%';
 }
 
 //-------------------------
