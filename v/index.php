@@ -4,12 +4,11 @@ if (isset ($_GET["id"])) {
     
     include '../script/dbincludes.php';
     
-    $retrievegameinformation="select team1.teamname, team1.teamnickname, team2.teamname, team2.teamnickname, game.gamecompetition, game.gamestage
+    $retrievegameinformation="select team1.teamname, team1.teamnickname, team2.teamname, team2.teamnickname, game.gamecompetition, game.gamestage, game.gamehometeam, game.gameawayteam
     from game
     join team as team1 on game.gamehometeam = team1.teamid
     join team as team2 on game.gameawayteam = team2.teamid
     where game.gameid=$gameid";
-    
         
     $retrievegameevents="select *
     from event
@@ -47,25 +46,29 @@ if (isset ($_GET["id"])) {
     <div id="header">
         <div id="closePageBtn" onclick="closeWindow('../');"></div>
         <div id="pageTitleNoValidation">
-            <? echo "#".$gameinfoarray[0][1]." vs. #".$gameinfoarray[0][3];?>
+            <? echo "#".$gameinfoarray[0][1].$gameinfoarray[0][3];?>
         </div>
     </div>
         
-    <div id="pitchContainerDataviz" class="pitchcontainerclass">
+        <center><?
+        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span><br>";//Competition name
+        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br><br>";//Competition Day
+        ?></center>
+        
+        <?
+        echo $gameinfoarray[0][0]." => RED";//Home team
+        ?>
+        
+    <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
     </div>
         
         <?
-        //echo print_r($gameinfoarray);
-        echo $gameinfoarray[0][0];//Home team
-        echo $gameinfoarray[0][1];//Home nickname
-        echo $gameinfoarray[0][2];//Away team
-        echo $gameinfoarray[0][3];//Away nickname
-        echo $gameinfoarray[0][4];//Competition name
-        echo $gameinfoarray[0][5];//Competition Day
+        echo $gameinfoarray[0][2]." => BLUE<br>";//Away team
         ?>
         
     <script>
-        var rawdatafromdb = <?php echo json_encode($eventsarray)?>;    
+        var rawdatafromdb = <?php echo json_encode($eventsarray)?>;
+        var idhometeam = '<?php echo $gameinfoarray[0][6]?>';
     </script>
         
     <!-- ~ SCRIPTS ~ -->

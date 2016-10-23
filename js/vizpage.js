@@ -2,13 +2,26 @@ for (var x in rawdatafromdb) {
     
     if(rawdatafromdb[x].eventaction!="corner"){
         
-        //console.log("x:"+(rawdatafromdb[x].eventposx)*100+"y:"+(rawdatafromdb[x].eventposy)*100);
+        //Home team events > Red > Shooting up
+        if(rawdatafromdb[x].eventteamid == idhometeam){
+            
+            //console.log("x:"+(rawdatafromdb[x].eventposx)*100+"y:"+(rawdatafromdb[x].eventposy)*100);
     
-        show_image('../ressources/pointer@x2.png', 
-            17, 22, 
-        (rawdatafromdb[x].eventposx)*100,
-        (rawdatafromdb[x].eventposy)*100);
-
+            show_image('../ressources/pointer_red@x2.png', 
+                17, 22, 
+            (95-(rawdatafromdb[x].eventposx)*100),
+            (91-(rawdatafromdb[x].eventposy)*100));
+            
+        }else{
+        //Away team events > Blue > Shooting down
+    
+            show_image('../ressources/pointer_blue@x2.png', 
+                17, 22, 
+            
+            (rawdatafromdb[x].eventposx)*100,
+            (rawdatafromdb[x].eventposy)*100);
+            
+        }   
     }    
 }
 
