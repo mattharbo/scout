@@ -45,11 +45,25 @@ if (isset ($_GET["id"])) {
     <!-- ~ Filter Menu ~ -->  
     <div id="filterSidenav" class="filterSidenav">
         
-        filters<br>
+        filters<br><br><br>
         
-        <input type="button" value="Supprimer" onclick="removeallimages()">
+        <input type="button" value="Turnover" onclick="displayeventstype('turnover');">
         
-        <input type="button" value="Afficher" onclick="displayimages()">
+        <br><br>
+        
+        <input type="button" value="Shoot" onclick="displayeventstype('shoot');">
+        
+        <br><br>
+        
+        <input type="button" value="Cross" onclick="displayeventstype('cross');">
+        
+        <br><br>
+        
+        <input type="button" value="Foul" onclick="displayeventstype('foul');">
+        
+        <br><br>
+        
+        <input type="button" value="Offside" onclick="displayeventstype('offside');">
         
     </div>
     <div id="blackOverlay" class="blackOverlay">
