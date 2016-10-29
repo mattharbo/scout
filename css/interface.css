@@ -560,13 +560,13 @@ a:active {
     
     #leftMenuBtn {
         display: inline-block;
-        background-image: url("../ressources/left_menu_logo@x1.png");
-        background-size: 5px 21px;
-        height: 21px;
-        width: 5px;
+        background-image: url("../ressources/left_menu_logo@x2.png");
+        background-size: 19px 16px;
+        height: 16px;
+        width: 19px;
         float: left;
-        margin-left: 15px;
-        margin-top: 12px;
+        margin-left: 14px;
+        margin-top: 14px;
     }
 
     #pageTitle {
@@ -1419,12 +1419,12 @@ a:active {
     #leftMenuBtn {
         display: inline-block;
         background-image: url("../ressources/left_menu_logo@x2.png");
-        background-size: 5px 21px;
-        height: 21px;
-        width: 5px;
+        background-size: 19px 16px;
+        height: 16px;
+        width: 19px;
         float: left;
-        margin-left: 15px;
-        margin-top: 12px;
+        margin-left: 14px;
+        margin-top: 14px;
     }
 
     #validationPageBtn {

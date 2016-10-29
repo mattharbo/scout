@@ -13,8 +13,6 @@ if (isset ($_GET["id"])) {
     $retrievegameevents="select *
     from event
     where event.eventgame=$gameid";
-    
-//    and event.eventaction='cross'
         
     dbconnexion();
     $gameinfoarray = dbread($retrievegameinformation);
@@ -84,34 +82,19 @@ if (isset ($_GET["id"])) {
         <center><?
         echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span><br>";//Competition name
         echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";//Competition Day
-        ?></center>
-        
-        
-        
-        
-        
-<!--
-        <input type="checkbox" id="foul" value="foul" class="checkbox"/>
-        <label class="forcheckbox" for="foul">Fouls</label>
-        
-        
-         <input type="checkbox" id="cross" value="cross" class="checkboxx"/>
-        <label class="forcheckbox" for="cross">Crosses</label>
--->
-        
+        ?></center>        
         
         <br>
         
-        
         <?
-        echo $gameinfoarray[0][0]." => RED";//Home team
+        echo $gameinfoarray[0][0]." (Red)";//Home team
         ?>
         
         <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
         </div>
         
         <?
-        echo $gameinfoarray[0][2]." => BLUE<br>";//Away team
+        echo $gameinfoarray[0][2]." (Blue)<br>";//Away team
         ?>
         
     </div>

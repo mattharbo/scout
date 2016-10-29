@@ -46,21 +46,56 @@ function displayeventstype(eventype){
         filteringoption.push(eventype);
             
         for (var x in rawdatafromdb) {
+            
             if(rawdatafromdb[x].eventaction==eventype){
+                
                 //Home team events > Red > Shooting up
                 if(rawdatafromdb[x].eventteamid == idhometeam){
-                    show_image('../ressources/dot_pointer_red@x2.png', 
-                        15, 15,           
-                    (95-(rawdatafromdb[x].eventposx)*100),
-                    (91-(parseFloat((rawdatafromdb[x].eventposy))-0.03)*100),
-                    eventype);
+                    
+                    if (rawdatafromdb[x].eventstate != ""){
+                        
+                    //Include also eventtype
+                        
+                        etype = rawdatafromdb[x].eventaction;
+                        estate = rawdatafromdb[x].eventstate;
+                    
+                        show_image('../ressources/'+etype+'_'+estate+'@x2.png', 
+                            15, 15,           
+                        (95-(rawdatafromdb[x].eventposx)*100),
+                        (91-(parseFloat((rawdatafromdb[x].eventposy))-0.03)*100),
+                        eventype);
+                        
+                    }else{
+                        show_image('../ressources/dot_pointer_red@x2.png', 
+                            15, 15,           
+                        (95-(rawdatafromdb[x].eventposx)*100),
+                        (91-(parseFloat((rawdatafromdb[x].eventposy))-0.03)*100),
+                        eventype);
+                    }
+                    
                 }else{
-                //Away team events > Blue > Shooting down
-                    show_image('../ressources/dot_pointer_blue@x2.png', 
-                        15, 15,
-                    (rawdatafromdb[x].eventposx)*100,
-                    (parseFloat((rawdatafromdb[x].eventposy))+0.03)*100,
-                    eventype);
+                    
+                    if (rawdatafromdb[x].eventstate != ""){
+                        
+                    //Include also eventtype
+                        
+                        etype = rawdatafromdb[x].eventaction;
+                        estate = rawdatafromdb[x].eventstate;
+                    
+                        //Away team events > Blue > Shooting down
+                        show_image('../ressources/'+etype+'_'+estate+'@x2.png', 
+                            15, 15,
+                        (rawdatafromdb[x].eventposx)*100,
+                        (parseFloat((rawdatafromdb[x].eventposy))+0.03)*100,
+                        eventype);
+                    }else{
+                        show_image('../ressources/dot_pointer_blue@x2.png', 
+                            15, 15,
+                        (rawdatafromdb[x].eventposx)*100,
+                        (parseFloat((rawdatafromdb[x].eventposy))+0.03)*100,
+                        eventype);
+                    }
+                    
                 }   
             }
         }
