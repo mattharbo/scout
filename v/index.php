@@ -42,29 +42,65 @@ if (isset ($_GET["id"])) {
     <!-- ~ Preloader ~ -->
     <div id="preloader"></div>
         
+    <!-- ~ Filter Menu ~ -->  
+    <div id="filterSidenav" class="filterSidenav">
+        
+        filters<br>
+        
+        <input type="button" value="Supprimer" onclick="removeallimages()">
+        
+        <input type="button" value="Afficher" onclick="displayimages()">
+        
+    </div>
+    <div id="blackOverlay" class="blackOverlay">
+    </div>
+        
+        
     <!-- ~ DEFAULT VIEW ~ -->    
-    <div id="header">
-        <div id="closePageBtn" onclick="closeWindow('../');"></div>
-        <div id="pageTitleNoValidation">
+    <div id="headerFixed">
+        <div id="leftMenuBtn" onclick=""></div>
+        <div id="pageTitle">
             <? echo "#".$gameinfoarray[0][1].$gameinfoarray[0][3];?>
         </div>
+        <div id="filterPageBtn" onclick="openfilterNav();"></div>
     </div>
+        
+    <div id="pageContentBelowFixedHeader">
         
         <center><?
         echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span><br>";//Competition name
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br><br>";//Competition Day
+        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";//Competition Day
         ?></center>
+        
+        
+        
+        
+        
+<!--
+        <input type="checkbox" id="foul" value="foul" class="checkbox"/>
+        <label class="forcheckbox" for="foul">Fouls</label>
+        
+        
+         <input type="checkbox" id="cross" value="cross" class="checkboxx"/>
+        <label class="forcheckbox" for="cross">Crosses</label>
+-->
+        
+        
+        <br>
+        
         
         <?
         echo $gameinfoarray[0][0]." => RED";//Home team
         ?>
         
-    <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
-    </div>
+        <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
+        </div>
         
         <?
         echo $gameinfoarray[0][2]." => BLUE<br>";//Away team
         ?>
+        
+    </div>
         
     <script>
         var rawdatafromdb = <?php echo json_encode($eventsarray)?>;
