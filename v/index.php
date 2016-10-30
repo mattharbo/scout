@@ -85,9 +85,8 @@ if (isset ($_GET["id"])) {
     <div id="pageContentBelowFixedHeader">
         
         <center><?
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span><br>";//Competition name
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";//Competition Day
-        ?></center>        
+        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span> • <span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";?>
+        </center>        
         
         <br>
         

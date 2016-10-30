@@ -141,9 +141,9 @@ a:active {
         transition: 0.2s;
         font-size: 12px;
 /*        padding-top: 60px;*/
--webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
--moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+        -webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+        -moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+        box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
     }
     
     .filterBtnUnchecked{
@@ -153,8 +153,7 @@ box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         line-height: 60px;
         color: #A5A5A5;
         font-weight: 400;
-/*        background-color: #fff;*/
-/*        border-bottom: 1px solid #CFC9C9;*/
+        border-bottom: 1px solid #F6F6F6;
     }
     
     .filterBtnChecked{
@@ -164,8 +163,8 @@ box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         line-height: 60px;
         color: #00739A;
         font-weight: 600;
-        background-color: #E9E9E9;
-/*        border-bottom: 1px solid #CFC9C9;*/
+        border-left: 3px solid #00739A;
+        border-bottom: 1px solid #F6F6F6;
     }
       
     .blackOverlay{
@@ -1101,6 +1100,13 @@ box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         width: 100%;
         height: 460px;
         z-index: 5;
+    }
+    
+    .averageturnoverline{
+        width: 100%;
+-webkit-box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
+-moz-box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
+box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
     }
     
     #pitchContainerTurnover{

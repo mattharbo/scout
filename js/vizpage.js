@@ -19,13 +19,15 @@
 //eventtime:"1"
 //eventtype:""
 
-//Data displayed by default
-//displayimages();
-
 var filteringoption = [''];
+var aggposyturnhome=0;
+var turnoverindexhome=0;
+var aggposyturnaway=0;
+var turnoverindexaway=0;
 
 function removeallimages(typetoremove){
-    $('.'+typetoremove).remove();  
+    $('.'+typetoremove).remove();
+
 }
 
 function displayeventstype(eventype, btnpressed){
@@ -37,21 +39,33 @@ function displayeventstype(eventype, btnpressed){
         btnpressed.className = "filterBtnUnchecked";
     }
     
-    // Find and remove item from an array
+    // Find the item in the array
     var i = filteringoption.indexOf(eventype);
     
     //If the events is already in the array
     if(i != -1) {
+        
+        if(eventype=="turnover"){
+            aggposyturnhome=0;
+            turnoverindexhome=0;
+            aggposyturnaway=0;
+            turnoverindexaway=0;
+            removeallimages('averageturnoverline');
+        }
+        
         //Remove the element from the followup array
         filteringoption.splice(i, 1);
         //If event dots already displayed then removed them
         removeallimages(eventype);
         
+        
+        
         console.log(filteringoption);
     }else{
-        //If not then push the event into the table and display event dots      
+        //If not then push the event into the array     
         filteringoption.push(eventype);
             
+        //Display event dots 
         for (var x in rawdatafromdb) {
             
             if(rawdatafromdb[x].eventaction==eventype){
@@ -73,6 +87,13 @@ function displayeventstype(eventype, btnpressed){
                         eventype);
                         
                     }else{
+                        
+                        //Data for turnover Home
+                        if(eventype=="turnover"){
+                            turnoverindexhome += 1;
+                            aggposyturnhome += (0.91-(parseFloat((rawdatafromdb[x].eventposy))-0.03));
+                        }
+                        
                         show_image('../ressources/dot_pointer_red@x2.png', 
                             15, 15,           
                         (95-(rawdatafromdb[x].eventposx)*100),
@@ -96,16 +117,52 @@ function displayeventstype(eventype, btnpressed){
                         (parseFloat((rawdatafromdb[x].eventposy))+0.03)*100,
                         eventype);
                     }else{
+                        
+                        //Data for turnover Away
+                        if(eventype=="turnover"){
+                            turnoverindexaway += 1;
+                            aggposyturnaway += (parseFloat((rawdatafromdb[x].eventposy))+0.03);
+                        }
+                        
+                        //Data for turnover Away
+                        if(eventype=="turnover"){
+                            turnoverindexaway += 1;
+                            aggposyturnaway += parseFloat(rawdatafromdb[x].eventposy);
+                        }
+                        
                         show_image('../ressources/dot_pointer_blue@x2.png', 
                             15, 15,
                         (rawdatafromdb[x].eventposx)*100,
                         (parseFloat((rawdatafromdb[x].eventposy))+0.03)*100,
                         eventype);
                     }
-                    
                 }   
             }
         }
+    
+        //Display average turnovers
+        if(eventype=="turnover"){
+
+            //Home team average turnover line display
+            show_image(
+                '../ressources/turnoveraverageline_red@x2.png',
+                3.5,
+                3,
+                0,
+                (parseFloat(aggposyturnhome/turnoverindexhome))*100,
+                'averageturnoverline'
+            );
+
+            //Away team average turnover line display
+            show_image(
+                '../ressources/turnoveraverageline_blue@x2.png',
+                3.5,
+                3,
+                0,
+                (parseFloat(aggposyturnaway/turnoverindexaway))*100,
+                'averageturnoverline'
+            );
+        } 
     }
     
     //closefilterNav();
@@ -129,7 +186,7 @@ function show_image(src, width, height, left, top, typeofevent) {
 
 
 function openfilterNav() {
-    document.getElementById("filterSidenav").style.width = "60px";
+    document.getElementById("filterSidenav").style.width = "62px";
     document.getElementById("blackOverlay").style.visibility = "visible" ;
     document.getElementById("filterPageBtn").style.backgroundImage = "url('../ressources/close@x2.png')" ;
     document.getElementById("filterPageBtn").onclick = function(){ closefilterNav(); };
