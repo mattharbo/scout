@@ -73,8 +73,28 @@ a:active {
     border-radius: 0px;
 }
 
+#notmobile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    z-index: 99;
+}
+
+#notmobile_content{
+    display: table-cell;
+    vertical-align: middle;
+    color: #FFFFFF;
+    background: linear-gradient(50deg, #00a5a7, #00739A);
+}
+
 /*RESPONSIVE*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 450px){
+    
+    #notmobile{
+        visibility: hidden;
+    }
 
     #header{
         width: 100%;
@@ -106,7 +126,6 @@ a:active {
         margin: 12px auto;
     }
     
-    
     .filterSidenav {
         height: 100%;
         width: 0px;
@@ -114,12 +133,41 @@ a:active {
         z-index: 10;
         top: 45px; /*header height*/
         right: 0;
-        background-color: yellow;
+/*        background-color: #F5F5F5;*/
+/*        background-color: #E9E9E9;*/
+/*        background-color: #E9E9E9;*/
+        background-color: #fff;
         overflow-x: hidden;
-        transition: 0.6s;
+        transition: 0.2s;
+        font-size: 12px;
 /*        padding-top: 60px;*/
+-webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+-moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
     }
     
+    .filterBtnUnchecked{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: #A5A5A5;
+        font-weight: 400;
+/*        background-color: #fff;*/
+/*        border-bottom: 1px solid #CFC9C9;*/
+    }
+    
+    .filterBtnChecked{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: #00739A;
+        font-weight: 600;
+        background-color: #E9E9E9;
+/*        border-bottom: 1px solid #CFC9C9;*/
+    }
+      
     .blackOverlay{
         position:fixed;
         width: 100%;
@@ -127,15 +175,9 @@ a:active {
         z-index: 8;
         background-color: rgba(0, 0, 0, 0.7);
         visibility: hidden;
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
+     
     #gamelistentry{
         width: 100%;
         height: 80px;

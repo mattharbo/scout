@@ -28,7 +28,14 @@ function removeallimages(typetoremove){
     $('.'+typetoremove).remove();  
 }
 
-function displayeventstype(eventype){
+function displayeventstype(eventype, btnpressed){
+    
+    //Change Btn Look and feel
+    if (btnpressed.className == "filterBtnUnchecked"){
+        btnpressed.className = "filterBtnChecked";
+    }else{
+        btnpressed.className = "filterBtnUnchecked";
+    }
     
     // Find and remove item from an array
     var i = filteringoption.indexOf(eventype);
@@ -100,6 +107,8 @@ function displayeventstype(eventype){
             }
         }
     }
+    
+    //closefilterNav();
 }
 
 function show_image(src, width, height, left, top, typeofevent) {

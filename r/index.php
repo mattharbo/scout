@@ -33,6 +33,11 @@ if (isset ($_GET["id"])) {
 
     <!-- ~ Preloader ~ -->
     <div id="preloader"></div>
+        
+    <!-- ~ Tablet and Desktop mode ~ -->
+    <div id="notmobile">
+        <div id="notmobile_content">MyScout experience is designed for mobile!</div>
+    </div>
 
         <!-- ~ TURNOVER CONTAINER ~ -->
         <div id="turnoverNavContainer" class="navContainer">

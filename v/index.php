@@ -40,28 +40,33 @@ if (isset ($_GET["id"])) {
     <!-- ~ Preloader ~ -->
     <div id="preloader"></div>
         
+    <!-- ~ Tablet and Desktop mode ~ -->
+    <div id="notmobile">
+        <div id="notmobile_content">MyScout experience is designed for mobile!</div>
+    </div>
+        
     <!-- ~ Filter Menu ~ -->  
     <div id="filterSidenav" class="filterSidenav">
         
-        filters<br><br><br>
+        <div class="filterBtnUnchecked" onclick="displayeventstype('turnover', this);">
+            Turnovers
+        </div>
         
-        <input type="button" value="Turnover" onclick="displayeventstype('turnover');">
+        <div class="filterBtnUnchecked" onclick="displayeventstype('shoot', this);">
+            Shoots
+        </div>
         
-        <br><br>
+        <div class="filterBtnUnchecked" onclick="displayeventstype('cross', this);">
+            Crosses
+        </div>
         
-        <input type="button" value="Shoot" onclick="displayeventstype('shoot');">
+        <div class="filterBtnUnchecked" onclick="displayeventstype('foul', this);">
+            Fouls
+        </div>
         
-        <br><br>
-        
-        <input type="button" value="Cross" onclick="displayeventstype('cross');">
-        
-        <br><br>
-        
-        <input type="button" value="Foul" onclick="displayeventstype('foul');">
-        
-        <br><br>
-        
-        <input type="button" value="Offside" onclick="displayeventstype('offside');">
+        <div class="filterBtnUnchecked" onclick="displayeventstype('offside', this);">
+            Offsides
+        </div>
         
     </div>
     <div id="blackOverlay" class="blackOverlay">
@@ -72,7 +77,7 @@ if (isset ($_GET["id"])) {
     <div id="headerFixed">
         <div id="leftMenuBtn" onclick=""></div>
         <div id="pageTitle">
-            <? echo "#".$gameinfoarray[0][1].$gameinfoarray[0][3];?>
+            <? echo $gameinfoarray[0][1]." 0:0 ".$gameinfoarray[0][3];?>
         </div>
         <div id="filterPageBtn" onclick="openfilterNav();"></div>
     </div>
