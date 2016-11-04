@@ -12,7 +12,7 @@
 	</head>
 	<body class="bodygreybg">
         
-        <!-- Preloader -->
+        <!-- ~ Preloader ~ -->
         <div id="preloader"></div>
         
         <!-- ~ Tablet and Desktop mode ~ -->
@@ -20,53 +20,58 @@
             <div id="notmobile_content">MyScout experience is designed for mobile!</div>
         </div>
         
-        <div id="header">
-                <div id="closePageBtn" onclick="closeWindow('../');"></div>
-                <div id="pageTitleNoValidation">Your game(s)</div>
+        <!-- ~ Header ~ -->
+        <div id="headerFixed">
+            <div id="leftMenuBtn" onclick=""></div>
+            <div id="pageTitleNoValidation">Your game(s)</div>
         </div>
         
-        <!--############# Listing #############-->
+        <!-- ~ Listing ~ -->
+
+        <div id="pageContentBelowFixedHeader">
         
-        <?php
-        
-        include '../script/dbincludes.php';
-        
-        $retrieveopenedgames="select game.gameid, game.gamedate, game.gamecompetition, game.gamestage, team1.teamname, team2.teamname
-        from game
-        join team as team1 on game.gamehometeam = team1.teamid
-        join team as team2 on game.gameawayteam = team2.teamid
-        where game.gamestatus=0
-        order by game.gamedate ASC";
-        
-        dbconnexion();
-        $resultsarray = dbread($retrieveopenedgames);
-        dbclosing();
-        
-        //Max number of game retrieved by the query
-        for ($p=0; $p<count($resultsarray);$p++){
-            echo "<a href=../r/?id=".$resultsarray[$p][0].">";            
-            //[][1]=dateandhour
-            //[][2]=compet
-            //[][3]=journey
-            //[][4]=hometeam
-            //[][5]=awayteam
-            echo "<div id='gamelistentry'>";
-                echo "<div id='gamelistdate'><div id='gamelistdatenumber'>".returndateday($resultsarray[$p][1])."</div>";
-                echo "<div id='gamelistdatemonth'>".returndatemonth($resultsarray[$p][1])."</div></div>";
+            <?php
             
-                echo "<div id='gamelistinfo'>";
-                    echo "<span class='gamelistinfocompet'>".$resultsarray[$p][2]."</span>";
-                    echo "<span class='gamelistinfohour'>@ ".returndatehour($resultsarray[$p][1])."</span>";
-                    echo "<span class='gamelistinfohometeam'>".$resultsarray[$p][4]."</span>";
-                    echo "<span class='gamelistinfoawayteam'>".$resultsarray[$p][5]."</span>";
+            include '../script/dbincludes.php';
+            
+            $retrieveopenedgames="select game.gameid, game.gamedate, game.gamecompetition, game.gamestage, team1.teamname, team2.teamname
+            from game
+            join team as team1 on game.gamehometeam = team1.teamid
+            join team as team2 on game.gameawayteam = team2.teamid
+            where game.gamestatus=0
+            order by game.gamedate ASC";
+            
+            dbconnexion();
+            $resultsarray = dbread($retrieveopenedgames);
+            dbclosing();
+            
+            //Max number of game retrieved by the query
+            for ($p=0; $p<count($resultsarray);$p++){
+                echo "<a href=../r/?id=".$resultsarray[$p][0].">";            
+                //[][1]=dateandhour
+                //[][2]=compet
+                //[][3]=journey
+                //[][4]=hometeam
+                //[][5]=awayteam
+                echo "<div id='gamelistentry'>";
+                    echo "<div id='gamelistdate'><div id='gamelistdatenumber'>".returndateday($resultsarray[$p][1])."</div>";
+                    echo "<div id='gamelistdatemonth'>".returndatemonth($resultsarray[$p][1])."</div></div>";
+                
+                    echo "<div id='gamelistinfo'>";
+                        echo "<span class='gamelistinfocompet'>".$resultsarray[$p][2]."</span>";
+                        echo "<span class='gamelistinfohour'>@ ".returndatehour($resultsarray[$p][1])."</span>";
+                        echo "<span class='gamelistinfohometeam'>".$resultsarray[$p][4]."</span>";
+                        echo "<span class='gamelistinfoawayteam'>".$resultsarray[$p][5]."</span>";
+                    echo "</div>";
                 echo "</div>";
-            echo "</div>";
-            echo "</a>";
-        }
+                echo "</a>";
+            }
+            
+            ?>
+
+        </div>
         
-        ?>
-        
-        <!--############# SCRIPTS #############-->
+        <!-- ~ Scripts ~ -->
         
         <script type="text/javascript" src="../js/jquery-latest.js"></script>
         <script type="text/javascript">

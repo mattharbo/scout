@@ -234,7 +234,9 @@ if (isset ($_GET["id"])) {
         
         <!-- ~ DEFAULT VIEW ~ -->
 		<div id="header">
+            <div id="leftMenuBtn" onclick=""></div>
             <a href="/" class="logo" id="logo_header">scout</a>
+            <div id="roadsterBtn" onclick=""></div>
         </div>
         
         <div id="matchPresentation">
