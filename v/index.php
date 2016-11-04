@@ -13,8 +13,6 @@ if (isset ($_GET["id"])) {
     $retrievegameevents="select *
     from event
     where event.eventgame=$gameid";
-    
-//    and event.eventaction='cross'
         
     dbconnexion();
     $gameinfoarray = dbread($retrievegameinformation);
@@ -42,29 +40,68 @@ if (isset ($_GET["id"])) {
     <!-- ~ Preloader ~ -->
     <div id="preloader"></div>
         
-    <!-- ~ DEFAULT VIEW ~ -->    
-    <div id="header">
-        <div id="closePageBtn" onclick="closeWindow('../');"></div>
-        <div id="pageTitleNoValidation">
-            <? echo "#".$gameinfoarray[0][1].$gameinfoarray[0][3];?>
-        </div>
+    <!-- ~ Tablet and Desktop mode ~ -->
+    <div id="notmobile">
+        <div id="notmobile_content">MyScout experience is designed for mobile!</div>
     </div>
+        
+    <!-- ~ Filter Menu ~ -->  
+    <div id="filterSidenav" class="filterSidenav">
+        
+        <div class="filterBtnUnchecked" onclick="displayeventstype('turnover', this);">
+            Turnovers
+        </div>
+        
+        <div class="filterBtnUnchecked" onclick="displayeventstype('shoot', this);">
+            Shoots
+        </div>
+        
+        <div class="filterBtnUnchecked" onclick="displayeventstype('cross', this);">
+            Crosses
+        </div>
+        
+        <div class="filterBtnUnchecked" onclick="displayeventstype('foul', this);">
+            Fouls
+        </div>
+        
+        <div class="filterBtnUnchecked" onclick="displayeventstype('offside', this);">
+            Offsides
+        </div>
+        
+    </div>
+    <div id="blackOverlay" class="blackOverlay">
+    </div>
+        
+        
+    <!-- ~ DEFAULT VIEW ~ -->    
+    <div id="headerFixed">
+        <div id="leftMenuBtn" onclick=""></div>
+        <div id="pageTitle">
+            <? echo $gameinfoarray[0][1]." 0:0 ".$gameinfoarray[0][3];?>
+        </div>
+        <div id="filterPageBtn" onclick="openfilterNav();"></div>
+    </div>
+        
+    <div id="pageContentBelowFixedHeader">
         
         <center><?
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span><br>";//Competition name
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br><br>";//Competition Day
-        ?></center>
+        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span> • <span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";?>
+        </center>        
+        
+        <br>
         
         <?
-        echo $gameinfoarray[0][0]." => RED";//Home team
+        echo $gameinfoarray[0][0]." (Red)";//Home team
         ?>
         
-    <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
+        <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
+        </div>
+        
+        <?
+        echo $gameinfoarray[0][2]." (Blue)<br>";//Away team
+        ?>
+        
     </div>
-        
-        <?
-        echo $gameinfoarray[0][2]." => BLUE<br>";//Away team
-        ?>
         
     <script>
         var rawdatafromdb = <?php echo json_encode($eventsarray)?>;

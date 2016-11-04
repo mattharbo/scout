@@ -73,8 +73,28 @@ a:active {
     border-radius: 0px;
 }
 
+#notmobile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    z-index: 99;
+}
+
+#notmobile_content{
+    display: table-cell;
+    vertical-align: middle;
+    color: #FFFFFF;
+    background: linear-gradient(50deg, #00a5a7, #00739A);
+}
+
 /*RESPONSIVE*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 450px){
+    
+    #notmobile{
+        visibility: hidden;
+    }
 
     #header{
         width: 100%;
@@ -84,12 +104,79 @@ a:active {
 /*        background: linear-gradient(50deg, #0093e7, #00cc86);*/
         background: linear-gradient(50deg, #00a5a7, #00739A);
     }
+    
+    #headerFixed{
+        position: fixed;
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        z-index: 2;
+        top: 0;
+        background: linear-gradient(50deg, #00a5a7, #00739A);
+    }
+    
+    #pageContentBelowFixedHeader{
+        display: block;
+        margin-top: 45px;
+/*        background-color: aquamarine;*/
+    }
 
     #logo_header{
         position: relative;
         margin: 12px auto;
     }
     
+    .filterSidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 10;
+        top: 45px; /*header height*/
+        right: 0;
+/*        background-color: #F5F5F5;*/
+/*        background-color: #E9E9E9;*/
+/*        background-color: #E9E9E9;*/
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: 0.2s;
+        font-size: 12px;
+/*        padding-top: 60px;*/
+        -webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+        -moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+        box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
+    }
+    
+    .filterBtnUnchecked{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: #A5A5A5;
+        font-weight: 400;
+        border-bottom: 1px solid #F6F6F6;
+    }
+    
+    .filterBtnChecked{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: #00739A;
+        font-weight: 600;
+        border-left: 3px solid #00739A;
+        border-bottom: 1px solid #F6F6F6;
+    }
+      
+    .blackOverlay{
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+        background-color: rgba(0, 0, 0, 0.7);
+        visibility: hidden;
+        
+    }
+     
     #gamelistentry{
         width: 100%;
         height: 80px;
@@ -511,6 +598,17 @@ a:active {
         margin-left: 15px;
         margin-top: 15px;
     }
+    
+    #leftMenuBtn {
+        display: inline-block;
+        background-image: url("../ressources/left_menu_logo@x2.png");
+        background-size: 19px 16px;
+        height: 16px;
+        width: 19px;
+        float: left;
+        margin-left: 14px;
+        margin-top: 14px;
+    }
 
     #pageTitle {
         display: inline-block;
@@ -532,6 +630,17 @@ a:active {
         background-image: url("../ressources/validation@x1.png");
         width: 18px;
         height: 17px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 14px;
+    }
+    
+    #filterPageBtn {
+        display: inline-block;
+        background-image: url("../ressources/filter@x1.png");
+        background-size: 15px 16.5px;
+        width: 15px;
+        height: 16px;
         float: right;
         margin-right: 15px;
         margin-top: 14px;
@@ -990,6 +1099,14 @@ a:active {
         position: relative;
         width: 100%;
         height: 460px;
+        z-index: 5;
+    }
+    
+    .averageturnoverline{
+        width: 100%;
+-webkit-box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
+-moz-box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
+box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
     }
     
     #pitchContainerTurnover{
@@ -1346,6 +1463,17 @@ a:active {
         margin-left: 15px;
         margin-top: 15px;
     }
+    
+    #leftMenuBtn {
+        display: inline-block;
+        background-image: url("../ressources/left_menu_logo@x2.png");
+        background-size: 19px 16px;
+        height: 16px;
+        width: 19px;
+        float: left;
+        margin-left: 14px;
+        margin-top: 14px;
+    }
 
     #validationPageBtn {
         display: inline-block;
@@ -1353,6 +1481,17 @@ a:active {
         background-size: 18px 17px;
         width: 18px;
         height: 17px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 14px;
+    }
+    
+    #filterPageBtn {
+        display: inline-block;
+        background-image: url("../ressources/filter@x2.png");
+        background-size: 15px 16.5px;
+        width: 15px;
+        height: 16px;
         float: right;
         margin-right: 15px;
         margin-top: 14px;

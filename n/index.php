@@ -16,6 +16,11 @@
         <!-- Preloader -->
         <div id="preloader"></div>
         
+        <!-- ~ Tablet and Desktop mode ~ -->
+        <div id="notmobile">
+            <div id="notmobile_content">MyScout experience is designed for mobile!</div>
+        </div>
+        
         <!--############# Form Step 3 #############-->
         
         <div id="formStepThree" class="formNextContainer">

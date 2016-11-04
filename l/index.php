@@ -15,6 +15,11 @@
         <!-- Preloader -->
         <div id="preloader"></div>
         
+        <!-- ~ Tablet and Desktop mode ~ -->
+        <div id="notmobile">
+            <div id="notmobile_content">MyScout experience is designed for mobile!</div>
+        </div>
+        
         <div id="header">
                 <div id="closePageBtn" onclick="closeWindow('../');"></div>
                 <div id="pageTitleNoValidation">Your game(s)</div>
