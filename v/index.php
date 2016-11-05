@@ -47,11 +47,10 @@ if (isset ($_GET["id"])) {
 
     <!-- ~ Left menu ~ -->
     <div id="leftmenu" class="leftmenu">
-      <a href="#" class="closebtn" onclick="closeLeftNav()">&times;</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+        <span class="welcomemsg">Hi Matthieu</span>
+        <a href="../l/">Upcoming games</a>
+        <a href="#">Contact</a>
+        <span class="madeby">Made with &#10084; in Paris (18<sup>arr.</sup>)</span>
     </div>
 
     <div id="contentToPushByLeftMenu">
@@ -122,14 +121,14 @@ if (isset ($_GET["id"])) {
         
     <!-- ~ SCRIPTS ~ -->
         
-    <script type="text/javascript" src="../js/jquery-latest.js"></script>
+    <script type="text/javascript" src="../lib/jquery-latest.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#preloader').fadeOut('slow',function(){$(this).remove();});
         });
     </script>
-    <script type="text/javascript" src='../js/vizpage.js'></script>
-    <script type="text/javascript" src='../js/leftmenu.js'></script>
+    <script type="text/javascript" src='../lib/vizpage.js'></script>
+    <script type="text/javascript" src='../lib/leftmenu.js'></script>
         
 	</body>
 </html>

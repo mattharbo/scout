@@ -295,15 +295,15 @@ if (isset ($_GET["id"])) {
         
         <!-- ~ SCRIPTS ~ -->
         
-        <script type="text/javascript" src="../js/jquery-latest.js"></script>
+        <script type="text/javascript" src="../lib/jquery-latest.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#preloader').fadeOut('slow',function(){$(this).remove();});
 
             });
        </script>
-        <script type="text/javascript" src='../js/recordpage.js'></script>
-        <script type="text/javascript" src='../js/chrono.js'></script>
+        <script type="text/javascript" src='../lib/recordpage.js'></script>
+        <script type="text/javascript" src='../lib/chrono.js'></script>
         
 	</body>
 </html>

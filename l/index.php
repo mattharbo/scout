@@ -73,14 +73,14 @@
         
         <!-- ~ Scripts ~ -->
         
-        <script type="text/javascript" src="../js/jquery-latest.js"></script>
+        <script type="text/javascript" src="../lib/jquery-latest.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#preloader').fadeOut('slow',function(){$(this).remove();});
 
             });
        </script>
-        <script type="text/javascript" src='../js/creationform.js'></script>
+        <script type="text/javascript" src='../lib/creationform.js'></script>
 
 
 	</body>

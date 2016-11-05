@@ -61,18 +61,44 @@ a:active {
     z-index: 99; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #F6F6F6; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: .4s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 90px; /* Place content 60px from the top */
+    transition: .3s; /* 0.5 second transition effect to slide in the sidenav */
+    color: #2C2D30;
+    font-size: 17px;
+}
+
+.welcomemsg{
+    position: absolute;
+    width: 200px;
+    margin-top: -55px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.madeby{
+    position: absolute;
+    width: 200px;
+    bottom: 120px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    color: #A6A6A7;
 }
 
 /* The navigation menu links */
 .leftmenu a {
-    padding: 8px 8px 8px 32px;
+    padding: 17px 8px 5px 40px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 15px;
+    font-weight: 500;
+    color: #58595D;
+    height: 30px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid #E6E6E6;
+    margin-top: -1px;
     display: block;
     transition: 0.3s
 }
@@ -82,18 +108,8 @@ a:active {
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-.leftmenu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-   
-}
-
 #contentToPushByLeftMenu{
-    transition: .4s;
+    transition: .3s;
 }
 
 
@@ -160,7 +176,7 @@ a:active {
         z-index: 2;
         top: 0;
         background: linear-gradient(50deg, #00a5a7, #00739A);
-        transition: .4s; /*Left menu purpose*/
+        transition: .3s; /*Left menu purpose*/
         left:0; /*Left menu purpose*/
     }
     
@@ -182,7 +198,7 @@ a:active {
         z-index: 10;
         top: 45px; /*header height*/
         right: 0;
-        background-color: #fff;
+        background-color: #F6F6F6;
         overflow-x: hidden;
         transition: 0.2s;
         font-size: 12px;
@@ -196,9 +212,10 @@ a:active {
         height: 60px;
         text-align: center;
         line-height: 60px;
-        color: #A5A5A5;
-        font-weight: 400;
-        border-bottom: 1px solid #F6F6F6;
+        color: #A6A6A7;
+        font-weight: 500;
+        background-color: white;
+        border-bottom: 1px solid #E6E6E6;
     }
     
     .filterBtnChecked{
@@ -209,7 +226,7 @@ a:active {
         color: #00739A;
         font-weight: 600;
         border-left: 3px solid #00739A;
-        border-bottom: 1px solid #F6F6F6;
+        border-bottom: 1px solid #E6E6E6;
     }
       
     .blackOverlay{
@@ -686,6 +703,7 @@ a:active {
         float: right;
         margin-right: 15px;
         margin-top: 14px;
+        transition: .3s ease-in-out;
     }
 
     #roadsterBtn {
@@ -1519,6 +1537,7 @@ box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
         float: left;
         margin-left: 14px;
         margin-top: 14px;
+        transition: .3s ease-in-out;
     }
 
     #validationPageBtn {
