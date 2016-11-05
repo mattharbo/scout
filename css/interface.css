@@ -27,7 +27,6 @@ body {
   font-size: 15px;
   background-color: white;
   box-sizing: border-box;
-/*    text-align: center;*/
 }
 
 .bodygreybg{
@@ -53,6 +52,54 @@ a:active {
   color: black;
   text-decoration: none;
 }
+
+/*Left menu*/
+.leftmenu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: .4s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.leftmenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.leftmenu a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.leftmenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+   
+}
+
+#contentToPushByLeftMenu{
+    transition: .4s;
+}
+
+
+
+
+
 
 /*AUTOCOMPLETE*/
 
@@ -113,6 +160,8 @@ a:active {
         z-index: 2;
         top: 0;
         background: linear-gradient(50deg, #00a5a7, #00739A);
+        transition: .4s; /*Left menu purpose*/
+        left:0; /*Left menu purpose*/
     }
     
     #pageContentBelowFixedHeader{
@@ -133,14 +182,10 @@ a:active {
         z-index: 10;
         top: 45px; /*header height*/
         right: 0;
-/*        background-color: #F5F5F5;*/
-/*        background-color: #E9E9E9;*/
-/*        background-color: #E9E9E9;*/
         background-color: #fff;
         overflow-x: hidden;
         transition: 0.2s;
         font-size: 12px;
-/*        padding-top: 60px;*/
         -webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         -moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
@@ -172,9 +217,8 @@ a:active {
         width: 100%;
         height: 100%;
         z-index: 8;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.6);
         visibility: hidden;
-        
     }
      
     #gamelistentry{
@@ -247,7 +291,6 @@ a:active {
         color: black;
     }
     
-
     #scoreContainer{
         position: relative;
         margin: 20px auto -60px auto;
@@ -292,7 +335,6 @@ a:active {
         font-size: 35px;
         color: #143542;
     }
-
 
     #homeTeamName{
         position: absolute;
@@ -1182,13 +1224,6 @@ box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
         background-size: 100% 460px;
         background-repeat: no-repeat;
         background-position: center top;
-/*
-        -moz-box-shadow: 0px 1px 2px 0px #c0c0c0;
-        -moz-box-shadow: 0px 1px 2px 0px #656565;
-        -webkit-box-shadow: 0px 1px 2px 0px #656565;
-        -o-box-shadow: 0px 1px 2px 0px #656565;
-        box-shadow: 0px 1px 2px 0px #656565;
-*/
     }
 
     #pitchExpandBtnShoot{

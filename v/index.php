@@ -44,64 +44,76 @@ if (isset ($_GET["id"])) {
     <div id="notmobile">
         <div id="notmobile_content">MyScout experience is designed for mobile!</div>
     </div>
-        
-    <!-- ~ Filter Menu ~ -->  
-    <div id="filterSidenav" class="filterSidenav">
-        
-        <div class="filterBtnUnchecked" onclick="displayeventstype('turnover', this);">
-            Turnovers
-        </div>
-        
-        <div class="filterBtnUnchecked" onclick="displayeventstype('shoot', this);">
-            Shoots
-        </div>
-        
-        <div class="filterBtnUnchecked" onclick="displayeventstype('cross', this);">
-            Crosses
-        </div>
-        
-        <div class="filterBtnUnchecked" onclick="displayeventstype('foul', this);">
-            Fouls
-        </div>
-        
-        <div class="filterBtnUnchecked" onclick="displayeventstype('offside', this);">
-            Offsides
-        </div>
-        
+
+    <!-- ~ Left menu ~ -->
+    <div id="leftmenu" class="leftmenu">
+      <a href="#" class="closebtn" onclick="closeLeftNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
-    <div id="blackOverlay" class="blackOverlay">
-    </div>
+
+    <div id="contentToPushByLeftMenu">
         
-        
-    <!-- ~ DEFAULT VIEW ~ -->    
-    <div id="headerFixed">
-        <div id="leftMenuBtn" onclick=""></div>
-        <div id="pageTitle">
-            <? echo $gameinfoarray[0][1]." 0:0 ".$gameinfoarray[0][3];?>
+        <!-- ~ Filter Menu ~ -->  
+        <div id="filterSidenav" class="filterSidenav">
+            
+            <div class="filterBtnUnchecked" onclick="displayeventstype('turnover', this);">
+                Turnovers
+            </div>
+            
+            <div class="filterBtnUnchecked" onclick="displayeventstype('shoot', this);">
+                Shoots
+            </div>
+            
+            <div class="filterBtnUnchecked" onclick="displayeventstype('cross', this);">
+                Crosses
+            </div>
+            
+            <div class="filterBtnUnchecked" onclick="displayeventstype('foul', this);">
+                Fouls
+            </div>
+            
+            <div class="filterBtnUnchecked" onclick="displayeventstype('offside', this);">
+                Offsides
+            </div>
+            
         </div>
-        <div id="filterPageBtn" onclick="openfilterNav();"></div>
-    </div>
-        
-    <div id="pageContentBelowFixedHeader">
-        
-        <center><?
-        echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span> • <span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";?>
-        </center>        
-        
-        <br>
-        
-        <?
-        echo $gameinfoarray[0][0]." (Red)";//Home team
-        ?>
-        
-        <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
+
+        <div id="blackOverlay" class="blackOverlay"></div>
+            
+        <!-- ~ DEFAULT VIEW ~ -->    
+        <div id="headerFixed">
+            <div id="leftMenuBtn" onclick="closefilterNav();openLeftNav();"></div>
+            <div id="pageTitle">
+                <? echo $gameinfoarray[0][1]." 0:0 ".$gameinfoarray[0][3];?>
+            </div>
+            <div id="filterPageBtn" onclick="openfilterNav();"></div>
         </div>
-        
-        <?
-        echo $gameinfoarray[0][2]." (Blue)<br>";//Away team
-        ?>
-        
-    </div>
+            
+        <div id="pageContentBelowFixedHeader">
+            
+            <center><?
+            echo "<span class='gamelistinfocompet'>".$gameinfoarray[0][4]."</span> • <span class='gamelistinfocompet'>".$gameinfoarray[0][5]."</span><br>";?>
+            </center>        
+            
+            <br>
+            
+            <?
+            echo $gameinfoarray[0][0]." (Red)";//Home team
+            ?>
+            
+            <div id="pitchContainerDataviz" class="pitchcontainerdatavizclass">
+            </div>
+            
+            <?
+            echo $gameinfoarray[0][2]." (Blue)<br>";//Away team
+            ?>
+            
+        </div>
+
+    </div><!-- contentToPush -->
         
     <script>
         var rawdatafromdb = <?php echo json_encode($eventsarray)?>;
@@ -117,6 +129,7 @@ if (isset ($_GET["id"])) {
         });
     </script>
     <script type="text/javascript" src='../js/vizpage.js'></script>
+    <script type="text/javascript" src='../js/leftmenu.js'></script>
         
 	</body>
 </html>
