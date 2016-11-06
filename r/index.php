@@ -39,6 +39,17 @@ if (isset ($_GET["id"])) {
         <div id="notmobile_content">MyScout experience is designed for mobile!</div>
     </div>
 
+    <!-- ~ Left menu ~ -->
+    <div id="leftmenu" class="leftmenu">
+        <span class="welcomemsg">Hi Matthieu</span>
+        <a href="../l/">Upcoming games</a>
+        <a href="../n/">New game</a>
+        <a href="#">Contact</a>
+        <span class="madeby">Made with &#9917; in Paris</span>
+    </div>
+
+    <div id="contentToPushByLeftMenu">
+
         <!-- ~ TURNOVER CONTAINER ~ -->
         <div id="turnoverNavContainer" class="navContainer">
             
@@ -230,11 +241,13 @@ if (isset ($_GET["id"])) {
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer5">
             </div>
             
-        </div> 
+        </div>
+
+        <div id="blackOverlay" class="blackOverlay"></div>
         
         <!-- ~ DEFAULT VIEW ~ -->
 		<div id="header">
-            <div id="leftMenuBtn" onclick=""></div>
+            <div id="leftMenuBtn" onclick="openLeftNavNotFixedHeader();"></div>
             <a href="/" class="logo" id="logo_header">scout</a>
             <div id="roadsterBtn" onclick=""></div>
         </div>
@@ -292,6 +305,8 @@ if (isset ($_GET["id"])) {
             <div id="dataType"  class="dataLabel">Offside(s)</div>
             <div id="offsideAway" class="dataScoreAway" onclick="openRightNav(this,'offsideNavContainer', '<?echo $resultsarray[0][6];?>', '<?echo $resultsarray[0][3];?>', '<?echo $gameid;?>');">0</div>
         </div>
+
+        </div>
         
         <!-- ~ SCRIPTS ~ -->
         
@@ -304,6 +319,7 @@ if (isset ($_GET["id"])) {
        </script>
         <script type="text/javascript" src='../lib/recordpage.js'></script>
         <script type="text/javascript" src='../lib/chrono.js'></script>
+        <script type="text/javascript" src='../lib/leftmenu.js'></script>
         
 	</body>
 </html>

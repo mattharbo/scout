@@ -71,7 +71,7 @@ a:active {
 
 .welcomemsg{
     position: absolute;
-    width: 200px;
+    width: 240px;
     margin-top: -55px;
     text-align: center;
     font-weight: 700;
@@ -79,8 +79,8 @@ a:active {
 
 .madeby{
     position: absolute;
-    width: 200px;
-    bottom: 120px;
+    width: 240px;
+    bottom: 22%;
     text-align: center;
     font-weight: 500;
     font-size: 10px;
@@ -95,7 +95,7 @@ a:active {
     font-weight: 500;
     color: #58595D;
     height: 30px;
-    width: 150px;
+    width: 192px;
     background-color: white;
     border: 1px solid #E6E6E6;
     margin-top: -1px;
