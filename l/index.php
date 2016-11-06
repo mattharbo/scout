@@ -19,10 +19,23 @@
         <div id="notmobile">
             <div id="notmobile_content">MyScout experience is designed for mobile!</div>
         </div>
+
+        <!-- ~ Left menu ~ -->
+        <div id="leftmenu" class="leftmenu">
+            <span class="welcomemsg">Hi Matthieu</span>
+            <a href="../l/">Upcoming games</a>
+            <a href="../n/">New game</a>
+            <a href="#">Contact</a>
+            <span class="madeby">Made with &#9917; in Paris</span>
+        </div>
+
+        <div id="contentToPushByLeftMenu">
+
+        <div id="blackOverlay" class="blackOverlay"></div>
         
         <!-- ~ Header ~ -->
         <div id="headerFixed">
-            <div id="leftMenuBtn" onclick=""></div>
+            <div id="leftMenuBtn" onclick="openLeftNav();"></div>
             <div id="pageTitleNoValidation">Your game(s)</div>
         </div>
         
@@ -70,18 +83,20 @@
             ?>
 
         </div>
+
+        </div>
         
         <!-- ~ Scripts ~ -->
         
-        <script type="text/javascript" src="../js/jquery-latest.js"></script>
+        <script type="text/javascript" src="../lib/jquery-latest.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#preloader').fadeOut('slow',function(){$(this).remove();});
 
             });
        </script>
-        <script type="text/javascript" src='../js/creationform.js'></script>
-
+        <script type="text/javascript" src='../lib/creationform.js'></script>
+        <script type="text/javascript" src='../lib/leftmenu.js'></script>
 
 	</body>
 </html>

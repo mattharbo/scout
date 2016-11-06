@@ -27,7 +27,6 @@ body {
   font-size: 15px;
   background-color: white;
   box-sizing: border-box;
-/*    text-align: center;*/
 }
 
 .bodygreybg{
@@ -53,6 +52,70 @@ a:active {
   color: black;
   text-decoration: none;
 }
+
+/*Left menu*/
+.leftmenu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #F6F6F6; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 90px; /* Place content 60px from the top */
+    transition: .3s; /* 0.5 second transition effect to slide in the sidenav */
+    color: #2C2D30;
+    font-size: 17px;
+}
+
+.welcomemsg{
+    position: absolute;
+    width: 240px;
+    margin-top: -55px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.madeby{
+    position: absolute;
+    width: 240px;
+    bottom: 22%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    color: #A6A6A7;
+}
+
+/* The navigation menu links */
+.leftmenu a {
+    padding: 17px 8px 5px 40px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #58595D;
+    height: 30px;
+    width: 192px;
+    background-color: white;
+    border: 1px solid #E6E6E6;
+    margin-top: -1px;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.leftmenu a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+#contentToPushByLeftMenu{
+    transition: .3s;
+}
+
+
+
+
+
 
 /*AUTOCOMPLETE*/
 
@@ -113,6 +176,8 @@ a:active {
         z-index: 2;
         top: 0;
         background: linear-gradient(50deg, #00a5a7, #00739A);
+        transition: .3s; /*Left menu purpose*/
+        left:0; /*Left menu purpose*/
     }
     
     #pageContentBelowFixedHeader{
@@ -133,14 +198,10 @@ a:active {
         z-index: 10;
         top: 45px; /*header height*/
         right: 0;
-/*        background-color: #F5F5F5;*/
-/*        background-color: #E9E9E9;*/
-/*        background-color: #E9E9E9;*/
-        background-color: #fff;
+        background-color: #F6F6F6;
         overflow-x: hidden;
         transition: 0.2s;
         font-size: 12px;
-/*        padding-top: 60px;*/
         -webkit-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         -moz-box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
         box-shadow: -3px 0px 2px 0px rgba(0,0,0,0.12);
@@ -151,9 +212,10 @@ a:active {
         height: 60px;
         text-align: center;
         line-height: 60px;
-        color: #A5A5A5;
-        font-weight: 400;
-        border-bottom: 1px solid #F6F6F6;
+        color: #A6A6A7;
+        font-weight: 500;
+        background-color: white;
+        border-bottom: 1px solid #E6E6E6;
     }
     
     .filterBtnChecked{
@@ -164,7 +226,7 @@ a:active {
         color: #00739A;
         font-weight: 600;
         border-left: 3px solid #00739A;
-        border-bottom: 1px solid #F6F6F6;
+        border-bottom: 1px solid #E6E6E6;
     }
       
     .blackOverlay{
@@ -172,9 +234,8 @@ a:active {
         width: 100%;
         height: 100%;
         z-index: 8;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.6);
         visibility: hidden;
-        
     }
      
     #gamelistentry{
@@ -247,7 +308,6 @@ a:active {
         color: black;
     }
     
-
     #scoreContainer{
         position: relative;
         margin: 20px auto -60px auto;
@@ -292,7 +352,6 @@ a:active {
         font-size: 35px;
         color: #143542;
     }
-
 
     #homeTeamName{
         position: absolute;
@@ -644,6 +703,7 @@ a:active {
         float: right;
         margin-right: 15px;
         margin-top: 14px;
+        transition: .3s ease-in-out;
     }
 
     #roadsterBtn {
@@ -1182,13 +1242,6 @@ box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
         background-size: 100% 460px;
         background-repeat: no-repeat;
         background-position: center top;
-/*
-        -moz-box-shadow: 0px 1px 2px 0px #c0c0c0;
-        -moz-box-shadow: 0px 1px 2px 0px #656565;
-        -webkit-box-shadow: 0px 1px 2px 0px #656565;
-        -o-box-shadow: 0px 1px 2px 0px #656565;
-        box-shadow: 0px 1px 2px 0px #656565;
-*/
     }
 
     #pitchExpandBtnShoot{
@@ -1484,6 +1537,7 @@ box-shadow: 0px 1px 2px 0px rgba(160,19,19,0.35);
         float: left;
         margin-left: 14px;
         margin-top: 14px;
+        transition: .3s ease-in-out;
     }
 
     #validationPageBtn {
