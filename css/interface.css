@@ -671,6 +671,13 @@ a:active {
         color: #FFFFFF;
         font-weight: 800;
     }
+
+    #pageTitleNoValidation {
+        display: inline-block;
+        margin: 15px 0 -15px 0;
+        color: #FFFFFF;
+        font-weight: 800;
+    }
     
     #pageTitleNoValidation {
         display: inline-block;

@@ -55,12 +55,11 @@ if (isset ($_GET["id"])) {
             
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
-                <div id="pageTitle">Turnover</div>
-                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
-<!--                <div id="validationPageBtn" onclick="submitRightNav();"></div>-->
+                <div id="pageTitleNoValidation">Turnover</div>
+                <!-- <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div> -->
             </div>
             
-            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');">
+            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');submitRightNav();event_ajax_post('../script/postevent.php');">
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer1">
             </div>
             
