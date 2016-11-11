@@ -49,8 +49,8 @@ if (isset ($_GET["id"])) {
     <div id="leftmenu" class="leftmenu">
         <span class="welcomemsg">Hi Matthieu</span>
         <a href="../l/">Upcoming games</a>
+        <a href="../e/">Game results</a>
         <a href="../n/">New game</a>
-        <a href="#">Contact</a>
         <span class="madeby">Made with &#9917; in Paris</span>
     </div>
 

@@ -54,6 +54,7 @@ a:active {
 }
 
 /*Left menu*/
+
 .leftmenu {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -61,7 +62,7 @@ a:active {
     z-index: 99; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #F6F6F6; /* Black*/
+    background-color: #F6F6F6;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 90px; /* Place content 60px from the top */
     transition: .3s; /* 0.5 second transition effect to slide in the sidenav */
