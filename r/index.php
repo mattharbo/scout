@@ -309,6 +309,11 @@ if (isset ($_GET["id"])) {
         </div>
         
         <!-- ~ SCRIPTS ~ -->
+
+
+        <script type="text/javascript">
+            var idgame = '<?php echo $gameid?>';
+        </script>
         
         <script type="text/javascript" src="../lib/jquery-latest.js"></script>
         <script type="text/javascript">
