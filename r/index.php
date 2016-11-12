@@ -59,7 +59,7 @@ if (isset ($_GET["id"])) {
                 <!-- <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div> -->
             </div>
             
-            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');submitRightNav();event_ajax_post('../script/postevent.php');">
+            <div id="pitchContainerTurnover" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer1');setTimeout(function (){submitRightNav('../script/postevent.php')},400);">
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer1">
             </div>
             
@@ -77,7 +77,7 @@ if (isset ($_GET["id"])) {
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer2">
             </div>
             
-            <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div>
+            <!-- <div id="pitchExpandBtnShoot" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerShoot');"></div> -->
             
             <div id="proposalTitle">What king of shoot?</div>
             
@@ -111,19 +111,23 @@ if (isset ($_GET["id"])) {
             
             <div id="propositions">
                 
-                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
                     Off target
                 </div>
                 
-                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
                     Blocked
                 </div>
                 
-                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
                     Saved (GK)
                 </div>
+
+                <div id="woodwork" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
+                    Wookwork
+                </div>
                 
-                <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="goal" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
                     Goal
                 </div>
                 
@@ -137,7 +141,7 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Cross</div>
-                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
+                <div id="validationPageBtn" onclick="submitRightNav('../script/postevent.php');"></div>
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
@@ -174,7 +178,7 @@ if (isset ($_GET["id"])) {
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
                 <div id="pageTitle">Foul</div>
-                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
+                <div id="validationPageBtn" onclick="submitRightNav('../script/postevent.php');"></div>
             </div>
             
 <!--            <div id="pitchExpandBtnFoul" class="pitchExpandBtn" onclick="expandCollapsePitch(this, 'pitchContainerFoul');"></div>-->
@@ -215,11 +219,11 @@ if (isset ($_GET["id"])) {
             
             <div id="propositions">
                 
-                <div id="leftside" class="proposalLineValidation" onclick="typeSelection('left');submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="leftside" class="proposalLineValidation" onclick="typeSelection('left');submitRightNav('../script/postevent.php');">
                     Left side
                 </div>
                 
-                <div id="rightside" class="proposalLineValidation" onclick="typeSelection('right');submitRightNav();event_ajax_post('../script/postevent.php');">
+                <div id="rightside" class="proposalLineValidation" onclick="typeSelection('right');submitRightNav('../script/postevent.php');">
                     Right side
                 </div>
                 
@@ -232,11 +236,12 @@ if (isset ($_GET["id"])) {
             
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
-                <div id="pageTitle">Offside</div>
-                <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div>
+                <!-- <div id="pageTitle">Offside</div> -->
+                <div id="pageTitleNoValidation">Offside</div>
+                <!-- <div id="validationPageBtn" onclick="submitRightNav();event_ajax_post('../script/postevent.php');"></div> -->
             </div>
             
-            <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');">
+            <div id="pitchContainerOffside" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer5');setTimeout(function (){submitRightNav('../script/postevent.php')},400);">
                 <img src="../ressources/pointer@x2.png" height="22" width="17" id="pitchpointer5">
             </div>
             
