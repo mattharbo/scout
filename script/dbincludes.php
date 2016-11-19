@@ -2,15 +2,15 @@
 
 $GLOBALS['conn'] = "";
 
-$GLOBALS['servername'] = "localhost";
-$GLOBALS['username'] = "root";
-$GLOBALS['password'] = "root";
-$GLOBALS['dbname'] = "scout";
+// $GLOBALS['servername'] = "localhost";
+// $GLOBALS['username'] = "root";
+// $GLOBALS['password'] = "root";
+// $GLOBALS['dbname'] = "scout";
 
-// $GLOBALS['servername'] = getenv('servername');
-// $GLOBALS['username'] = getenv('username');
-// $GLOBALS['password'] = getenv('password');
-// $GLOBALS['dbname'] = getenv('dbname');
+$GLOBALS['servername'] = getenv('servername');
+$GLOBALS['username'] = getenv('username');
+$GLOBALS['password'] = getenv('password');
+$GLOBALS['dbname'] = getenv('dbname');
 
 function dbconnexion(){
     // Create connection
