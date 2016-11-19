@@ -140,8 +140,7 @@ if (isset ($_GET["id"])) {
             
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
-                <div id="pageTitle">Cross</div>
-                <div id="validationPageBtn" onclick="submitRightNav('../script/postevent.php');"></div>
+                <div id="pageTitleNoValidation">Cross</div>
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
@@ -149,26 +148,27 @@ if (isset ($_GET["id"])) {
             </div>
             
             <div id="proposalTitle">Cross details</div>
-            
-            <div id="propositions" class="radios">
 
-               <input type="radio" name="crosstype" id="intercepted"/>
+            <div id="propositions">
                 
-                <label class="forradiobtn" for="intercepted">Intercepted (GK)</label>
-    
-                <input type="radio" name="crosstype" id="block" />
+                <div id="offtarget" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
+                    Intercepted (GK)
+                </div>
                 
-                <label class="forradiobtn" for="block">Blocked</label>
+                <div id="blocked" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
+                    Blocked
+                </div>
                 
-                <input type="radio" name="crosstype" id="completed" />
-                
-                <label class="forradiobtn" for="completed">Completed</label>
-                
-                <input type="radio" name="crosstype" id="incompleted" />
-                
-                <label class="forradiobtn" for="incompleted">Incompleted</label>
+                <div id="save" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
+                    Completed
+                </div>
+
+                <div id="woodwork" class="proposalLineValidation" onclick="steptwo(this);submitRightNav('../script/postevent.php');">
+                    Incompleted
+                </div>
                 
             </div>
+
             
         </div>      
         
