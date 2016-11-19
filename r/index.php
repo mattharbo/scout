@@ -140,8 +140,7 @@ if (isset ($_GET["id"])) {
             
             <div id="header">
                 <div id="closePageBtn" onclick="closeRightNav();"></div>
-                <div id="pageTitle">Cross</div>
-                <div id="validationPageBtn" onclick="submitRightNav('../script/postevent.php');"></div>
+                <div id="pageTitleNoValidation">Cross</div>
             </div>
             
             <div id="pitchContainerCross" class="pitchcontainerclass" onclick="printMousePos(this, 'pitchpointer3');">
