@@ -40,13 +40,13 @@ if (isset ($_GET["id"])) {
         
     <!-- ~ SCRIPTS ~ -->
         
-    <script type="text/javascript" src="../js/jquery-latest.js"></script>
+    <script type="text/javascript" src="../lib/jquery-latest.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#preloader').fadeOut('slow',function(){$(this).remove();});
         });
     </script>
-    <script type="text/javascript" src='../js/vizpagelive.js'></script>
+    <script type="text/javascript" src='../lib/vizpagelive.js'></script>
         
 	</body>
 </html>
